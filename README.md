@@ -8,15 +8,16 @@ AI-automated web development for local brick-and-mortar businesses with no web p
 
 | Domain | Role |
 |---|---|
-| `heresmycompanyweb.site` | **Live domain** — homepage + hosted demos |
-| `heresmycompanywebsite.com` | 301 → .site |
-| `heresmycompanywebsite.net` | 301 → .site |
+| `mybusinessweb.site` | **Live domain** — homepage + hosted demos (short, owner-friendly URLs) |
+| `heresmycompanywebsite.com` | Brand/story domain — 301 → live domain (or future marketing page) |
+| `heresmycompanyweb.site` | 301 → live domain |
+| `heresmycompanywebsite.net` | 301 → live domain |
 
 DNS at Squarespace. Currently structured for **GitHub Pages** hosting (account `graveltrap`); `CNAME` file pins the custom domain.
 
 ## Demo URL scheme
 
-Demos live at root paths on the .site domain: **`heresmycompanyweb.site/<slug>`** (e.g. `heresmycompanyweb.site/chopzla`). One repo, one Pages site — adding a demo = adding a folder. Notes:
+Demos live at root paths on the live domain: **`mybusinessweb.site/<slug>`** (e.g. `mybusinessweb.site/chopzla`). One repo, one Pages site — adding a demo = adding a folder. Notes:
 
 - GitHub Pages does not support wildcard subdomains, so root-path demos are also the friction-free choice here. If subdomain-style URLs are ever wanted, migrate to Cloudflare Pages/Netlify; the folder-per-demo layout carries over.
 - Every new demo folder gets a matching `Disallow: /<slug>/` line in robots.txt.
@@ -26,7 +27,7 @@ Demos live at root paths on the .site domain: **`heresmycompanyweb.site/<slug>`*
 
 ```
 index.html                      # public homepage — what the service is
-CNAME                           # heresmycompanyweb.site (GitHub Pages custom domain)
+CNAME                           # mybusinessweb.site (GitHub Pages custom domain)
 robots.txt                      # Disallow per demo slug (demos never indexed)
 templates/demo-template/        # canonical demo template + config schema
 <slug>/index.html               # one root-level folder per generated demo
