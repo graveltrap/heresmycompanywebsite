@@ -117,6 +117,42 @@
   .visit .addr { font-size: 1.08rem; color: #6b4436; font-weight: 600; margin-top: 4px; }
   .visit .hours { display: inline-block; margin-top: 14px; background: #fdeee2; border-radius: 999px; padding: 10px 24px; color: #a26246; font-size: 0.9rem; }
 
+  /* HERO ART */
+  .hero-art { max-width: 300px; margin: 34px auto 0; }
+  .hero-art svg { width: 100%; height: auto; display: block; }
+
+  /* LOGO CONCEPT */
+  .logo-concept { text-align: center; background: #fdf1f4; }
+  .logo-card {
+    display: inline-block; margin-top: 26px;
+    background: #fff; border-radius: 18px;
+    padding: 38px 46px 30px;
+    box-shadow: 0 8px 24px rgba(180, 110, 130, 0.14);
+    border-top: 6px solid #f2a9bd;
+  }
+  .logo-card svg { width: clamp(190px, 46vw, 250px); height: auto; display: block; margin: 0 auto; }
+  .logo-concept .caption {
+    color: #86685b; font-style: italic; font-size: 0.92rem;
+    max-width: 44em; margin: 24px auto 0;
+  }
+
+  /* MAP */
+  .map-shell { max-width: 740px; margin: 28px auto 0; }
+  .map-shell iframe {
+    width: 100%; height: 320px; display: block; border: 0;
+    border: 3px solid #f2a9bd; border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(180, 110, 130, 0.14);
+    background: #fff;
+  }
+  .map-link {
+    display: inline-block; margin-top: 18px;
+    background: #d4728c; color: #fff; text-decoration: none;
+    border-radius: 999px; padding: 12px 30px;
+    font-weight: 600; letter-spacing: 0.04em; font-size: 0.92rem;
+    box-shadow: 0 6px 18px rgba(212, 114, 140, 0.35);
+  }
+  .map-link:hover { background: #c05c78; }
+
   footer {
     background: #362420; color: #cbb0a3;
     padding: 32px 24px; text-align: center; font-size: 0.8rem;
@@ -135,6 +171,40 @@
     <span>&#129360; Daily Pan Dulce</span>
     <span>&#129380; Aguas Frescas</span>
     <span>Open Daily 6am–7pm</span>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 280 230" xmlns="http://www.w3.org/2000/svg">
+      <!-- cake stand -->
+      <path d="M118 208 L 162 208 M140 208 L 140 194 M104 194 L 176 194" stroke="#c9a68f" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <!-- bottom tier -->
+      <rect x="72" y="150" width="136" height="44" rx="8" fill="#fbe3c9" stroke="#e4c3a5" stroke-width="2"/>
+      <path d="M72 158 Q 89 172, 106 158 Q 123 172, 140 158 Q 157 172, 174 158 Q 191 172, 208 158 L 208 150 L 72 150 Z" fill="#f2a9bd"/>
+      <!-- middle tier -->
+      <rect x="94" y="108" width="92" height="42" rx="7" fill="#fff" stroke="#e4c3a5" stroke-width="2"/>
+      <path d="M94 116 Q 105.5 128, 117 116 Q 128.5 128, 140 116 Q 151.5 128, 163 116 Q 174.5 128, 186 116 L 186 108 L 94 108 Z" fill="#a9cfe0"/>
+      <!-- top tier -->
+      <rect x="112" y="72" width="56" height="36" rx="6" fill="#fdeee2" stroke="#e4c3a5" stroke-width="2"/>
+      <path d="M112 79 Q 121 89, 130 79 Q 139 89, 148 79 Q 157 89, 166 79 L 168 79 L 168 72 L 112 72 Z" fill="#f5c98a"/>
+      <!-- cherry + leaf -->
+      <circle cx="140" cy="58" r="9" fill="#d4728c"/>
+      <path d="M140 49 C 141 42, 147 40, 152 42" fill="none" stroke="#9dbb7a" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- piping dots -->
+      <circle cx="104" cy="184" r="3" fill="#d4728c"/><circle cx="122" cy="184" r="3" fill="#f5c98a"/>
+      <circle cx="140" cy="184" r="3" fill="#a9cfe0"/><circle cx="158" cy="184" r="3" fill="#c3b1e1"/>
+      <circle cx="176" cy="184" r="3" fill="#d4728c"/>
+      <!-- floating sprinkles / confetti -->
+      <rect x="46" y="80" width="9" height="3.5" rx="1.75" fill="#f2a9bd" transform="rotate(-24 50 82)"/>
+      <rect x="226" y="96" width="9" height="3.5" rx="1.75" fill="#a9cfe0" transform="rotate(20 230 98)"/>
+      <rect x="60" y="126" width="9" height="3.5" rx="1.75" fill="#c3b1e1" transform="rotate(14 64 128)"/>
+      <rect x="218" y="140" width="9" height="3.5" rx="1.75" fill="#f5c98a" transform="rotate(-16 222 142)"/>
+      <circle cx="76" cy="58" r="3" fill="#f5c98a"/>
+      <circle cx="204" cy="52" r="3" fill="#f2a9bd"/>
+      <circle cx="238" cy="70" r="2.5" fill="#c3b1e1"/>
+      <circle cx="40" cy="106" r="2.5" fill="#a9cfe0"/>
+      <!-- concha at the side -->
+      <path d="M216 178 A 22 16 0 0 1 260 178 Z" fill="#e8b07d" stroke="#c9855a" stroke-width="2"/>
+      <path d="M226 166 L 222 178 M238 162 L 238 178 M250 166 L 254 178" stroke="#c9855a" stroke-width="2" stroke-linecap="round"/>
+    </svg>
   </div>
 </header>
 
@@ -196,6 +266,39 @@
     <h2>Come hungry</h2>
     <p class="addr">4972 W Pico Blvd, Los Angeles, CA 90019</p>
     <span class="hours">Open every day &middot; 6:00am – 7:00pm</span>
+    <div class="map-shell">
+      <iframe src="https://maps.google.com/maps?q=Rubio%27s+Bakery+4972+W+Pico+Blvd+Los+Angeles+CA+90019&amp;output=embed" loading="lazy" title="Map to Rubio's Bakery" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Rubio%27s+Bakery+4972+W+Pico+Blvd+Los+Angeles+CA+90019" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="logo-concept">
+  <div class="wrap">
+    <div class="kicker">A Little Extra</div>
+    <h2>A logo direction &mdash; included with your site</h2>
+    <div class="logo-card">
+      <svg viewBox="0 0 240 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Proposed logo concept for Rubio's Bakery">
+        <!-- scalloped medallion like a cake doily -->
+        <circle cx="120" cy="78" r="58" fill="#fdf1f4"/>
+        <circle cx="120" cy="78" r="58" fill="none" stroke="#f2a9bd" stroke-width="2.5"/>
+        <circle cx="120" cy="78" r="50" fill="none" stroke="#f5c98a" stroke-width="1.5" stroke-dasharray="2 6" stroke-linecap="round"/>
+        <!-- little two-tier cake mark -->
+        <rect x="96" y="82" width="48" height="20" rx="4" fill="#fff" stroke="#d4728c" stroke-width="2"/>
+        <path d="M96 86 Q 102 93, 108 86 Q 114 93, 120 86 Q 126 93, 132 86 Q 138 93, 144 86 L 144 82 L 96 82 Z" fill="#f2a9bd"/>
+        <rect x="106" y="62" width="28" height="20" rx="3.5" fill="#fdeee2" stroke="#d4728c" stroke-width="2"/>
+        <path d="M106 66 Q 110.5 72, 115 66 Q 119.5 72, 124 66 Q 128.5 72, 133 66 L 134 66 L 134 62 L 106 62 Z" fill="#a9cfe0"/>
+        <circle cx="120" cy="54" r="5" fill="#d4728c"/>
+        <path d="M120 49 C 121 45, 125 44, 128 45" fill="none" stroke="#9dbb7a" stroke-width="2" stroke-linecap="round"/>
+        <!-- sparkle dots -->
+        <circle cx="84" cy="66" r="2" fill="#f5c98a"/>
+        <circle cx="156" cy="66" r="2" fill="#c3b1e1"/>
+        <circle cx="120" cy="110" r="2" fill="#f2a9bd"/>
+        <text x="120" y="156" text-anchor="middle" fill="#6b4436" font-family="Georgia, 'Times New Roman', serif" font-size="26">Rubio's Bakery</text>
+        <text x="120" y="176" text-anchor="middle" fill="#d4728c" font-family="Georgia, serif" font-style="italic" font-size="11" letter-spacing="2">PAN DULCE &#8226; TRES LECHES &#8226; MID-CITY</text>
+      </svg>
+    </div>
+    <p class="caption">Our proposed concept: a doily-soft medallion with a little celebration cake at its heart &mdash; original artwork we'd happily refine with you. Not the bakery's current branding.</p>
   </div>
 </section>
 

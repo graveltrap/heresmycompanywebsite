@@ -145,6 +145,36 @@
   .age { margin-top: 18px; font-size: 0.8rem; letter-spacing: 0.2em; color: #8f7bab;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
 
+  /* HERO ART */
+  .hero-art { width: clamp(150px, 26vw, 210px); height: auto; margin: 26px auto 0; display: block; }
+
+  /* MAP */
+  .map-frame {
+    width: 100%; height: 340px; border: 1px solid #5b3b85; border-radius: 14px;
+    margin: 30px auto 0; display: block;
+    box-shadow: 0 10px 40px rgba(120, 40, 190, 0.25);
+  }
+  .map-link {
+    display: inline-block; margin-top: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.9rem; letter-spacing: 0.06em; text-decoration: none;
+    color: #f0dc9b; border: 1px solid #c9932e; border-radius: 999px; padding: 10px 24px;
+  }
+  .map-link:hover { background: rgba(201, 147, 46, 0.15); }
+
+  /* LOGO CONCEPT */
+  .logo-section {
+    background: linear-gradient(160deg, #1d1030 0%, #180e26 100%);
+    border-top: 1px solid #3a2454; text-align: center;
+  }
+  .logo-stage {
+    display: inline-block; padding: clamp(28px, 5vw, 48px) clamp(34px, 7vw, 70px);
+    background: #120a1c; border: 1px solid #35204f; border-radius: 18px; margin-top: 14px;
+  }
+  .logo-section .logo-note {
+    max-width: 36em; margin: 24px auto 0; color: #b7a4cd; font-size: 0.95rem;
+  }
+
   footer {
     background: #0a0510; padding: 34px 24px; text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -159,6 +189,35 @@
   <div class="eyebrow">Mid-City &middot; Los Angeles</div>
   <h1>Legacy Lounge</h1>
   <div class="neon">Hookah &middot; Cocktails &middot; Culture</div>
+  <svg class="hero-art" viewBox="0 0 220 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hand-drawn hookah illustration">
+    <defs>
+      <linearGradient id="ll-glass" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#3c205f"/><stop offset="1" stop-color="#221336"/>
+      </linearGradient>
+      <linearGradient id="ll-gold" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#e7c766"/><stop offset="1" stop-color="#c9932e"/>
+      </linearGradient>
+    </defs>
+    <!-- smoke curls -->
+    <path d="M118 34 C 106 26, 118 12, 130 16 C 144 21, 138 36, 126 34" fill="none" stroke="#ff7ae0" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+    <path d="M138 42 C 154 38, 158 22, 147 15" fill="none" stroke="#ff7ae0" stroke-width="2" stroke-linecap="round" opacity="0.45"/>
+    <path d="M100 40 C 88 36, 88 24, 97 20" fill="none" stroke="#ff7ae0" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+    <!-- bowl -->
+    <path d="M94 54 q16 -16 32 0 l-5 15 h-22 z" fill="url(#ll-gold)"/>
+    <rect x="106" y="69" width="8" height="26" rx="3" fill="#e7c766"/>
+    <!-- tray -->
+    <path d="M84 96 h52 l-9 9 h-34 z" fill="#c9932e"/>
+    <!-- stem -->
+    <rect x="107" y="105" width="6" height="38" fill="url(#ll-gold)"/>
+    <!-- vase -->
+    <path d="M110 143 c-27 6 -35 29 -35 45 c0 23 16 37 35 37 c19 0 35 -14 35 -37 c0 -16 -8 -39 -35 -45 z" fill="url(#ll-glass)" stroke="#5b3b85" stroke-width="2"/>
+    <path d="M92 168 c-4 8 -6 16 -5 24" fill="none" stroke="#c99df0" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <!-- hose -->
+    <path d="M107 118 C 58 116, 38 150, 50 186 C 58 209, 84 216, 97 207" fill="none" stroke="#ff7ae0" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="97" cy="207" r="5" fill="#e7c766"/>
+    <!-- glow base -->
+    <ellipse cx="110" cy="234" rx="46" ry="6" fill="rgba(231, 199, 102, 0.16)"/>
+  </svg>
   <p class="tag">A Black woman&#8209;owned lounge on Pico where the lights stay low, the smoke stays smooth, and the night doesn't rush you out the door.</p>
   <div class="hours-pill">Open late — till 1–2am &middot; Closed Mondays &middot; 21+</div>
 </header>
@@ -220,6 +279,32 @@
     <p class="addr">5084 W Pico Blvd, Los Angeles, CA 90019</p>
     <p class="ig">Instagram: @legacylounge_la</p>
     <p class="age">21+ VENUE</p>
+    <iframe class="map-frame" src="https://maps.google.com/maps?q=Legacy%20Lounge%2C%205084%20W%20Pico%20Blvd%2C%20Los%20Angeles%2C%20CA%2090019&amp;output=embed" loading="lazy" title="Map to Legacy Lounge" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Legacy%20Lounge%2C%205084%20W%20Pico%20Blvd%2C%20Los%20Angeles%2C%20CA%2090019" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+  </div>
+</section>
+
+<section class="logo-section">
+  <div class="wrap">
+    <h2>A logo direction — included with your site</h2>
+    <div class="rule" style="margin-left:auto; margin-right:auto; background: linear-gradient(90deg, transparent, #e7c766, transparent);"></div>
+    <div class="logo-stage">
+      <svg viewBox="0 0 300 180" width="260" height="156" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Proposed Legacy Lounge logo concept">
+        <defs>
+          <linearGradient id="ll-lg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#e7c766"/><stop offset="0.5" stop-color="#f6e7ae"/><stop offset="1" stop-color="#c9932e"/>
+          </linearGradient>
+        </defs>
+        <circle cx="150" cy="72" r="54" fill="none" stroke="url(#ll-lg)" stroke-width="2"/>
+        <circle cx="150" cy="72" r="47" fill="none" stroke="#5b3b85" stroke-width="1"/>
+        <text x="132" y="92" font-family="Georgia, serif" font-size="56" fill="url(#ll-lg)" text-anchor="middle">L</text>
+        <text x="163" y="100" font-family="Georgia, serif" font-size="56" font-style="italic" fill="#ff7ae0" text-anchor="middle" opacity="0.9">L</text>
+        <path d="M150 12 l3 6 6 1 -4.5 4 1 6 -5.5 -3 -5.5 3 1 -6 -4.5 -4 6 -1 z" fill="#ff7ae0" opacity="0.9"/>
+        <text x="150" y="152" font-family="Georgia, serif" font-size="20" letter-spacing="6" fill="#f0dc9b" text-anchor="middle">LEGACY LOUNGE</text>
+        <text x="150" y="170" font-family="'Segoe UI', sans-serif" font-size="9" letter-spacing="4" fill="#c99df0" text-anchor="middle">HOOKAH &#183; COCKTAILS &#183; CULTURE</text>
+      </svg>
+    </div>
+    <p class="logo-note">An original monogram concept we designed for this proposal — interlocked L&rsquo;s in gold with a neon-pink echo, ready for signage, glassware, and the IG grid. Yours to keep, refine, or reimagine with us.</p>
   </div>
 </section>
 

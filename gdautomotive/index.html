@@ -52,6 +52,19 @@
     margin-top:1.4rem; display:inline-block; border:1px solid var(--navy); color:var(--navy);
     padding:.5em 1.4em; text-transform:uppercase; letter-spacing:.2em; font-size:.72rem;
   }
+  .crest{display:block; margin:0 auto 1.2rem; width:150px; height:auto;}
+  /* MAP */
+  .map-wrap{max-width:640px; margin:1.8rem auto 0;}
+  .map-frame{width:100%; height:320px; border:1px solid var(--navy); border-radius:8px; display:block; background:var(--paper); box-shadow:6px 6px 0 rgba(30,51,80,.12);}
+  .map-link{display:inline-block; margin-top:.9rem; color:var(--rust); font-weight:700; text-decoration:none; border-bottom:1px solid var(--rust); font-size:.95rem;}
+  .map-link:hover{color:var(--navy); border-bottom-color:var(--navy);}
+  /* LOGO CONCEPT */
+  .logo-sec{background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .logo-frame{
+    max-width:560px; margin:0 auto; text-align:center; border:1px solid var(--navy);
+    background:var(--cream); padding:2rem 1.6rem; box-shadow:6px 6px 0 rgba(176,82,41,.14);
+  }
+  .logo-frame p{max-width:34em; margin:1.2rem auto 0; font-size:.95rem; color:#5a584e; font-style:italic;}
   /* BODY */
   section{padding:clamp(2.4rem,6vw,4rem) 0;}
   h2{
@@ -97,6 +110,25 @@
 <div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by MyBusinessWeb.site. Not affiliated with the business.</div>
 
 <header>
+  <svg class="crest" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Heritage garage crest with piston and laurels">
+    <g fill="none" stroke="#1e3350" stroke-width="3">
+      <path d="M100 12 L148 26 L148 78 Q148 116 100 138 Q52 116 52 78 L52 26 Z"/>
+      <path d="M100 22 L139 33 L139 76 Q139 108 100 127 Q61 108 61 76 L61 33 Z" stroke-width="1.5" stroke="#b05229"/>
+    </g>
+    <g stroke="#1e3350" stroke-width="3" fill="none" stroke-linecap="round">
+      <rect x="86" y="46" width="28" height="22" rx="3"/>
+      <line x1="86" y1="54" x2="80" y2="54"/><line x1="114" y1="54" x2="120" y2="54"/>
+      <line x1="86" y1="62" x2="80" y2="62"/><line x1="114" y1="62" x2="120" y2="62"/>
+      <line x1="96" y1="68" x2="96" y2="82"/><line x1="104" y1="68" x2="104" y2="82"/>
+      <circle cx="100" cy="90" r="8"/>
+    </g>
+    <text x="100" y="115" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#b05229" font-style="italic">G &amp; D</text>
+    <g fill="none" stroke="#b05229" stroke-width="2" stroke-linecap="round">
+      <path d="M40 128 Q22 108 24 80"/><path d="M160 128 Q178 108 176 80"/>
+      <path d="M33 120 l-9 3 M28 106 l-9 2 M25 92 l-9 1"/>
+      <path d="M167 120 l9 3 M172 106 l9 2 M175 92 l9 1"/>
+    </g>
+  </svg>
   <span class="est">Family Owned &amp; Operated</span>
   <h1>G <span class="amp">&amp;</span> D Automotive</h1>
   <p class="tagline">Honest wrench-work on Pico Boulevard — the way a neighborhood shop should be.</p>
@@ -150,6 +182,30 @@
       <h3>Come By the Shop</h3>
       <p class="addr">5650 W Pico Blvd<br>Los Angeles, CA 90019</p>
       <p style="margin-top:.8rem; font-style:italic; color:#5a584e;">On Pico in Mid-City — stop in and talk to us about your car.</p>
+    </div>
+    <div class="map-wrap">
+      <iframe class="map-frame" src="https://maps.google.com/maps?q=G%20%26%20D%20Automotive%2C%205650%20W%20Pico%20Blvd%2C%20Los%20Angeles%2C%20CA%2090019&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to G &amp; D Automotive" allowfullscreen></iframe>
+      <div style="text-align:center;"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=G%20%26%20D%20Automotive%2C%205650%20W%20Pico%20Blvd%2C%20Los%20Angeles%2C%20CA%2090019" target="_blank" rel="noopener">Open in Google Maps &rarr;</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="logo-sec">
+  <div class="wrap">
+    <h2>A Logo Direction — Included with Your Site</h2>
+    <p class="h2sub">Our proposed concept, sketched for this proposal</p>
+    <div class="logo-frame">
+      <svg viewBox="0 0 260 150" width="230" height="133" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Proposed G &amp; D Automotive heritage logo concept">
+        <rect x="6" y="6" width="248" height="138" fill="none" stroke="#1e3350" stroke-width="3"/>
+        <rect x="12" y="12" width="236" height="126" fill="none" stroke="#b05229" stroke-width="1"/>
+        <text x="130" y="40" text-anchor="middle" font-family="Georgia,serif" font-size="11" letter-spacing="5" fill="#b05229">FAMILY OWNED</text>
+        <text x="130" y="85" text-anchor="middle" font-family="Georgia,serif" font-size="40" font-weight="700" fill="#1e3350">G <tspan fill="#b05229" font-style="italic">&amp;</tspan> D</text>
+        <text x="130" y="110" text-anchor="middle" font-family="Georgia,serif" font-size="15" letter-spacing="6" fill="#1e3350">AUTOMOTIVE</text>
+        <line x1="55" y1="122" x2="115" y2="122" stroke="#b05229" stroke-width="1"/>
+        <line x1="145" y1="122" x2="205" y2="122" stroke="#b05229" stroke-width="1"/>
+        <text x="130" y="126" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#b05229">&#10038;</text>
+      </svg>
+      <p>A heritage sign-painter's plate in the shop's navy and rust — at home on letterhead, a work order, or the sign out front. It's an original concept and yours with the site; we'll gladly refine it together.</p>
     </div>
   </div>
 </section>

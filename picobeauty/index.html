@@ -108,6 +108,27 @@
   .visit address { font-style: normal; font-size: clamp(1.05rem, 2.4vw, 1.25rem); color: #f3e9f7; margin-top: 1rem; }
   .visit p { color: #b99cd1; margin-top: 0.6rem; font-size: 0.95rem; }
 
+  .hero-art { display: block; margin: 0 auto 1rem; }
+  .card { transition: transform 0.15s ease, border-color 0.15s ease; }
+  .card:hover { transform: translateY(-3px); border-color: #d4a43c; }
+  .map-frame { margin-top: 1.6rem; }
+  .map-frame iframe {
+    display: block; width: 100%; height: 320px;
+    border: 2px solid #d4a43c; border-radius: 16px;
+  }
+  .map-link {
+    display: inline-block; margin-top: 0.9rem; color: #f3d98a; font-weight: 700;
+    text-decoration: none; border-bottom: 2px solid #d4a43c; padding-bottom: 2px;
+    letter-spacing: 0.03em;
+  }
+  .map-link:hover { color: #ffffff; }
+  .logo-section { text-align: center; }
+  .logo-plate {
+    display: inline-block; background: linear-gradient(170deg, #3b2153, #321c47);
+    border: 1px solid #d4a43c; border-radius: 16px;
+    padding: 2.2rem 2.6rem; margin-top: 1.6rem;
+  }
+  .logo-note { color: #b99cd1; max-width: 40rem; margin: 0.4rem auto 0; font-size: 0.95rem; }
   footer {
     padding: 1.8rem 20px; text-align: center;
     font-size: 0.78rem; color: #8f7aa5; background: #14091f;
@@ -118,7 +139,24 @@
 <div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by MyBusinessWeb.site. Not affiliated with the business.</div>
 
 <header class="hero">
-  <div class="crown">&#128081;</div>
+  <svg class="hero-art" width="170" height="96" viewBox="0 0 170 96" aria-hidden="true" role="img">
+    <!-- gold crown resting on flowing curls -->
+    <path d="M50 44 L58 20 L72 38 L85 14 L98 38 L112 20 L120 44 Z" fill="#d4a43c"/>
+    <rect x="50" y="44" width="70" height="8" rx="3" fill="#f3d98a"/>
+    <circle cx="58" cy="18" r="4" fill="#f3d98a"/>
+    <circle cx="85" cy="11" r="4.5" fill="#f3d98a"/>
+    <circle cx="112" cy="18" r="4" fill="#f3d98a"/>
+    <g fill="none" stroke="#9a5fc0" stroke-width="4" stroke-linecap="round">
+      <path d="M40 66 c0 -10 14 -10 14 0 s14 10 14 0"/>
+      <path d="M72 72 c0 -10 14 -10 14 0 s14 10 14 0"/>
+      <path d="M104 66 c0 -10 14 -10 14 0"/>
+    </g>
+    <g fill="#f3d98a">
+      <path d="M22 30 l2.5 5 5 2.5 -5 2.5 -2.5 5 -2.5 -5 -5 -2.5 5 -2.5 z"/>
+      <path d="M146 36 l2 4 4 2 -4 2 -2 4 -2 -4 -4 -2 4 -2 z"/>
+    </g>
+    <path d="M55 88 h60" stroke="#55357a" stroke-width="3" stroke-linecap="round"/>
+  </svg>
   <h1>Pico Beauty Supplies &amp; Salon</h1>
   <p class="tag">The neighborhood's home for textured hair &mdash; shop the shelves, then sit in the chair. Everything your crown deserves, all under one roof on Pico.</p>
   <div class="chips">
@@ -205,6 +243,29 @@
     <h2>Visit the Hub</h2>
     <address>4972 W Pico Blvd, Ste 103, Los Angeles, CA 90019</address>
     <p>In the plaza at Pico &amp; La Brea &mdash; a trusted stop for the neighborhood's hair care.</p>
+    <div class="map-frame">
+      <iframe src="https://maps.google.com/maps?q=Pico+Beauty+Supplies+%26+Salon+4972+W+Pico+Blvd+Ste+103+Los+Angeles+CA+90019&output=embed" loading="lazy" title="Map to Pico Beauty Supplies &amp; Salon" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Pico+Beauty+Supplies+%26+Salon+4972+W+Pico+Blvd+Ste+103+Los+Angeles+CA+90019" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="logo-section">
+  <div class="wrap">
+    <h2>A Logo Direction &mdash; Included With Your Site</h2>
+    <p class="logo-note">Every proposal comes with an original mark, no extra charge. Our concept for Pico Beauty: a crowned monogram in the store's royal gold and plum &mdash; made to shine on a storefront sign, a price tag, or a satin bonnet label.</p>
+    <div class="logo-plate">
+      <svg width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="Proposed Pico Beauty crowned monogram logo concept">
+        <circle cx="90" cy="92" r="62" fill="none" stroke="#d4a43c" stroke-width="3"/>
+        <circle cx="90" cy="92" r="54" fill="none" stroke="#7a5a9e" stroke-width="1.5" stroke-dasharray="3 5"/>
+        <path d="M66 52 L72 36 L81 48 L90 32 L99 48 L108 36 L114 52 Z" fill="#d4a43c"/>
+        <rect x="66" y="52" width="48" height="6" rx="3" fill="#f3d98a"/>
+        <text x="90" y="106" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="42" fill="#f3d98a">PB</text>
+        <path d="M62 120 h56" stroke="#7a5a9e" stroke-width="2"/>
+        <text x="90" y="138" text-anchor="middle" font-family="'Trebuchet MS',Tahoma,sans-serif" font-weight="700" font-size="10.5" letter-spacing="3" fill="#e2cef0">PICO BEAUTY</text>
+        <text x="90" y="172" text-anchor="middle" font-family="'Trebuchet MS',Tahoma,sans-serif" font-size="8.5" letter-spacing="2.5" fill="#b99cd1">SUPPLIES &#183; SALON</text>
+      </svg>
+    </div>
   </div>
 </section>
 

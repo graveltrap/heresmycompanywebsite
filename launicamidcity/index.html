@@ -116,6 +116,41 @@
   .visit .addr { font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.1rem; font-weight: 700; color: #3a1408; margin-top: 6px; }
   .visit p.note { font-family: Georgia, serif; font-style: italic; font-weight: 400; color: #8a4a22; margin-top: 10px; }
 
+  /* HERO ART */
+  .hero-art { max-width: 340px; margin: 34px auto 0; }
+  .hero-art svg { width: 100%; height: auto; display: block; }
+
+  /* LOGO CONCEPT */
+  .logo-concept { text-align: center; background: #fff6ea; }
+  .logo-card {
+    display: inline-block; margin-top: 30px;
+    background: #fffdf7; border: 3px solid #3a1408; border-radius: 6px;
+    box-shadow: 8px 8px 0 #f5a623;
+    padding: 34px 44px 26px;
+  }
+  .logo-card svg { width: clamp(190px, 46vw, 250px); height: auto; display: block; margin: 0 auto; }
+  .logo-concept .caption {
+    font-family: Georgia, serif; font-style: italic; font-weight: 400;
+    color: #8a4a22; font-size: 0.92rem; max-width: 44em; margin: 26px auto 0;
+  }
+
+  /* MAP */
+  .map-shell { max-width: 760px; margin: 30px auto 0; }
+  .map-shell iframe {
+    width: 100%; height: 330px; display: block; border: 0;
+    border: 4px solid #a81208; border-radius: 10px;
+    box-shadow: 8px 8px 0 #f5a623;
+    background: #fffdf7;
+  }
+  .map-link {
+    display: inline-block; margin-top: 22px;
+    background: #a81208; color: #ffe9c2; text-decoration: none;
+    font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 900;
+    padding: 12px 24px; border: 2px dashed #f5a623;
+    transform: rotate(-1deg);
+  }
+  .map-link:hover { background: #c8340e; }
+
   footer {
     background: #1c0a04; color: #cfa87e;
     font-family: 'Segoe UI', Arial, sans-serif; font-weight: 400;
@@ -134,6 +169,36 @@
     <span>&#128293; Red-Oil Consom&eacute;</span>
     <span>&#129472; Quesatacos</span>
     <span>&#127805; Handmade Tortillas</span>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg">
+      <!-- steam -->
+      <path d="M140 58 C 132 44, 148 36, 140 20" fill="none" stroke="#ffe9c2" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+      <path d="M162 60 C 154 46, 172 38, 162 20" fill="none" stroke="#ffd23f" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+      <path d="M184 58 C 176 44, 192 36, 184 22" fill="none" stroke="#ffe9c2" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+      <!-- bowl of consome -->
+      <path d="M96 78 L 226 78 C 224 118, 200 142, 161 142 C 122 142, 98 118, 96 78 Z" fill="#5c1200" stroke="#ffd23f" stroke-width="4"/>
+      <ellipse cx="161" cy="78" rx="65" ry="12" fill="#c8340e" stroke="#ffd23f" stroke-width="3"/>
+      <!-- chile-oil sheen -->
+      <ellipse cx="140" cy="76" rx="14" ry="3.5" fill="#f5a623" opacity="0.85"/>
+      <ellipse cx="182" cy="80" rx="10" ry="2.8" fill="#f5a623" opacity="0.7"/>
+      <circle cx="163" cy="74" r="2.5" fill="#ffd23f"/>
+      <!-- dipped quesataco -->
+      <path d="M226 62 C 246 40, 282 44, 292 66 L 259 82 Z" fill="#ffd23f" stroke="#5c1200" stroke-width="3.5"/>
+      <path d="M259 82 L 292 66 C 288 76, 272 84, 259 82 Z" fill="#c8340e"/>
+      <circle cx="266" cy="60" r="2.5" fill="#c8340e"/>
+      <circle cx="277" cy="56" r="2.2" fill="#a81208"/>
+      <!-- lime wedge -->
+      <path d="M52 116 A 22 22 0 0 1 96 116 Z" fill="#8fae3a" stroke="#5c1200" stroke-width="3"/>
+      <path d="M60 112 A 14 14 0 0 1 88 112 Z" fill="#d8e79a"/>
+      <path d="M74 112 L 74 100 M64 112 L 68 102 M84 112 L 80 102" stroke="#8fae3a" stroke-width="1.6"/>
+      <!-- base plate line -->
+      <path d="M84 152 L 238 152" stroke="#ffd23f" stroke-width="4" stroke-linecap="round"/>
+      <path d="M104 164 L 218 164" stroke="#f5a623" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+      <!-- pepper accents -->
+      <path d="M34 66 C 26 70, 24 84, 32 90 C 38 94, 44 88, 42 80 C 41 74, 38 68, 34 66 Z" fill="#c8340e" stroke="#5c1200" stroke-width="2"/>
+      <path d="M34 66 C 33 62, 36 60, 40 60" fill="none" stroke="#8fae3a" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
   </div>
 </header>
 
@@ -187,6 +252,41 @@
     <h2>Ll&eacute;gale</h2>
     <p class="addr">5871 Venice Blvd, Los Angeles, CA 90019</p>
     <p class="note">Mid-City outpost &mdash; original en Boyle Heights.</p>
+    <div class="map-shell">
+      <iframe src="https://maps.google.com/maps?q=Tacos+y+Birria+La+Unica+5871+Venice+Blvd+Los+Angeles+CA+90019&amp;output=embed" loading="lazy" title="Map to Tacos y Birria La Unica" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Tacos+y+Birria+La+Unica+5871+Venice+Blvd+Los+Angeles+CA+90019" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="logo-concept">
+  <div class="wrap">
+    <h2>A Logo Direction &mdash; Included With Your Site</h2>
+    <p class="sub-es">Un concepto original, dibujado para La Unica.</p>
+    <div class="logo-card">
+      <svg viewBox="0 0 240 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Proposed logo concept for Tacos y Birria La Unica">
+        <!-- badge -->
+        <circle cx="120" cy="96" r="84" fill="#a81208"/>
+        <circle cx="120" cy="96" r="84" fill="none" stroke="#3a1408" stroke-width="5"/>
+        <circle cx="120" cy="96" r="74" fill="none" stroke="#f5a623" stroke-width="3" stroke-dasharray="10 6"/>
+        <!-- steam -->
+        <path d="M104 66 C 99 58, 108 54, 103 44" fill="none" stroke="#ffe9c2" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+        <path d="M120 68 C 115 58, 125 54, 119 42" fill="none" stroke="#ffd23f" stroke-width="3" stroke-linecap="round"/>
+        <path d="M136 66 C 131 58, 140 54, 135 46" fill="none" stroke="#ffe9c2" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+        <!-- bowl -->
+        <path d="M84 80 L 156 80 C 155 104, 141 118, 120 118 C 99 118, 85 104, 84 80 Z" fill="#5c1200" stroke="#ffd23f" stroke-width="3"/>
+        <ellipse cx="120" cy="80" rx="36" ry="7" fill="#c8340e" stroke="#ffd23f" stroke-width="2.5"/>
+        <ellipse cx="112" cy="79" rx="8" ry="2.2" fill="#f5a623"/>
+        <!-- arched wordmarks -->
+        <text x="120" y="146" text-anchor="middle" fill="#ffd23f" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="24" letter-spacing="1">LA UNICA</text>
+        <text x="120" y="163" text-anchor="middle" fill="#ffe9c2" font-family="Georgia, serif" font-style="italic" font-size="10.5" letter-spacing="2">TACOS Y BIRRIA &#8226; DESDE 2017</text>
+        <!-- stars -->
+        <path d="M52 96 l 3.5 7 l -3.5 7 l -3.5 -7 Z" fill="#f5a623"/>
+        <path d="M188 96 l 3.5 7 l -3.5 7 l -3.5 -7 Z" fill="#f5a623"/>
+        <text x="120" y="200" text-anchor="middle" fill="#8a4a22" font-family="Georgia, serif" font-style="italic" font-size="10">el sabor que cruz&#243; la ciudad</text>
+      </svg>
+    </div>
+    <p class="caption">Our proposed concept: a hand-painted-sign badge with the famous red bowl at the center &mdash; original artwork, not the taquer&iacute;a's current branding. We'd refine it with you.</p>
   </div>
 </section>
 

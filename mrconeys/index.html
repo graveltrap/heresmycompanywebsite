@@ -100,6 +100,31 @@
   .visit-card .icn{font-size:1.8rem;display:block;margin-bottom:.6rem;}
   .visit-card h3{font-size:1.05rem;margin-bottom:.4rem;}
   .visit-card p{font-size:.95rem;color:#4a5261;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;}
+  .hero-art{display:block;margin:0 auto 1.4rem;}
+  .svc{transition:transform .18s ease, box-shadow .18s ease;}
+  .svc:hover{transform:translateY(-4px);box-shadow:0 8px 18px rgba(30,36,48,.12);}
+  .visit-card{transition:transform .18s ease, box-shadow .18s ease;}
+  .visit-card:hover{transform:translateY(-3px);box-shadow:0 6px 14px rgba(30,36,48,.1);}
+  .map-frame{margin-top:2rem;}
+  .map-frame iframe{
+    display:block;width:100%;height:330px;border:0;border-radius:8px;
+    border:3px solid var(--pole-blue);outline:1px solid #e4ddd0;
+  }
+  .map-link{
+    display:inline-block;margin-top:.8rem;color:var(--pole-blue);font-weight:700;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+    font-size:.9rem;text-decoration:none;border-bottom:2px solid var(--gold);
+  }
+  .map-link:hover{color:var(--pole-red);}
+  .logo-section{background:#fff;border-top:1px solid #e4ddd0;text-align:center;}
+  .logo-section .concept-note{
+    max-width:36rem;margin:1.25rem auto 0;color:#4a5261;font-size:.95rem;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+  }
+  .logo-plate{
+    display:inline-block;background:var(--cream);border:1px solid #e4ddd0;border-radius:10px;
+    padding:2.25rem 3rem;margin-top:2rem;box-shadow:0 4px 14px rgba(30,36,48,.08);
+  }
   footer{
     background:#14181f;color:#9aa2b1;text-align:center;
     font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
@@ -112,6 +137,25 @@
 
 <div class="pole-stripe" aria-hidden="true"></div>
 <header class="hero">
+  <svg class="hero-art" width="92" height="150" viewBox="0 0 92 150" aria-hidden="true" role="img">
+    <!-- hand-drawn barber pole -->
+    <ellipse cx="46" cy="146" rx="26" ry="4" fill="#0e121a"/>
+    <rect x="30" y="10" width="32" height="14" rx="6" fill="#d9a441" stroke="#b3822c" stroke-width="1.5"/>
+    <rect x="30" y="126" width="32" height="14" rx="6" fill="#d9a441" stroke="#b3822c" stroke-width="1.5"/>
+    <circle cx="46" cy="8" r="6.5" fill="#d9a441" stroke="#b3822c" stroke-width="1.5"/>
+    <g>
+      <rect x="33" y="24" width="26" height="102" rx="12" fill="#faf6ef" stroke="#2a3245" stroke-width="2"/>
+      <clipPath id="poleClip"><rect x="34.5" y="25.5" width="23" height="99" rx="11"/></clipPath>
+      <g clip-path="url(#poleClip)">
+        <path d="M20 40 L72 18 L72 30 L20 52 Z" fill="#c8102e"/>
+        <path d="M20 64 L72 42 L72 54 L20 76 Z" fill="#1b3f8f"/>
+        <path d="M20 88 L72 66 L72 78 L20 100 Z" fill="#c8102e"/>
+        <path d="M20 112 L72 90 L72 102 L20 124 Z" fill="#1b3f8f"/>
+        <path d="M20 136 L72 114 L72 126 L20 148 Z" fill="#c8102e"/>
+        <rect x="35" y="25" width="6" height="100" fill="#ffffff" opacity=".28"/>
+      </g>
+    </g>
+  </svg>
   <span class="est">Mid-City Los Angeles &middot; Est. in the Neighborhood</span>
   <h1>Mr. Coney<span class="apos">'</span>s Barbershop</h1>
   <p class="hero-sub">The chair everybody in Mid-City knows. Fresh fades, honest conversation, and a shop that feels like family — right on Pico.</p>
@@ -154,6 +198,33 @@
       <div class="visit-card"><span class="icn">📍</span><h3>Find Us</h3><p>5076 1/2 W Pico Blvd<br>Los Angeles, CA 90019<br>Mid-City, right on the boulevard.</p></div>
       <div class="visit-card"><span class="icn">💈</span><h3>Walk-Ins Welcome</h3><p>No appointment needed. Come as you are, leave sharper than you came.</p></div>
       <div class="visit-card"><span class="icn">📸</span><h3>See the Work</h3><p>Fresh cuts posted on Instagram — @mrconeysbarbershop</p></div>
+    </div>
+    <div class="map-frame">
+      <iframe src="https://maps.google.com/maps?q=Mr.%20Coney%27s%20Barbershop%205076%201%2F2%20W%20Pico%20Blvd%20Los%20Angeles%20CA%2090019&output=embed" loading="lazy" title="Map to Mr. Coney's Barbershop" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Mr.%20Coney%27s%20Barbershop%205076%201%2F2%20W%20Pico%20Blvd%20Los%20Angeles%20CA%2090019" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="logo-section">
+  <div class="wrap">
+    <h2>A Logo Direction — Included With Your Site</h2>
+    <div class="rule"></div>
+    <p class="concept-note">One original mark we'd propose for the shop — a classic chair-back badge built on the pole colors. This is our concept sketch, not your existing logo, and it's yours to keep or toss.</p>
+    <div class="logo-plate">
+      <svg width="220" height="220" viewBox="0 0 220 220" role="img" aria-label="Proposed Mr. Coney's badge logo concept">
+        <circle cx="110" cy="110" r="104" fill="#1e2430"/>
+        <circle cx="110" cy="110" r="96" fill="none" stroke="#d9a441" stroke-width="2"/>
+        <circle cx="110" cy="110" r="88" fill="none" stroke="#d9a441" stroke-width="1" opacity=".5"/>
+        <text x="110" y="96" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="52" fill="#faf6ef" font-weight="bold">MC</text>
+        <g transform="translate(110,116)">
+          <path d="M-46 0 L46 0" stroke="#c8102e" stroke-width="5"/>
+          <path d="M-46 8 L46 8" stroke="#faf6ef" stroke-width="5"/>
+          <path d="M-46 16 L46 16" stroke="#1b3f8f" stroke-width="5"/>
+        </g>
+        <text x="110" y="162" text-anchor="middle" font-family="Georgia, serif" font-size="13" letter-spacing="3" fill="#d9a441">MR. CONEY'S</text>
+        <text x="110" y="180" text-anchor="middle" font-family="Georgia, serif" font-size="9" letter-spacing="4" fill="#9aa2b1">BARBERSHOP &#183; MID-CITY LA</text>
+      </svg>
     </div>
   </div>
 </section>

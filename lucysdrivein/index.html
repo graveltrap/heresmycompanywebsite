@@ -127,6 +127,39 @@
     padding: 12px 26px; transform: rotate(-1deg);
   }
 
+  /* HERO ART — googie starburst sign */
+  .hero-art { max-width: 340px; margin: 38px auto -6px; }
+  .hero-art svg { width: 100%; height: auto; display: block; }
+
+  /* LOGO CONCEPT */
+  .logo-concept { text-align: center; background: #fdf6e3; }
+  .logo-card {
+    display: inline-block; margin-top: 28px;
+    background: #16233d; border: 3px solid #33241a; border-radius: 12px;
+    box-shadow: 5px 5px 0 rgba(200, 23, 10, 0.25);
+    padding: 34px 44px 28px;
+  }
+  .logo-card svg { width: clamp(200px, 48vw, 260px); height: auto; display: block; margin: 0 auto; }
+  .logo-concept .caption { color: #8a6a4a; font-size: 0.9rem; max-width: 44em; margin: 24px auto 0; font-style: italic; }
+
+  /* MAP */
+  .map-shell { max-width: 760px; margin: 30px auto 0; }
+  .map-shell iframe {
+    width: 100%; height: 330px; display: block; border: 0;
+    border: 4px solid #16233d; border-radius: 12px;
+    box-shadow: 5px 5px 0 rgba(200, 23, 10, 0.25);
+    background: #fffdf5;
+  }
+  .map-link {
+    display: inline-block; margin-top: 20px;
+    background: #ffd23f; color: #7a130c; text-decoration: none;
+    font-weight: 900; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.85rem;
+    padding: 12px 26px; border: 3px solid #33241a;
+    box-shadow: 3px 3px 0 #b8860b;
+    transform: rotate(-1deg);
+  }
+  .map-link:hover { background: #ffe272; }
+
   footer {
     background: #201510; color: #bfa286;
     padding: 32px 24px; text-align: center; font-size: 0.8rem;
@@ -141,6 +174,37 @@
   <h1>Lucy's</h1>
   <div class="drive">Drive In</div>
   <div class="marquee-24">&#9733; OPEN <span class="blink">24 HOURS</span> &middot; SINCE 1969 &#9733;</div>
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+      <!-- googie starburst -->
+      <g stroke="#ffd23f" stroke-width="4" stroke-linecap="round">
+        <path d="M160 78 L 160 22"/><path d="M160 78 L 160 134"/>
+        <path d="M160 78 L 112 78"/><path d="M160 78 L 208 78"/>
+        <path d="M160 78 L 126 44"/><path d="M160 78 L 194 112"/>
+        <path d="M160 78 L 194 44"/><path d="M160 78 L 126 112"/>
+      </g>
+      <g fill="#ffd23f">
+        <circle cx="160" cy="22" r="5"/><circle cx="160" cy="134" r="5"/>
+        <circle cx="112" cy="78" r="5"/><circle cx="208" cy="78" r="5"/>
+        <circle cx="126" cy="44" r="4"/><circle cx="194" cy="112" r="4"/>
+        <circle cx="194" cy="44" r="4"/><circle cx="126" cy="112" r="4"/>
+      </g>
+      <circle cx="160" cy="78" r="13" fill="#ff4b3e"/>
+      <circle cx="160" cy="78" r="13" fill="none" stroke="#fff3c4" stroke-width="3"/>
+      <!-- boomerang swoosh -->
+      <path d="M46 148 C 100 108, 220 108, 274 148" fill="none" stroke="#9fd8ef" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+      <path d="M60 160 C 108 126, 212 126, 260 160" fill="none" stroke="#ff4b3e" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+      <!-- retro arrow into the lot -->
+      <path d="M236 36 L 286 36 L 286 26 L 306 44 L 286 62 L 286 52 L 236 52 Z" fill="#ff4b3e" stroke="#7a130c" stroke-width="2.5"/>
+      <circle cx="246" cy="44" r="2.6" fill="#fff3c4"/><circle cx="260" cy="44" r="2.6" fill="#fff3c4"/><circle cx="274" cy="44" r="2.6" fill="#fff3c4"/>
+      <!-- little satellite stars -->
+      <path d="M48 48 l 3 6 l -3 6 l -3 -6 Z" fill="#9fd8ef"/>
+      <path d="M78 88 l 2.5 5 l -2.5 5 l -2.5 -5 Z" fill="#ffd23f"/>
+      <path d="M270 92 l 2.5 5 l -2.5 5 l -2.5 -5 Z" fill="#9fd8ef"/>
+      <!-- roadline -->
+      <path d="M92 178 L 118 178 M136 178 L 162 178 M180 178 L 206 178 M224 178 L 250 178" stroke="#ffd23f" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+    </svg>
+  </div>
   <div class="checker"></div>
 </header>
 
@@ -193,6 +257,40 @@
     <p class="addr">1373 S La Brea Ave, Los Angeles, CA 90019</p>
     <p style="color:#8a6a4a; margin-top:6px;">Corner of La Brea &amp; Pico</p>
     <span class="always">Open 24 Hours &middot; 365 Days</span>
+    <div class="map-shell">
+      <iframe src="https://maps.google.com/maps?q=Lucy%27s+Drive+In+1373+S+La+Brea+Ave+Los+Angeles+CA+90019&amp;output=embed" loading="lazy" title="Map to Lucy's Drive In" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Lucy%27s+Drive+In+1373+S+La+Brea+Ave+Los+Angeles+CA+90019" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="logo-concept">
+  <div class="wrap">
+    <h2>A Logo Direction &mdash; Included With Your Site</h2>
+    <p class="subline">One original roadside mark, drawn in the sign-shop spirit of 1969.</p>
+    <div class="logo-card">
+      <svg viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Proposed logo concept for Lucy's Drive In">
+        <!-- starburst behind -->
+        <g stroke="#ffd23f" stroke-width="3" stroke-linecap="round" opacity="0.9">
+          <path d="M130 70 L 130 24"/><path d="M130 70 L 84 70"/><path d="M130 70 L 176 70"/>
+          <path d="M130 70 L 98 40"/><path d="M130 70 L 162 40"/>
+          <path d="M130 70 L 98 100"/><path d="M130 70 L 162 100"/>
+        </g>
+        <g fill="#ffd23f">
+          <circle cx="130" cy="24" r="4"/><circle cx="84" cy="70" r="4"/><circle cx="176" cy="70" r="4"/>
+          <circle cx="98" cy="40" r="3.4"/><circle cx="162" cy="40" r="3.4"/>
+          <circle cx="98" cy="100" r="3.4"/><circle cx="162" cy="100" r="3.4"/>
+        </g>
+        <!-- neon script name -->
+        <text x="130" y="106" text-anchor="middle" fill="#ff4b3e" font-family="'Trebuchet MS', 'Segoe UI', Arial, sans-serif" font-style="italic" font-weight="900" font-size="52"
+              style="text-shadow: 0 0 8px rgba(255,90,70,0.8);">Lucy's</text>
+        <text x="130" y="132" text-anchor="middle" fill="#9fd8ef" font-family="'Trebuchet MS', Arial, sans-serif" font-weight="700" font-size="15" letter-spacing="10">DRIVE IN</text>
+        <!-- boomerang underline -->
+        <path d="M58 152 C 100 136, 160 136, 202 152" fill="none" stroke="#9fd8ef" stroke-width="3.5" stroke-linecap="round"/>
+        <text x="130" y="180" text-anchor="middle" fill="#ffd23f" font-family="'Trebuchet MS', Arial, sans-serif" font-weight="700" font-size="10.5" letter-spacing="4">SINCE 1969 &#8226; LA BREA &amp; PICO</text>
+      </svg>
+    </div>
+    <p class="caption">Our proposed concept: a neon-script roadside sign with a googie starburst &mdash; original artwork inspired by the era, not Lucy's current signage. We'd fine-tune it with you.</p>
   </div>
 </section>
 

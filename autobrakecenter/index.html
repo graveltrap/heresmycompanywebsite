@@ -49,6 +49,20 @@
     display:inline-block; margin-top:1.2rem; background:var(--white); border:3px solid var(--black);
     padding:.4em 1em; font-size:.9rem;
   }
+  .hero-flex{display:flex; align-items:center; gap:2.4rem; flex-wrap:wrap;}
+  .hero-copy{flex:1 1 340px; min-width:0;}
+  .hero-art{flex:0 1 220px; width:100%; max-width:220px; height:auto; margin:0 auto; filter:drop-shadow(6px 8px 0 rgba(17,17,17,.18));}
+  /* MAP */
+  .map-block{margin-top:1.2rem;}
+  .map-frame{width:100%; height:330px; border:4px solid var(--black); display:block; background:var(--gray); box-shadow:8px 8px 0 var(--yellow);}
+  .map-link{display:inline-block; margin-top:1.1rem; background:var(--black); color:var(--yellow); font-weight:900; text-transform:uppercase; text-decoration:none; padding:.55em 1.1em; letter-spacing:.06em; font-size:.85rem;}
+  .map-link:hover{background:var(--yellow); color:var(--black); outline:3px solid var(--black);}
+  /* LOGO CONCEPT */
+  .logo-sec{background:var(--gray);}
+  .logo-box{display:flex; align-items:center; gap:1.8rem; flex-wrap:wrap; border:3px solid var(--black); background:var(--white); padding:1.8rem; box-shadow:8px 8px 0 var(--yellow);}
+  .logo-box svg{flex:0 0 auto; margin:0 auto;}
+  .logo-box .note{flex:1 1 280px; font-size:.95rem;}
+  .logo-box .note strong{display:block; text-transform:uppercase; margin-bottom:.4rem; font-family:"Arial Black",Arial,sans-serif;}
   /* WHY PAY MORE band */
   .band{
     background:var(--black); color:var(--yellow); text-align:center;
@@ -96,12 +110,34 @@
 <div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by MyBusinessWeb.site. Not affiliated with the business.</div>
 
 <header>
-  <div class="wrap">
-    <span class="stencil">Pico Blvd &middot; Los Angeles</span>
-    <h1>Auto <span>Brake</span> Center</h1>
-    <p class="hero-pitch">Brakes done right. Prices done better.</p>
-    <p class="hero-sub txt">Discount brake parts at the counter, expert installation in the bay. One stop, one honest price — <em>frenos buenos, precios justos.</em></p>
-    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#189; ~4.5 stars from the neighborhood</span>
+  <div class="wrap hero-flex">
+    <div class="hero-copy">
+      <span class="stencil">Pico Blvd &middot; Los Angeles</span>
+      <h1>Auto <span>Brake</span> Center</h1>
+      <p class="hero-pitch">Brakes done right. Prices done better.</p>
+      <p class="hero-sub txt">Discount brake parts at the counter, expert installation in the bay. One stop, one honest price — <em>frenos buenos, precios justos.</em></p>
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#189; ~4.5 stars from the neighborhood</span>
+    </div>
+    <svg class="hero-art" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Brake rotor and caliper illustration">
+      <circle cx="120" cy="124" r="100" fill="#111111"/>
+      <circle cx="120" cy="124" r="90" fill="#ffffff" stroke="#111111" stroke-width="4"/>
+      <circle cx="120" cy="124" r="86" fill="none" stroke="#111111" stroke-width="1.5"/>
+      <g fill="#111111">
+        <circle cx="120" cy="52" r="5"/><circle cx="171" cy="73" r="5"/><circle cx="192" cy="124" r="5"/>
+        <circle cx="171" cy="175" r="5"/><circle cx="120" cy="196" r="5"/><circle cx="69" cy="175" r="5"/>
+        <circle cx="48" cy="124" r="5"/><circle cx="69" cy="73" r="5"/>
+      </g>
+      <circle cx="120" cy="124" r="46" fill="#111111"/>
+      <circle cx="120" cy="124" r="38" fill="#ffd400" stroke="#111111" stroke-width="3"/>
+      <g fill="#111111">
+        <circle cx="120" cy="99" r="5.5"/><circle cx="144" cy="117" r="5.5"/><circle cx="135" cy="145" r="5.5"/>
+        <circle cx="105" cy="145" r="5.5"/><circle cx="96" cy="117" r="5.5"/>
+      </g>
+      <circle cx="120" cy="124" r="9" fill="#111111"/>
+      <path d="M120 14 a110 110 0 0 1 96 57 l-26 15 a80 80 0 0 0 -70 -42 z" fill="#ffd400" stroke="#111111" stroke-width="5"/>
+      <circle cx="150" cy="42" r="5" fill="#111111"/>
+      <circle cx="188" cy="70" r="5" fill="#111111"/>
+    </svg>
   </div>
 </header>
 
@@ -155,6 +191,33 @@
       <div class="addr-card" style="background:var(--yellow); color:var(--black);">
         <h3 style="color:var(--black);">The Deal</h3>
         <p class="big">Get a quote anywhere else — then come see ours. That's the whole sales pitch.</p>
+      </div>
+    </div>
+    <div class="map-block txt">
+      <iframe class="map-frame" src="https://maps.google.com/maps?q=Auto%20Brake%20Center%2C%205760%20W%20Pico%20Blvd%2C%20Los%20Angeles%2C%20CA%2090019&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to Auto Brake Center" allowfullscreen></iframe>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Auto%20Brake%20Center%2C%205760%20W%20Pico%20Blvd%2C%20Los%20Angeles%2C%20CA%2090019" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="logo-sec">
+  <div class="wrap">
+    <h2 class="sec-title">A logo direction — included with your site</h2>
+    <div class="logo-box txt">
+      <svg viewBox="0 0 300 120" width="260" height="104" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Proposed Auto Brake Center logo concept">
+        <rect x="4" y="4" width="292" height="112" fill="#111111"/>
+        <rect x="12" y="12" width="276" height="96" fill="#ffd400"/>
+        <circle cx="52" cy="60" r="34" fill="#111111"/>
+        <circle cx="52" cy="60" r="26" fill="#ffd400"/>
+        <circle cx="52" cy="60" r="18" fill="#111111"/>
+        <circle cx="52" cy="60" r="6" fill="#ffd400"/>
+        <g fill="#111111"><circle cx="52" cy="38" r="3"/><circle cx="73" cy="53" r="3"/><circle cx="65" cy="78" r="3"/><circle cx="39" cy="78" r="3"/><circle cx="31" cy="53" r="3"/></g>
+        <text x="96" y="52" font-family="'Arial Black',Arial,sans-serif" font-size="26" font-weight="900" fill="#111111">AUTO BRAKE</text>
+        <text x="96" y="86" font-family="'Arial Black',Arial,sans-serif" font-size="26" font-weight="900" fill="#111111">CENTER<tspan font-family="Arial,sans-serif" font-size="11" font-weight="700" dx="8" dy="-2">PICO BLVD &#8226; LA</tspan></text>
+      </svg>
+      <div class="note">
+        <strong>Our proposed concept</strong>
+        A rotor-and-block mark in your signature yellow and black — loud on a storefront, crisp on a receipt or a work shirt. This is an original concept we drew for this proposal; it comes with the site, and we'll tune it to your taste.
       </div>
     </div>
   </div>

@@ -46,6 +46,20 @@
   }
   h1 small{display:block; font-size:.42em; font-weight:400; font-style:italic; color:var(--brass); letter-spacing:.12em; margin-top:.4em;}
   .hero-line{max-width:34em; margin:1.2rem auto 0; font-style:italic; color:#dde4d6; font-size:clamp(1rem,2.3vw,1.15rem);}
+  .hero-machine{display:block; width:min(340px,80%); height:auto; margin:2rem auto 0; opacity:.95;}
+  /* MAP */
+  .map-wrap{max-width:560px; margin:1.8rem auto 0; text-align:center;}
+  .map-frame{width:100%; height:310px; border:1px solid var(--brass); display:block; background:var(--paper); box-shadow:0 0 0 6px rgba(168,130,60,.12);}
+  .map-link{display:inline-block; margin-top:1rem; color:var(--brass); font-weight:700; font-style:italic; text-decoration:none; border-bottom:1px solid var(--brass);}
+  .map-link:hover{color:var(--sage-deep); border-bottom-color:var(--sage-deep);}
+  /* LOGO CONCEPT */
+  .logo-sec{background:var(--paper); border-top:1px solid #e0d8c2; border-bottom:1px solid #e0d8c2;}
+  .logo-plate{
+    max-width:560px; margin:0 auto; text-align:center; border:1px solid var(--brass);
+    background:var(--cream); padding:2.2rem 1.6rem; position:relative;
+  }
+  .logo-plate::before{content:""; position:absolute; inset:7px; border:1px solid rgba(168,130,60,.35); pointer-events:none;}
+  .logo-plate p{max-width:32em; margin:1.2rem auto 0; font-style:italic; color:var(--soft); font-size:.93rem;}
   /* ORNAMENT */
   .orn{text-align:center; color:var(--brass); font-size:1.1rem; padding:0; letter-spacing:.8em; text-indent:.8em;}
   /* STORY */
@@ -106,6 +120,22 @@
   <p class="overline">Sales &middot; Service &middot; Repair</p>
   <h1>Boulevard Vacuum &amp; Sewing Co<small>Purveyors of well-kept machines, Pico Boulevard</small></h1>
   <p class="hero-line">Nearly eighty years of keeping the neighborhood's vacuums humming and sewing machines singing — one of the last shops of its kind, and proud of it.</p>
+  <svg class="hero-machine" viewBox="0 0 340 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vintage sewing machine line art">
+    <g fill="none" stroke="#f4efe3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="26" y="148" width="288" height="16" rx="8"/>
+      <path d="M254 148 V78 q0 -22 -24 -22 H128 q-20 0 -20 20 v18"/>
+      <path d="M108 94 v28 q0 12 10 14"/>
+      <path d="M96 136 h30"/>
+      <line x1="111" y1="136" x2="111" y2="148"/>
+      <path d="M124 56 v-14 h-12 v14"/>
+    </g>
+    <g stroke="#a8823c" stroke-width="3.5" fill="none" stroke-linecap="round">
+      <circle cx="278" cy="86" r="18"/>
+      <circle cx="278" cy="86" r="7"/>
+      <line x1="150" y1="76" x2="216" y2="76"/>
+    </g>
+    <line x1="44" y1="172" x2="296" y2="172" stroke="#a8823c" stroke-width="2.5" stroke-dasharray="2 9" stroke-linecap="round"/>
+  </svg>
 </header>
 
 <section>
@@ -172,6 +202,30 @@
       <p class="addr">5086 W Pico Blvd<br>Los Angeles, CA 90019</p>
       <p class="hrs"><b>Monday – Friday:</b> 9:00 am – 5:30 pm<br><b>Saturday &amp; Sunday:</b> Closed</p>
       <p class="hrs" style="font-style:italic;">Bring the machine in — diagnosis starts with a look and a chat.</p>
+    </div>
+    <div class="map-wrap">
+      <iframe class="map-frame" src="https://maps.google.com/maps?q=Boulevard%20Vacuum%20%26%20Sewing%20Co%2C%205086%20W%20Pico%20Blvd%2C%20Los%20Angeles%2C%20CA%2090019&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to Boulevard Vacuum &amp; Sewing Co" allowfullscreen></iframe>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Boulevard%20Vacuum%20%26%20Sewing%20Co%2C%205086%20W%20Pico%20Blvd%2C%20Los%20Angeles%2C%20CA%2090019" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="logo-sec">
+  <div class="wrap">
+    <h2>A Logo Direction — Included with Your Site</h2>
+    <p class="sub">Our proposed concept, drawn for this proposal</p>
+    <div class="logo-plate">
+      <svg viewBox="0 0 240 150" width="220" height="138" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Proposed Boulevard Vacuum and Sewing Co seal logo concept">
+        <ellipse cx="120" cy="75" rx="112" ry="66" fill="none" stroke="#a8823c" stroke-width="3"/>
+        <ellipse cx="120" cy="75" rx="102" ry="57" fill="none" stroke="#5c6e56" stroke-width="1" stroke-dasharray="3 4"/>
+        <text x="120" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="10" letter-spacing="4" fill="#a8823c">SALES &#8226; SERVICE &#8226; REPAIR</text>
+        <text x="120" y="80" text-anchor="middle" font-family="Georgia,serif" font-size="27" font-style="italic" fill="#5c6e56">Boulevard</text>
+        <text x="120" y="102" text-anchor="middle" font-family="Georgia,serif" font-size="11.5" letter-spacing="2.5" fill="#3a3d34">VACUUM &amp; SEWING CO</text>
+        <line x1="72" y1="114" x2="106" y2="114" stroke="#a8823c" stroke-width="1"/>
+        <line x1="134" y1="114" x2="168" y2="114" stroke="#a8823c" stroke-width="1"/>
+        <text x="120" y="122" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#a8823c">1946</text>
+      </svg>
+      <p>A trade seal in the shop's sage and brass — the kind of mark that belongs on a repair tag, a shop window, or a hand-stamped receipt. An original concept, included with the site, and happily refined to your liking.</p>
     </div>
   </div>
 </section>

@@ -123,6 +123,33 @@
   .visit .ig { color: #5aa8ff; font-size: 0.9rem; margin-top: 8px; }
   .visit .age { margin-top: 16px; font-size: 0.75rem; letter-spacing: 0.25em; color: #587099; }
 
+  /* HERO ART — fine-line emblem */
+  .hero-emblem { display: block; width: clamp(120px, 16vw, 160px); height: auto; margin-top: 34px; }
+  @media (max-width: 720px) { .hero-emblem { margin-left: auto; margin-right: auto; } }
+
+  /* MAP */
+  .map-frame {
+    width: 100%; height: 330px; border: 1px solid #1d3a68; border-radius: 6px;
+    margin: 32px auto 0; display: block;
+    box-shadow: 0 12px 44px rgba(30, 90, 200, 0.22);
+  }
+  .map-link {
+    display: inline-block; margin-top: 18px; text-decoration: none;
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #cfe6ff; border: 1px solid #5aa8ff; padding: 12px 28px;
+    background: linear-gradient(180deg, rgba(40, 110, 220, 0.2), rgba(20, 55, 120, 0.2));
+  }
+  .map-link:hover { background: rgba(90, 168, 255, 0.18); }
+
+  /* LOGO CONCEPT */
+  .logo-section { border-top: 1px solid #101f3c; text-align: center; }
+  .logo-stage {
+    display: inline-block; margin-top: 16px;
+    padding: clamp(30px, 5vw, 52px) clamp(36px, 7vw, 74px);
+    border: 1px solid #12294f; background: #070d1a;
+  }
+  .logo-note { max-width: 38em; margin: 26px auto 0; color: #9db4d6; font-size: 0.93rem; }
+
   footer {
     background: #02030a; border-top: 1px solid #12294f;
     padding: 34px 26px; text-align: center; font-size: 0.8rem; color: #7f96bb;
@@ -138,6 +165,18 @@
     <h1>Blue <span class="thin-accent">Flame</span><br>Restaurant &amp; Lounge</h1>
     <p class="sub">An elegant Mid-City room where dinner turns into an evening — full bar, VIP seating, and event layouts styled to the occasion.</p>
     <span class="est">Est. 2023 &middot; W Pico Blvd, Los Angeles</span>
+    <svg class="hero-emblem" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fine-line flame and glassware emblem">
+      <!-- coupe glass, single-stroke line art -->
+      <path d="M28 34 h64 c0 18 -14 28 -32 28 c-18 0 -32 -10 -32 -28 z" fill="none" stroke="#5aa8ff" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="60" y1="62" x2="60" y2="94" stroke="#5aa8ff" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="42" y1="98" x2="78" y2="98" stroke="#5aa8ff" stroke-width="1.6" stroke-linecap="round"/>
+      <!-- flame rising from the glass -->
+      <path d="M60 30 c-9 -8 -6 -18 2 -24 c-2 8 8 10 8 18 c0 6 -4 9 -10 6 z" fill="none" stroke="#9cd0ff" stroke-width="1.6" stroke-linejoin="round"/>
+      <!-- orbit accents -->
+      <path d="M104 46 c22 4 34 14 30 24 c-3 8 -18 12 -34 10" fill="none" stroke="#1d3a68" stroke-width="1.4" stroke-linecap="round"/>
+      <circle cx="112" cy="38" r="2.4" fill="#6db4ff"/>
+      <circle cx="138" cy="84" r="1.8" fill="#3f83e8"/>
+    </svg>
   </div>
   <div class="flame-stage">
     <div class="flame"><i class="f1"></i><i class="f2"></i><i class="f3"></i><i class="f4"></i></div>
@@ -182,6 +221,32 @@
     <p class="addr">5047 W Pico Blvd, Los Angeles, CA 90019</p>
     <p class="ig">Instagram: @the_blueflame_private_events</p>
     <p class="age">LOUNGE &amp; BAR — 21+</p>
+    <iframe class="map-frame" src="https://maps.google.com/maps?q=Blue%20Flame%20Restaurant%20%26%20Lounge%2C%205047%20W%20Pico%20Blvd%2C%20Los%20Angeles%2C%20CA%2090019&amp;output=embed" loading="lazy" title="Map to Blue Flame Restaurant &amp; Lounge" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Blue%20Flame%20Restaurant%20%26%20Lounge%2C%205047%20W%20Pico%20Blvd%2C%20Los%20Angeles%2C%20CA%2090019" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+  </div>
+</section>
+
+<section class="logo-section">
+  <div class="wrap">
+    <div class="kicker">Brand Identity</div>
+    <h2>A logo direction — included with your site</h2>
+    <div class="logo-stage">
+      <svg viewBox="0 0 320 170" width="280" height="149" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Proposed Blue Flame logo concept">
+        <defs>
+          <linearGradient id="bf-fl" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#143c86"/><stop offset="0.6" stop-color="#3f83e8"/><stop offset="1" stop-color="#9cd0ff"/>
+          </linearGradient>
+        </defs>
+        <!-- flame mark -->
+        <path d="M160 14 c-16 16 -26 28 -26 42 c0 16 12 26 26 26 c14 0 26 -10 26 -26 c0 -14 -10 -26 -26 -42 z" fill="none" stroke="url(#bf-fl)" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M160 40 c-7 8 -11 13 -11 20 c0 8 5 12 11 12 c6 0 11 -4 11 -12 c0 -7 -4 -12 -11 -20 z" fill="url(#bf-fl)" opacity="0.9"/>
+        <!-- lockup -->
+        <text x="160" y="122" font-family="'Segoe UI', sans-serif" font-size="30" font-weight="200" letter-spacing="8" fill="#f2f7ff" text-anchor="middle">BLUE <tspan font-weight="600" fill="#6db4ff">FLAME</tspan></text>
+        <line x1="70" y1="140" x2="250" y2="140" stroke="#1d3a68" stroke-width="1"/>
+        <text x="160" y="158" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="600" letter-spacing="5" fill="#7f9cc4" text-anchor="middle">RESTAURANT &#183; LOUNGE &#183; EVENTS</text>
+      </svg>
+    </div>
+    <p class="logo-note">Our proposed mark for Blue Flame — a double-walled flame in the house blues over a featherweight wordmark. A concept we designed for this demo, included with the site and refined to your taste.</p>
   </div>
 </section>
 

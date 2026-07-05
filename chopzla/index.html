@@ -27,6 +27,22 @@
     .card { border: 1px solid #e7e7e7; border-radius: 10px; padding: 1.1rem; }
     .card b { color: var(--brand-dark); }
     .addr { color: #555; }
+    .hero-art { display: block; margin: 0 auto 1.4rem; }
+    .card { transition: transform 0.15s ease, box-shadow 0.15s ease; }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 6px 14px rgba(36,29,18,0.12); }
+    .map-frame { margin-top: 1.2rem; }
+    .map-frame iframe { display: block; width: 100%; height: 320px; border: 3px solid var(--brand); border-radius: 12px; }
+    .map-link {
+      display: inline-block; margin-top: 0.8rem; color: var(--brand-dark); font-weight: 700;
+      text-decoration: none; border-bottom: 2px solid var(--brand); padding-bottom: 2px;
+    }
+    .map-link:hover { color: var(--brand); }
+    .logo-section { margin-top: 2.8rem; text-align: center; }
+    .logo-plate {
+      display: inline-block; background: var(--brand-dark); border-radius: 14px;
+      padding: 2.2rem 2.6rem; margin-top: 1.2rem; border: 2px solid var(--brand);
+    }
+    .logo-note { color: #555; max-width: 40rem; margin: 0.6rem auto 0; }
     footer { text-align: center; padding: 2rem 1.5rem; font-size: 0.8rem; color: #777; border-top: 1px solid #eee; }
   </style>
 </head>
@@ -35,6 +51,23 @@
   <div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by MyBusinessWeb.site. Not affiliated with the business.</div>
 
   <div class="hero">
+    <svg class="hero-art" width="150" height="110" viewBox="0 0 150 110" aria-hidden="true" role="img">
+      <!-- crossed straight razor & scissors in the house gold -->
+      <g stroke="#ffd76a" stroke-width="4" stroke-linecap="round" fill="none">
+        <path d="M40 20 L108 88"/>
+        <circle cx="34" cy="14" r="8"/>
+      </g>
+      <g stroke="#ffd76a" stroke-width="4" stroke-linecap="round" fill="none">
+        <path d="M110 20 L42 88"/>
+        <circle cx="116" cy="14" r="8"/>
+      </g>
+      <circle cx="75" cy="54" r="5" fill="#ffd76a"/>
+      <g fill="#b8862d">
+        <path d="M15 58 l2.5 5 5 2.5 -5 2.5 -2.5 5 -2.5 -5 -5 -2.5 5 -2.5 z"/>
+        <path d="M132 44 l2.5 5 5 2.5 -5 2.5 -2.5 5 -2.5 -5 -5 -2.5 5 -2.5 z"/>
+      </g>
+      <path d="M55 100 h40" stroke="#b8862d" stroke-width="3" stroke-linecap="round"/>
+    </svg>
     <h1>CHOPZ&nbsp;LA</h1>
     <p>Serving Mid-City — sharp cuts, no shortcuts.</p>
     <div class="stars">★★★★★<span>5.0 rated by the neighborhood</span></div>
@@ -56,6 +89,25 @@
     <section>
       <h2>Find Us</h2>
       <p class="addr">5076 W Pico Blvd, Los Angeles, CA 90019 — Mid-City, between Redondo and La Brea.</p>
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=CHOPZ+LA+5076+W+Pico+Blvd+Los+Angeles+CA+90019&output=embed" loading="lazy" title="Map to CHOPZ LA" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=CHOPZ+LA+5076+W+Pico+Blvd+Los+Angeles+CA+90019" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+      </div>
+    </section>
+    <section class="logo-section">
+      <h2>A Logo Direction — Included With Your Site</h2>
+      <p class="logo-note">Every proposal comes with an original mark, on the house. Our concept for CHOPZ LA: a gold monogram badge with crossed blades — built to sit clean on a window decal, a cape, or a cap.</p>
+      <div class="logo-plate">
+        <svg width="170" height="170" viewBox="0 0 170 170" role="img" aria-label="Proposed CHOPZ LA monogram logo concept">
+          <circle cx="85" cy="85" r="76" fill="none" stroke="#b8862d" stroke-width="4"/>
+          <circle cx="85" cy="85" r="66" fill="none" stroke="#ffd76a" stroke-width="1.5"/>
+          <text x="85" y="86" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="44" fill="#ffd76a">CZ</text>
+          <path d="M60 102 L110 102" stroke="#b8862d" stroke-width="2"/>
+          <text x="85" y="122" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="12" letter-spacing="5" fill="#fff">CHOPZ LA</text>
+          <path d="M85 36 l3 6 6 3 -6 3 -3 6 -3 -6 -6 -3 6 -3 z" fill="#ffd76a"/>
+          <text x="85" y="146" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" letter-spacing="3" fill="#b8862d">MID-CITY</text>
+        </svg>
+      </div>
     </section>
   </main>
   <footer>

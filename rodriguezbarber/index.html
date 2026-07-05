@@ -119,6 +119,35 @@
   .visit address { font-style: normal; font-size: clamp(1rem, 2.4vw, 1.2rem); margin-top: 1rem; font-weight: bold; }
   .visit p { color: #d8f2e6; margin-top: 0.5rem; font-size: 0.95rem; }
 
+  .hero-art { max-width: 460px; margin: 1.8rem auto 0; }
+  .hero-art svg { width: 100%; height: auto; display: block; }
+
+  .logo-concept { text-align: center; background: #fff8ef; }
+  .logo-card {
+    display: inline-block; background: #fff;
+    border-radius: 14px; padding: 2.2rem 2.6rem 1.8rem;
+    box-shadow: 0 3px 10px rgba(120,60,20,0.12);
+    border-top: 6px solid #e8722c;
+    margin-top: 1.4rem;
+  }
+  .logo-card svg { width: clamp(190px, 45vw, 250px); height: auto; display: block; margin: 0 auto; }
+  .logo-concept .caption { color: #8a6a4a; font-style: italic; font-size: 0.9rem; max-width: 560px; margin: 1.4rem auto 0; }
+
+  .map-shell { max-width: 720px; margin: 1.6rem auto 0; }
+  .map-shell iframe {
+    width: 100%; height: 320px; display: block;
+    border: 4px solid #f5d547; border-radius: 14px;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.18);
+  }
+  .map-link {
+    display: inline-block; margin-top: 1.1rem;
+    background: #f5d547; color: #1f1410;
+    padding: 0.55rem 1.3rem; border-radius: 8px;
+    font-weight: bold; text-decoration: none; font-size: 0.95rem;
+    box-shadow: 0 3px 0 #b09a20;
+  }
+  .map-link:hover { background: #ffe272; }
+
   footer {
     padding: 1.8rem 18px; text-align: center;
     font-size: 0.78rem; color: #8a7a68; background: #fff8ef;
@@ -135,6 +164,46 @@
     <span class="es">Barber&iacute;a y Sal&oacute;n de Belleza de la Familia Rodriguez</span>
   </h1>
   <div class="walkin">Walk-Ins Welcome &middot; Sin Cita &mdash; Pase Adelante</div>
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 460 170" xmlns="http://www.w3.org/2000/svg">
+      <!-- papel picado banner string -->
+      <path d="M10 24 C 130 54, 330 54, 450 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      <!-- pennants along the curve -->
+      <g stroke="rgba(0,0,0,0.15)" stroke-width="1.5">
+        <path d="M52 34 h44 v30 l-22 14 l-22 -14 Z" fill="#178a63"/>
+        <path d="M132 44 h44 v30 l-22 14 l-22 -14 Z" fill="#f5d547"/>
+        <path d="M212 48 h44 v30 l-22 14 l-22 -14 Z" fill="#c02942"/>
+        <path d="M292 44 h44 v30 l-22 14 l-22 -14 Z" fill="#f5d547"/>
+        <path d="M372 34 h44 v30 l-22 14 l-22 -14 Z" fill="#178a63"/>
+      </g>
+      <!-- papel picado cutouts -->
+      <g fill="rgba(255,255,255,0.85)">
+        <circle cx="74" cy="50" r="5"/><path d="M74 62 l 5 6 l -5 6 l -5 -6 Z"/>
+        <circle cx="154" cy="60" r="5" fill="rgba(192,41,66,0.55)"/><path d="M154 72 l 5 6 l -5 6 l -5 -6 Z" fill="rgba(192,41,66,0.55)"/>
+        <circle cx="234" cy="64" r="5"/><path d="M234 76 l 5 6 l -5 6 l -5 -6 Z"/>
+        <circle cx="314" cy="60" r="5" fill="rgba(192,41,66,0.55)"/><path d="M314 72 l 5 6 l -5 6 l -5 -6 Z" fill="rgba(192,41,66,0.55)"/>
+        <circle cx="394" cy="50" r="5"/><path d="M394 62 l 5 6 l -5 6 l -5 -6 Z"/>
+      </g>
+      <!-- scissors -->
+      <g stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none">
+        <path d="M158 142 L 200 116"/>
+        <path d="M158 116 L 200 142"/>
+      </g>
+      <circle cx="151" cy="146" r="8" fill="none" stroke="#fff" stroke-width="4"/>
+      <circle cx="151" cy="112" r="8" fill="none" stroke="#fff" stroke-width="4"/>
+      <circle cx="179" cy="129" r="3.5" fill="#f5d547"/>
+      <!-- comb -->
+      <g stroke="#f5d547" stroke-width="4" stroke-linecap="round">
+        <path d="M236 120 L 310 120"/>
+        <path d="M244 120 L 244 138"/><path d="M258 120 L 258 138"/>
+        <path d="M272 120 L 272 138"/><path d="M286 120 L 286 138"/>
+        <path d="M300 120 L 300 138"/>
+      </g>
+      <!-- small sparkles -->
+      <path d="M116 128 l 3 6 l -3 6 l -3 -6 Z" fill="#f5d547"/>
+      <path d="M336 132 l 3 6 l -3 6 l -3 -6 Z" fill="#fff" opacity="0.9"/>
+    </svg>
+  </div>
 </header>
 
 <section class="intro">
@@ -211,6 +280,48 @@
     </h2>
     <address>4972 W Pico Blvd, Los Angeles, CA 90019<br>Pico &amp; La Brea Plaza</address>
     <p>Easy parking in the plaza lot &middot; Estacionamiento en la plaza</p>
+    <div class="map-shell">
+      <iframe src="https://maps.google.com/maps?q=Rodriguez+Barber+and+Beauty+Salon+4972+W+Pico+Blvd+Los+Angeles+CA+90019&amp;output=embed" loading="lazy" title="Map to Rodriguez Barber and Beauty Salon" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Rodriguez+Barber+and+Beauty+Salon+4972+W+Pico+Blvd+Los+Angeles+CA+90019" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="logo-concept">
+  <div class="wrap">
+    <h2>A Logo Direction &mdash; Included With Your Site
+      <span class="es-h">Un concepto de logotipo &mdash; incluido con su sitio</span>
+    </h2>
+    <div class="logo-card">
+      <svg viewBox="0 0 240 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Proposed logo concept for Rodriguez Barber and Beauty Salon">
+        <!-- fiesta badge -->
+        <circle cx="120" cy="90" r="72" fill="#fff8ef"/>
+        <circle cx="120" cy="90" r="72" fill="none" stroke="#e8722c" stroke-width="4"/>
+        <circle cx="120" cy="90" r="63" fill="none" stroke="#178a63" stroke-width="2" stroke-dasharray="8 6"/>
+        <!-- scissors + comb crossed -->
+        <g stroke="#3a2a1e" stroke-width="3.5" stroke-linecap="round" fill="none">
+          <path d="M92 66 L 128 104"/>
+          <path d="M92 104 L 128 66"/>
+        </g>
+        <circle cx="86" cy="60" r="6.5" fill="none" stroke="#3a2a1e" stroke-width="3.5"/>
+        <circle cx="86" cy="110" r="6.5" fill="none" stroke="#3a2a1e" stroke-width="3.5"/>
+        <circle cx="110" cy="85" r="3" fill="#c02942"/>
+        <g stroke="#e8722c" stroke-width="3.5" stroke-linecap="round">
+          <path d="M136 70 L 136 110"/>
+          <path d="M136 76 L 148 76"/><path d="M136 86 L 148 86"/>
+          <path d="M136 96 L 148 96"/><path d="M136 106 L 148 106"/>
+        </g>
+        <!-- papel picado flags across the top of the badge -->
+        <path d="M84 36 h14 v9 l-7 5 l-7 -5 Z" fill="#178a63"/>
+        <path d="M113 32 h14 v9 l-7 5 l-7 -5 Z" fill="#f5d547" stroke="#e8b820" stroke-width="1"/>
+        <path d="M142 36 h14 v9 l-7 5 l-7 -5 Z" fill="#c02942"/>
+        <!-- family heart at the base of the mark -->
+        <path d="M120 132 c -6 -8, -18 -4, -14 5 c 3 6, 10 9, 14 12 c 4 -3, 11 -6, 14 -12 c 4 -9, -8 -13, -14 -5 Z" fill="#c02942"/>
+        <text x="120" y="182" text-anchor="middle" fill="#3a2a1e" font-family="Verdana, Geneva, Tahoma, sans-serif" font-weight="bold" font-size="17">RODRIGUEZ</text>
+        <text x="120" y="200" text-anchor="middle" fill="#178a63" font-family="Verdana, Geneva, Tahoma, sans-serif" font-size="9.5" letter-spacing="1.5">BARBER &amp; BEAUTY SALON &#8226; PICO Y LA BREA</text>
+      </svg>
+    </div>
+    <p class="caption">Our proposed concept: crossed scissors and comb under papel picado, with a heart for the familia at the center &mdash; original artwork, not the shop's current signage. We'd refine it together, in English o en espa&ntilde;ol.</p>
   </div>
 </section>
 

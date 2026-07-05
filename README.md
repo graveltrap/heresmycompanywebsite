@@ -57,6 +57,10 @@ docs/                           # pipeline + policy docs
 - The hosting domains carry only the website, demo links, and (eventually) inbound contact.
 - If a burner domain gets burned, it's discarded; hosting reputation is untouched.
 
+## Ops docs live elsewhere
+
+This repo is public (required for free GitHub Pages). Prospect lists, pitch strategy, research data, and reports live in a private local folder (`C:\Claude\mybusinessweb-ops\`), never in this repo. Only the validator script stays in `docs/`.
+
 ## Identity rules
 
 - No personal names, phone numbers, or personal email addresses anywhere in this repo, its content, or its commit metadata. Repo-local git identity is the brand + a GitHub noreply address.

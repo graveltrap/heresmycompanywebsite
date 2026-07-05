@@ -47,6 +47,20 @@
   .stat-row{display:flex; flex-wrap:wrap; gap:2.2rem; margin-top:2rem;}
   .stat b{display:block; color:var(--orange); font-size:1.7rem; font-weight:800;}
   .stat span{font-size:.82rem; color:#aeb5bc; text-transform:uppercase; letter-spacing:.08em;}
+  .hero-flex{display:flex; align-items:center; gap:2.6rem; flex-wrap:wrap; position:relative; z-index:1;}
+  .hero-copy{flex:1 1 340px; min-width:0;}
+  .hero-art{flex:0 1 300px; width:100%; max-width:300px; height:auto; margin:0 auto;}
+  /* MAP */
+  .map-panel{margin-top:1.8rem;}
+  .map-frame{width:100%; height:330px; border:1px solid #e2e5e8; border-top:4px solid var(--orange); border-radius:8px; display:block; background:var(--white);}
+  .map-link{display:inline-block; margin-top:.9rem; color:var(--orange); font-weight:700; text-decoration:none; font-size:.95rem;}
+  .map-link:hover{color:var(--charcoal); text-decoration:underline;}
+  /* LOGO CONCEPT */
+  .logo-sec{background:var(--white); border-top:1px solid #e2e5e8;}
+  .logo-row{display:flex; align-items:center; gap:2rem; flex-wrap:wrap; background:var(--light); border:1px solid #e2e5e8; border-radius:8px; padding:1.8rem; border-left:5px solid var(--orange);}
+  .logo-row svg{flex:0 0 auto; margin:0 auto;}
+  .logo-row .note{flex:1 1 300px; color:#4a5057; font-size:.95rem;}
+  .logo-row .note strong{display:block; color:var(--charcoal); margin-bottom:.4rem;}
   /* SECTIONS */
   section{padding:clamp(2.6rem,6vw,4.4rem) 0;}
   .eyebrow{color:var(--orange); font-weight:700; text-transform:uppercase; letter-spacing:.18em; font-size:.75rem;}
@@ -105,15 +119,37 @@
 </div>
 
 <header class="hero">
-  <div class="wrap">
-    <span class="hero-tag">Collision &middot; Body &middot; Mechanical</span>
-    <h1>Thirty-plus years of putting cars — and days — back together.</h1>
-    <p>From fender-benders to full collision restoration, Body Builders Automotive has been the shop La Brea trusts since 1991. Straight repairs, handled insurance claims, and a finish you can't tell from factory.</p>
-    <div class="stat-row">
-      <div class="stat"><b>4.8&#9733;</b><span>Customer rating</span></div>
-      <div class="stat"><b>1991</b><span>Established</span></div>
-      <div class="stat"><b>30+</b><span>Years on La Brea</span></div>
+  <div class="wrap hero-flex">
+    <div class="hero-copy">
+      <span class="hero-tag">Collision &middot; Body &middot; Mechanical</span>
+      <h1>Thirty-plus years of putting cars — and days — back together.</h1>
+      <p>From fender-benders to full collision restoration, Body Builders Automotive has been the shop La Brea trusts since 1991. Straight repairs, handled insurance claims, and a finish you can't tell from factory.</p>
+      <div class="stat-row">
+        <div class="stat"><b>4.8&#9733;</b><span>Customer rating</span></div>
+        <div class="stat"><b>1991</b><span>Established</span></div>
+        <div class="stat"><b>30+</b><span>Years on La Brea</span></div>
+      </div>
     </div>
+    <svg class="hero-art" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Car body line art with panel alignment marks">
+      <g fill="none" stroke="#f4711f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M28 132 q4 -26 44 -32 q30 -34 78 -34 q52 0 76 32 q52 6 60 26 l4 12 q-2 8 -12 8 l-14 0"/>
+        <path d="M234 144 l-124 0"/>
+        <path d="M60 144 l-24 0 q-10 0 -8 -12"/>
+        <path d="M92 100 q26 -26 60 -26 q40 0 62 28" stroke-width="2"/>
+        <path d="M150 74 l0 28" stroke-width="2"/>
+        <circle cx="85" cy="144" r="20"/><circle cx="85" cy="144" r="8"/>
+        <circle cx="259" cy="144" r="20"/><circle cx="259" cy="144" r="8"/>
+      </g>
+      <g stroke="#8f979e" stroke-width="1.5" stroke-dasharray="5 5" fill="none">
+        <line x1="150" y1="30" x2="150" y2="66"/>
+        <line x1="286" y1="60" x2="252" y2="88"/>
+        <line x1="42" y1="62" x2="72" y2="94"/>
+      </g>
+      <g fill="#f4711f">
+        <circle cx="150" cy="26" r="4"/><circle cx="290" cy="56" r="4"/><circle cx="38" cy="58" r="4"/>
+      </g>
+      <text x="150" y="18" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" letter-spacing="2" fill="#aeb5bc">PANEL &#8226; FRAME &#8226; FINISH</text>
+    </svg>
   </div>
 </header>
 
@@ -168,6 +204,34 @@
       <div class="copy">
         <p>In this business, shops come and go. Body Builders Automotive has spent more than three decades at the corner of the neighborhood — long enough to repair the same family's cars across two generations. A 4.8-star reputation isn't built by advertising. It's built one straight, honest repair at a time.</p>
         <span class="addr">1200 S La Brea Ave, Los Angeles, CA 90019</span>
+      </div>
+    </div>
+    <div class="map-panel">
+      <iframe class="map-frame" src="https://maps.google.com/maps?q=Body%20Builders%20Automotive%2C%201200%20S%20La%20Brea%20Ave%2C%20Los%20Angeles%2C%20CA%2090019&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to Body Builders Automotive" allowfullscreen></iframe>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Body%20Builders%20Automotive%2C%201200%20S%20La%20Brea%20Ave%2C%20Los%20Angeles%2C%20CA%2090019" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="logo-sec">
+  <div class="wrap">
+    <span class="eyebrow">A little extra</span>
+    <h2>A logo direction — included with your site</h2>
+    <div class="logo-row">
+      <svg viewBox="0 0 300 110" width="270" height="99" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Proposed Body Builders Automotive logo concept">
+        <g fill="none" stroke="#f4711f" stroke-width="4" stroke-linecap="round">
+          <path d="M18 64 q6 -18 34 -22 q18 -20 46 -20 q30 0 46 20 q30 4 36 20"/>
+          <circle cx="58" cy="70" r="11"/>
+          <circle cx="140" cy="70" r="11"/>
+        </g>
+        <line x1="18" y1="86" x2="180" y2="86" stroke="#2b2f33" stroke-width="3"/>
+        <text x="196" y="48" font-family="Segoe UI,Arial,sans-serif" font-size="21" font-weight="800" fill="#2b2f33">BODY</text>
+        <text x="196" y="72" font-family="Segoe UI,Arial,sans-serif" font-size="21" font-weight="800" fill="#f4711f">BUILDERS</text>
+        <text x="196" y="92" font-family="Segoe UI,Arial,sans-serif" font-size="10" letter-spacing="2" fill="#6b7178">AUTOMOTIVE &#8226; EST. 1991</text>
+      </svg>
+      <div class="note">
+        <strong>Our proposed concept</strong>
+        A clean body-line silhouette over a level baseline — the panel-straight look your work is known for, in the shop's charcoal and orange. This is an original mark we drafted for this proposal; it's included with the site and easy to refine with you.
       </div>
     </div>
   </div>

@@ -102,6 +102,25 @@
   .vc h3{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;}
   .vc p{color:var(--text);font-size:.95rem;}
   .vc p small{color:var(--muted);}
+  .hero-art{display:block;margin:2.25rem auto 0;opacity:.9;}
+  .svc-row{transition:background .25s ease, padding-left .25s ease;}
+  .svc-row:hover{background:rgba(201,163,92,.05);padding-left:.75rem;}
+  .map-frame{margin-top:3rem;}
+  .map-frame iframe{
+    display:block;width:100%;height:320px;border:1px solid var(--gold);
+    filter:grayscale(35%) contrast(1.05);
+  }
+  .map-link{
+    display:inline-block;margin-top:1rem;color:var(--gold-light);text-decoration:none;
+    letter-spacing:.25em;text-transform:uppercase;font-size:.72rem;
+    border-bottom:1px solid var(--gold);padding-bottom:.2rem;transition:color .2s;
+  }
+  .map-link:hover{color:#f0ede6;}
+  .logo-section{background:var(--black);text-align:center;}
+  .logo-plate{
+    display:inline-block;border:1px solid #2a2c33;background:var(--panel);
+    padding:3rem 3.5rem;margin-top:2.5rem;
+  }
   footer{
     background:#000;color:#6f6d68;text-align:center;font-size:.78rem;
     padding:2.25rem 1.5rem;line-height:1.7;border-top:1px solid #1e2025;
@@ -117,6 +136,21 @@
   <p class="tagline">Executive Grooming &middot; Est. 2011</p>
   <p class="intro">By appointment only. A private, unhurried grooming experience for men who understand that presence is built in the details.</p>
   <a class="hero-cta" href="#visit">Request an Appointment</a>
+  <svg class="hero-art" width="260" height="72" viewBox="0 0 260 72" aria-hidden="true" role="img">
+    <!-- open straight razor, fine line work -->
+    <g fill="none" stroke="#c9a35c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 46 L128 22 C134 20.5 138 22 139 26 L141 33 C141.8 36 139.5 38.5 135 39.5 L26 56 C21 56.8 17.5 54 17 50.5 Z"/>
+      <path d="M24 47.5 L128 27.5" stroke-width=".9" opacity=".7"/>
+      <path d="M139 30 C158 24 170 27 178 36 C186 45 198 48 214 43" />
+      <circle cx="141" cy="31.5" r="3.2"/>
+      <path d="M178 36 L236 22 C241 20.8 244.5 23 245 26.5 C245.5 30 243 33 238.5 34 L186 45" stroke-width="1.3"/>
+    </g>
+    <g stroke="#c9a35c" stroke-width="1" opacity=".55">
+      <path d="M0 64 L104 64"/>
+      <path d="M156 64 L260 64"/>
+    </g>
+    <text x="130" y="67.5" text-anchor="middle" font-family="Garamond, Georgia, serif" font-size="11" letter-spacing="5" fill="#c9a35c">EST. 2011</text>
+  </svg>
 </header>
 
 <section>
@@ -163,6 +197,31 @@
       <div class="vc"><h3>Studio</h3><p>5591 W Pico Blvd<br>La Pico Plaza<br>Los Angeles, CA 90019</p></div>
       <div class="vc"><h3>Booking</h3><p>Appointments reserved in advance.<br><small>Discretion and punctuality, both ways.</small></p></div>
       <div class="vc"><h3>Portfolio</h3><p>Instagram — @mbarberingla</p></div>
+    </div>
+    <div class="map-frame">
+      <iframe src="https://maps.google.com/maps?q=M%20Barbering%205591%20W%20Pico%20Blvd%20Los%20Angeles%20CA%2090019&output=embed" loading="lazy" title="Map to M Barbering" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=M%20Barbering%205591%20W%20Pico%20Blvd%20Los%20Angeles%20CA%2090019" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="logo-section">
+  <div class="wrap">
+    <p class="kicker">Identity</p>
+    <h2>A Logo Direction — Included With Your Site</h2>
+    <div class="hairline"></div>
+    <p class="center-copy">Our proposed mark, not your existing logo: a double-rule monogram seal that carries the executive standard onto cards, capes, and glass. Presented as a starting point — refined with you.</p>
+    <div class="logo-plate">
+      <svg width="230" height="180" viewBox="0 0 230 180" role="img" aria-label="Proposed M Barbering monogram logo concept">
+        <rect x="65" y="8" width="100" height="100" fill="none" stroke="#c9a35c" stroke-width="1.5"/>
+        <rect x="72" y="15" width="86" height="86" fill="none" stroke="#c9a35c" stroke-width=".75" opacity=".5"/>
+        <text x="115" y="82" text-anchor="middle" font-family="Garamond, 'Palatino Linotype', Georgia, serif" font-size="58" fill="#e3c98f">M</text>
+        <path d="M40 132 L96 132" stroke="#c9a35c" stroke-width="1" opacity=".6"/>
+        <path d="M134 132 L190 132" stroke="#c9a35c" stroke-width="1" opacity=".6"/>
+        <circle cx="115" cy="132" r="2" fill="#c9a35c"/>
+        <text x="115" y="156" text-anchor="middle" font-family="Garamond, Georgia, serif" font-size="16" letter-spacing="7" fill="#f0ede6">M BARBERING</text>
+        <text x="115" y="174" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="8" letter-spacing="4" fill="#8d8b85">EXECUTIVE GROOMING &#183; LOS ANGELES</text>
+      </svg>
     </div>
   </div>
 </section>

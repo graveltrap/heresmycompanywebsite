@@ -111,6 +111,25 @@
   .visit .days { margin-top: 1rem; font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase; color: #9a7b4f; }
   .visit .ig { margin-top: 1.4rem; font-size: 0.9rem; color: #6b6257; }
 
+  .hero-art { display: block; margin: 0 auto 1.8rem; }
+  .map-frame { max-width: 720px; margin: 2.2rem auto 0; }
+  .map-frame iframe {
+    display: block; width: 100%; height: 320px;
+    border: 1px solid #9a7b4f; border-radius: 8px;
+  }
+  .map-link {
+    display: inline-block; margin-top: 1rem;
+    font-size: 0.78rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: #9a7b4f; text-decoration: none;
+    border-bottom: 1px solid #9a7b4f; padding-bottom: 3px;
+  }
+  .map-link:hover { color: #141414; border-color: #141414; }
+  .logo-section { background: #f4f0e9; text-align: center; }
+  .logo-plate {
+    display: inline-block; background: #fcfbf9;
+    border: 1px solid #e2ddd4; padding: 2.8rem 3.2rem; margin-top: 2rem;
+  }
+  .logo-note { max-width: 460px; margin: 0 auto; font-size: 0.92rem; color: #6b6257; }
   footer {
     padding: 2rem 24px; text-align: center;
     font-size: 0.76rem; color: #9a8f80;
@@ -122,6 +141,16 @@
 <div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by MyBusinessWeb.site. Not affiliated with the business.</div>
 
 <header class="hero">
+  <svg class="hero-art" width="120" height="88" viewBox="0 0 120 88" aria-hidden="true" role="img">
+    <!-- an arched doorway with a stair rising into it — the upper room -->
+    <path d="M28 84 V38 A32 32 0 0 1 92 38 V84" fill="none" stroke="#9a7b4f" stroke-width="1.5"/>
+    <path d="M38 84 V42 A22 22 0 0 1 82 42 V84" fill="none" stroke="#e2ddd4" stroke-width="1"/>
+    <g stroke="#141414" stroke-width="1.5" fill="none">
+      <path d="M44 84 h10 v-8 h10 v-8 h10 v-8 h8"/>
+    </g>
+    <circle cx="60" cy="24" r="3" fill="#9a7b4f"/>
+    <path d="M10 84 H110" stroke="#141414" stroke-width="1.5"/>
+  </svg>
   <p class="eyebrow">Los Angeles &middot; West Pico</p>
   <h1>The Upper Room<br><span class="accent">Boutique</span></h1>
   <p class="promise">An exclusive shopping experience &mdash; fashion, elevated. Curated pieces for those who dress with intention.</p>
@@ -198,6 +227,30 @@
     <address>5082 W Pico Blvd, Los Angeles, CA 90019</address>
     <p class="days">Open Seven Days a Week</p>
     <p class="ig">Follow the racks: @goshopattheupperroom on Instagram &mdash; join 5,500+ followers who shop the drops first.</p>
+    <div class="map-frame">
+      <iframe src="https://maps.google.com/maps?q=The+Upper+Room+Boutique+5082+W+Pico+Blvd+Los+Angeles+CA+90019&output=embed" loading="lazy" title="Map to The Upper Room Boutique" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=The+Upper+Room+Boutique+5082+W+Pico+Blvd+Los+Angeles+CA+90019" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="logo-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The Mark</span>
+      <h2>A Logo Direction &mdash; Included With Your Site</h2>
+    </div>
+    <p class="logo-note">Every proposal includes an original mark. Ours for The Upper Room: a quiet serif monogram beneath an arch &mdash; understated on a hang tag, unmistakable on the door.</p>
+    <div class="logo-plate">
+      <svg width="170" height="190" viewBox="0 0 170 190" role="img" aria-label="Proposed Upper Room monogram logo concept">
+        <path d="M35 118 V62 A50 50 0 0 1 135 62 V118" fill="none" stroke="#9a7b4f" stroke-width="1.5"/>
+        <text x="85" y="98" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="52" fill="#141414">UR</text>
+        <path d="M60 118 H110" stroke="#141414" stroke-width="1"/>
+        <text x="85" y="146" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" letter-spacing="6" fill="#6b6257">THE UPPER ROOM</text>
+        <text x="85" y="166" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="8" letter-spacing="5" fill="#9a7b4f">BOUTIQUE &#183; LOS ANGELES</text>
+        <circle cx="85" cy="28" r="2.5" fill="#9a7b4f"/>
+      </svg>
+    </div>
   </div>
 </section>
 
