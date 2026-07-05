@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>The Upper Room Boutique — Demo Concept</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #fcfbf9;
+    color: #1a1a1a;
+    padding-top: 44px;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+  }
+  .demo-banner {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+    background: #111; color: #eee;
+    font-size: 12px; text-align: center; padding: 7px 12px;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .serif { font-family: Georgia, 'Times New Roman', serif; }
+
+  header.hero {
+    text-align: center;
+    padding: clamp(5rem, 14vw, 10rem) 24px clamp(4rem, 10vw, 8rem);
+  }
+  .eyebrow {
+    font-size: clamp(0.65rem, 1.5vw, 0.72rem);
+    letter-spacing: 0.5em; text-transform: uppercase;
+    color: #9a8f80;
+  }
+  h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: normal;
+    font-size: clamp(2.6rem, 8vw, 5.5rem);
+    line-height: 1.08;
+    margin: 1.2rem 0;
+    color: #141414;
+  }
+  h1 .accent { font-style: italic; color: #9a7b4f; }
+  .hero .promise {
+    font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+    color: #6b6257;
+    max-width: 480px; margin: 0 auto;
+  }
+  .hero-rule { width: 1px; height: clamp(40px, 8vw, 70px); background: #9a7b4f; margin: 2.5rem auto 0; }
+
+  section { padding: clamp(3rem, 8vw, 6rem) 0; }
+  .section-head { text-align: center; margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+  .section-head .eyebrow { display: block; margin-bottom: 0.8rem; }
+  h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: normal;
+    font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+    color: #141414;
+  }
+
+  .manifesto { background: #141414; color: #f0ece5; text-align: center; }
+  .manifesto p {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.15rem, 3vw, 1.7rem);
+    font-style: italic;
+    max-width: 700px; margin: 0 auto;
+    line-height: 1.6;
+  }
+  .manifesto .sig {
+    margin-top: 2rem;
+    font-size: 0.7rem; letter-spacing: 0.4em; text-transform: uppercase;
+    color: #9a7b4f; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal;
+  }
+
+  .collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1px;
+    background: #e2ddd4;
+    border: 1px solid #e2ddd4;
+  }
+  .col-card {
+    background: #fcfbf9;
+    padding: clamp(2.2rem, 5vw, 3.5rem) 1.8rem;
+    text-align: center;
+    transition: background 0.25s;
+  }
+  .col-card:hover { background: #f4f0e9; }
+  .col-card .no {
+    font-size: 0.65rem; letter-spacing: 0.4em; color: #9a7b4f;
+  }
+  .col-card h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: normal;
+    font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+    margin: 0.8rem 0 0.6rem;
+  }
+  .col-card p { font-size: 0.88rem; color: #6b6257; max-width: 260px; margin: 0 auto; }
+
+  .experience { background: #f4f0e9; }
+  .exp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: clamp(1.5rem, 4vw, 3rem); text-align: center; }
+  .exp-grid h4 {
+    font-family: Georgia, serif; font-weight: normal;
+    font-size: 1.15rem; margin-bottom: 0.5rem;
+  }
+  .exp-grid h4::after { content: ""; display: block; width: 24px; height: 1px; background: #9a7b4f; margin: 0.7rem auto 0; }
+  .exp-grid p { font-size: 0.9rem; color: #6b6257; margin-top: 0.7rem; }
+
+  .visit { text-align: center; }
+  .visit address { font-style: normal; font-size: clamp(1rem, 2.3vw, 1.15rem); color: #1a1a1a; margin-top: 0.5rem; }
+  .visit .days { margin-top: 1rem; font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase; color: #9a7b4f; }
+  .visit .ig { margin-top: 1.4rem; font-size: 0.9rem; color: #6b6257; }
+
+  footer {
+    padding: 2rem 24px; text-align: center;
+    font-size: 0.76rem; color: #9a8f80;
+    border-top: 1px solid #e2ddd4;
+  }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by Here's My Company Website. Not affiliated with the business.</div>
+
+<header class="hero">
+  <p class="eyebrow">Los Angeles &middot; West Pico</p>
+  <h1>The Upper Room<br><span class="accent">Boutique</span></h1>
+  <p class="promise">An exclusive shopping experience &mdash; fashion, elevated. Curated pieces for those who dress with intention.</p>
+  <div class="hero-rule"></div>
+</header>
+
+<section class="manifesto">
+  <div class="wrap">
+    <p>&ldquo;Some rooms you walk into. This one, you rise to. Every piece on our racks is chosen &mdash; never stocked &mdash; so that what you wear says what you mean.&rdquo;</p>
+    <p class="sig">The Upper Room &middot; Est. on Pico</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The Collection</span>
+      <h2>Curated, Not Crowded</h2>
+    </div>
+    <div class="collection-grid">
+      <div class="col-card">
+        <span class="no">No. 01</span>
+        <h3>Statement Pieces</h3>
+        <p>The one item in the room everyone asks about. Limited quantities, by design.</p>
+      </div>
+      <div class="col-card">
+        <span class="no">No. 02</span>
+        <h3>Everyday Elevated</h3>
+        <p>Daily wear that refuses to be basic &mdash; cuts and fabrics that carry the whole week.</p>
+      </div>
+      <div class="col-card">
+        <span class="no">No. 03</span>
+        <h3>Occasion &amp; Evening</h3>
+        <p>For the nights that get photographed. Dresses and sets that arrive before you do.</p>
+      </div>
+      <div class="col-card">
+        <span class="no">No. 04</span>
+        <h3>Accessories</h3>
+        <p>The finishing word &mdash; bags, jewelry, and details that complete the sentence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The Experience</span>
+      <h2>Shopping, the Way It Should Feel</h2>
+    </div>
+    <div class="exp-grid">
+      <div>
+        <h4>Personal Attention</h4>
+        <p>Styling help without the hover. Tell us the occasion; leave with the outfit.</p>
+      </div>
+      <div>
+        <h4>Fresh Arrivals</h4>
+        <p>The racks turn over constantly &mdash; our regulars know to come back often.</p>
+      </div>
+      <div>
+        <h4>Open Seven Days</h4>
+        <p>Inspiration doesn't keep business hours. Neither do we &mdash; every day of the week.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Visit</span>
+      <h2>Step Up to the Upper Room</h2>
+    </div>
+    <address>5082 W Pico Blvd, Los Angeles, CA 90019</address>
+    <p class="days">Open Seven Days a Week</p>
+    <p class="ig">Follow the racks: @goshopattheupperroom on Instagram &mdash; join 5,500+ followers who shop the drops first.</p>
+  </div>
+</section>
+
+<footer>
+  Demo concept page — not the official website of The Upper Room Boutique. Built as a proposal by Here's My Company Website. This page is hidden from search engines and will be removed on request.
+</footer>
+</body>
+</html>

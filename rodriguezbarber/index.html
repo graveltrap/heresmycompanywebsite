@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Rodriguez Barber and Beauty Salon — Demo Concept</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #fff8ef;
+    color: #3a2a1e;
+    padding-top: 44px;
+    line-height: 1.6;
+  }
+  .demo-banner {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+    background: #1f1410; color: #ffe9d0;
+    font-size: 12px; text-align: center; padding: 7px 12px;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 18px; }
+
+  header.hero {
+    background: linear-gradient(135deg, #d94f2b 0%, #e8722c 45%, #f2a03d 100%);
+    color: #fff;
+    text-align: center;
+    padding: clamp(2.8rem, 8vw, 5rem) 18px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute; left: 0; right: 0; bottom: 0; height: 14px;
+    background: repeating-linear-gradient(90deg, #178a63 0 40px, #f5d547 40px 80px, #c02942 80px 120px);
+  }
+  .hero .welcome {
+    display: inline-block;
+    background: rgba(0,0,0,0.22);
+    border-radius: 999px;
+    padding: 0.4rem 1.2rem;
+    font-size: clamp(0.75rem, 1.8vw, 0.85rem);
+    letter-spacing: 0.15em; text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+  h1 {
+    font-size: clamp(2rem, 6.5vw, 3.6rem);
+    line-height: 1.15;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.18);
+    font-weight: 800;
+  }
+  .hero .es {
+    display: block;
+    font-size: clamp(1rem, 2.6vw, 1.4rem);
+    font-weight: normal; font-style: italic;
+    margin-top: 0.6rem; color: #ffe9c4;
+  }
+  .hero .walkin {
+    margin-top: 1.6rem;
+    display: inline-block;
+    background: #178a63; color: #fff;
+    padding: 0.75rem 1.6rem; border-radius: 8px;
+    font-weight: bold; font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+    box-shadow: 0 3px 0 #0e5c41;
+  }
+
+  h2 {
+    font-size: clamp(1.35rem, 3.2vw, 1.8rem);
+    color: #c02942;
+    margin-bottom: 0.2rem;
+  }
+  h2 .es-h { display: block; font-size: 0.72em; color: #b06a2a; font-style: italic; font-weight: normal; }
+  section { padding: clamp(2.2rem, 5.5vw, 3.6rem) 0; }
+
+  .intro { text-align: center; }
+  .intro p { max-width: 700px; margin: 1rem auto 0; }
+  .intro .es-p { color: #8a6a4a; font-style: italic; font-size: 0.95rem; }
+
+  .prices { background: #fdeed7; border-top: 4px solid #e8722c; border-bottom: 4px solid #e8722c; }
+  .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin-top: 1.6rem; }
+  @media (max-width: 660px) { .price-grid { grid-template-columns: 1fr; } }
+  .price-card {
+    background: #fff; border-radius: 12px;
+    padding: 1.5rem 1.4rem;
+    box-shadow: 0 3px 10px rgba(120,60,20,0.12);
+    border-top: 6px solid #178a63;
+  }
+  .price-card.beauty { border-top-color: #c02942; }
+  .price-card h3 { font-size: 1.15rem; color: #3a2a1e; margin-bottom: 0.2rem; }
+  .price-card h3 span { display: block; font-size: 0.85rem; color: #8a6a4a; font-style: italic; font-weight: normal; }
+  .price-card table { width: 100%; border-collapse: collapse; margin-top: 0.9rem; }
+  .price-card td { padding: 0.5rem 0; border-bottom: 1px dashed #e5d3b8; font-size: 0.95rem; }
+  .price-card td:last-child { text-align: right; font-weight: bold; color: #178a63; white-space: nowrap; }
+  .price-card.beauty td:last-child { color: #c02942; }
+  .price-note { text-align: center; margin-top: 1.2rem; font-size: 0.85rem; color: #8a6a4a; font-style: italic; }
+
+  .hours { text-align: center; }
+  .hours-box {
+    max-width: 460px; margin: 1.4rem auto 0;
+    background: #178a63; color: #fff;
+    border-radius: 12px; padding: 1.6rem 1.4rem;
+    box-shadow: 0 4px 0 #0e5c41;
+  }
+  .hours-box .big { font-size: clamp(1.2rem, 3vw, 1.5rem); font-weight: 800; }
+  .hours-box .es-p { color: #cdeee1; font-style: italic; font-size: 0.92rem; margin-top: 0.3rem; }
+  .hours-box .detail { margin-top: 0.9rem; font-size: 0.95rem; color: #eafff5; }
+
+  .family { background: #fdeed7; }
+  .family-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.3rem; margin-top: 1.5rem; }
+  .family-card { background: #fff; border-radius: 12px; padding: 1.4rem; text-align: center; box-shadow: 0 3px 10px rgba(120,60,20,0.10); }
+  .family-card .icon { font-size: 2rem; }
+  .family-card h4 { margin: 0.5rem 0 0.3rem; color: #c02942; font-size: 1rem; }
+  .family-card h4 span { display: block; font-size: 0.82rem; color: #b06a2a; font-style: italic; font-weight: normal; }
+  .family-card p { font-size: 0.9rem; color: #5a4636; }
+
+  .visit { text-align: center; background: linear-gradient(135deg, #178a63, #0e5c41); color: #fff; }
+  .visit h2 { color: #f5d547; }
+  .visit h2 .es-h { color: #cdeee1; }
+  .visit address { font-style: normal; font-size: clamp(1rem, 2.4vw, 1.2rem); margin-top: 1rem; font-weight: bold; }
+  .visit p { color: #d8f2e6; margin-top: 0.5rem; font-size: 0.95rem; }
+
+  footer {
+    padding: 1.8rem 18px; text-align: center;
+    font-size: 0.78rem; color: #8a7a68; background: #fff8ef;
+    border-top: 1px solid #eadbc4;
+  }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by Here's My Company Website. Not affiliated with the business.</div>
+
+<header class="hero">
+  <div class="welcome">Bienvenidos &middot; Welcome &middot; Pico &amp; La Brea</div>
+  <h1>Rodriguez Barber &amp; Beauty Salon
+    <span class="es">Barber&iacute;a y Sal&oacute;n de Belleza de la Familia Rodriguez</span>
+  </h1>
+  <div class="walkin">Walk-Ins Welcome &middot; Sin Cita &mdash; Pase Adelante</div>
+</header>
+
+<section class="intro">
+  <div class="wrap">
+    <h2>A Family Shop for the Whole Family
+      <span class="es-h">Un negocio familiar para toda la familia</span>
+    </h2>
+    <p>Right in the plaza at Pico and La Brea, the Rodriguez family cuts, styles, and takes care of the neighborhood the way only a family business can &mdash; with warmth, skill, and a chair for everyone from abuelito to the little ones.</p>
+    <p class="es-p">En la plaza de Pico y La Brea, la familia Rodriguez atiende al barrio como solo un negocio familiar sabe hacerlo: con cari&ntilde;o, experiencia y una silla para todos.</p>
+  </div>
+</section>
+
+<section class="prices">
+  <div class="wrap">
+    <h2>Services &amp; Prices
+      <span class="es-h">Servicios y Precios</span>
+    </h2>
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Barber Shop <span>Barber&iacute;a</span></h3>
+        <table>
+          <tr><td>Men's Haircut &middot; Corte de caballero</td><td>$</td></tr>
+          <tr><td>Fade / Taper &middot; Desvanecido</td><td>$</td></tr>
+          <tr><td>Kids' Cut &middot; Corte de ni&ntilde;o</td><td>$</td></tr>
+          <tr><td>Beard Trim &middot; Arreglo de barba</td><td>$</td></tr>
+          <tr><td>Cut + Beard &middot; Corte y barba</td><td>$</td></tr>
+        </table>
+      </div>
+      <div class="price-card beauty">
+        <h3>Beauty Salon <span>Sal&oacute;n de Belleza</span></h3>
+        <table>
+          <tr><td>Women's Cut &middot; Corte de dama</td><td>$</td></tr>
+          <tr><td>Blow-Dry &amp; Style &middot; Secado y peinado</td><td>$</td></tr>
+          <tr><td>Color &middot; Tinte</td><td>$</td></tr>
+          <tr><td>Perm &middot; Permanente</td><td>$</td></tr>
+          <tr><td>Special Occasion &middot; Peinado de evento</td><td>$</td></tr>
+        </table>
+      </div>
+    </div>
+    <p class="price-note">Ask in the shop for current prices &middot; Pregunte por los precios en el sal&oacute;n</p>
+  </div>
+</section>
+
+<section class="hours">
+  <div class="wrap">
+    <h2>Walk-In Hours
+      <span class="es-h">Horario &mdash; Sin Cita</span>
+    </h2>
+    <div class="hours-box">
+      <div class="big">No appointment needed &mdash; just walk in!</div>
+      <div class="es-p">No necesita cita &mdash; &iexcl;pase adelante!</div>
+      <div class="detail">Open daily &middot; Abierto todos los d&iacute;as<br>Stop by the shop for this week's hours &middot; Visite el sal&oacute;n para el horario de la semana</div>
+    </div>
+  </div>
+</section>
+
+<section class="family">
+  <div class="wrap">
+    <h2>Why the Neighborhood Loves Us
+      <span class="es-h">Por qu&eacute; el barrio nos quiere</span>
+    </h2>
+    <div class="family-grid">
+      <div class="family-card"><div class="icon">&#128106;</div><h4>Family-Run <span>Negocio familiar</span></h4><p>The Rodriguez family greets you at the door and knows your usual by heart.</p></div>
+      <div class="family-card"><div class="icon">&#9986;&#65039;</div><h4>Barber + Beauty <span>Barber&iacute;a y belleza</span></h4><p>His cut, her color, the kids' trims &mdash; one friendly stop for everyone.</p></div>
+      <div class="family-card"><div class="icon">&#127757;</div><h4>English &amp; Espa&ntilde;ol <span>Se habla espa&ntilde;ol</span></h4><p>Explain exactly what you want in whichever language feels like home.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <h2>Find Us in the Plaza
+      <span class="es-h">Encu&eacute;ntrenos en la plaza</span>
+    </h2>
+    <address>4972 W Pico Blvd, Los Angeles, CA 90019<br>Pico &amp; La Brea Plaza</address>
+    <p>Easy parking in the plaza lot &middot; Estacionamiento en la plaza</p>
+  </div>
+</section>
+
+<footer>
+  Demo concept page — not the official website of Rodriguez Barber and Beauty Salon. Built as a proposal by Here's My Company Website. This page is hidden from search engines and will be removed on request.
+</footer>
+</body>
+</html>

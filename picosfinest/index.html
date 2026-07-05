@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Pico's Finest Barbershop — Demo Concept</title>
+<style>
+  :root{
+    --white:#ffffff;
+    --off:#f4f5f7;
+    --ink:#0e0f11;
+    --steel:#5b6068;
+    --electric:#0a58e0;
+    --lime:#c8f04a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+    background:var(--white);color:var(--ink);
+    padding-top:44px;line-height:1.6;
+  }
+  .demo-banner{
+    position:fixed;top:0;left:0;right:0;z-index:9999;
+    background:#101216;color:#f0f1f3;
+    font-size:12px;text-align:center;padding:6px 10px;line-height:1.4;
+  }
+  header.hero{
+    background:var(--white);
+    padding:clamp(3.5rem,9vw,7rem) 1.25rem clamp(3rem,7vw,5.5rem);
+    text-align:center;
+    border-bottom:6px solid var(--ink);
+  }
+  .badge-50{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:var(--lime);color:var(--ink);
+    font-weight:800;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+    padding:.45rem 1.1rem;border-radius:999px;margin-bottom:1.75rem;
+  }
+  h1{
+    font-size:clamp(2.6rem,9vw,5.5rem);
+    font-weight:900;line-height:.95;
+    text-transform:uppercase;letter-spacing:-.02em;
+    font-stretch:condensed;
+  }
+  h1 .finest{
+    display:block;
+    color:var(--white);
+    -webkit-text-stroke:2px var(--ink);
+    text-shadow:none;
+  }
+  .hero-sub{
+    max-width:34rem;margin:1.5rem auto 0;color:var(--steel);
+    font-size:clamp(1rem,2.4vw,1.2rem);font-weight:500;
+  }
+  .hero-actions{margin-top:2.25rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;text-decoration:none;font-weight:800;text-transform:uppercase;
+    letter-spacing:.1em;font-size:.85rem;padding:1rem 2.2rem;border-radius:4px;
+  }
+  .btn-dark{background:var(--ink);color:var(--white);}
+  .btn-line{border:3px solid var(--ink);color:var(--ink);}
+  .ticker{
+    background:var(--ink);color:var(--lime);
+    font-weight:800;text-transform:uppercase;letter-spacing:.2em;
+    font-size:.75rem;padding:.8rem 1rem;text-align:center;
+    overflow:hidden;white-space:nowrap;
+  }
+  section{padding:clamp(3rem,7vw,5.5rem) 1.25rem;}
+  .wrap{max-width:1000px;margin:0 auto;}
+  .sec-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:2.25rem;flex-wrap:wrap;}
+  .sec-num{font-weight:900;color:var(--electric);font-size:1rem;letter-spacing:.1em;}
+  h2{font-size:clamp(1.7rem,5vw,2.6rem);font-weight:900;text-transform:uppercase;letter-spacing:-.01em;}
+  .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem;}
+  .card{
+    background:var(--off);border-radius:10px;padding:1.75rem;
+    border-bottom:5px solid var(--electric);
+  }
+  .card h3{font-size:1.15rem;font-weight:800;text-transform:uppercase;margin-bottom:.5rem;}
+  .card p{color:var(--steel);font-size:.95rem;}
+  .ritual{background:var(--ink);color:var(--white);}
+  .ritual h2{color:var(--white);}
+  .ritual .card{background:#1b1d22;border-bottom-color:var(--lime);}
+  .ritual .card h3{color:var(--lime);}
+  .ritual .card p{color:#a7abb3;}
+  .stats{display:flex;flex-wrap:wrap;gap:2.5rem;justify-content:center;text-align:center;margin-top:2.5rem;}
+  .stat .n{font-size:clamp(2.2rem,6vw,3.2rem);font-weight:900;color:var(--electric);}
+  .ritual .stat .n{color:var(--lime);}
+  .stat .l{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);}
+  .ritual .stat .l{color:#a7abb3;}
+  .amen{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem;}
+  .chip{
+    background:var(--white);border:2px solid var(--ink);border-radius:999px;
+    font-weight:700;font-size:.82rem;padding:.5rem 1.1rem;
+  }
+  .visit-flex{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;}
+  .visit-box{border:3px solid var(--ink);border-radius:10px;padding:1.75rem;}
+  .visit-box h3{font-weight:900;text-transform:uppercase;font-size:1rem;margin-bottom:.6rem;letter-spacing:.06em;}
+  .visit-box p{color:var(--steel);font-size:.95rem;}
+  footer{
+    background:#101216;color:#8e939c;text-align:center;font-size:.78rem;
+    padding:2.25rem 1.25rem;line-height:1.7;
+  }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by Here's My Company Website. Not affiliated with the business.</div>
+
+<header class="hero">
+  <span class="badge-50">&#9733; 5.0 Rated &middot; Black-Owned &middot; Mid-City LA</span>
+  <h1>Pico's<span class="finest">Finest</span>Barbershop</h1>
+  <p class="hero-sub">The name isn't a boast — it's a standard. The sharpest fades on the corridor, a hot-towel finish every time, and a shop kept as clean as the line-ups.</p>
+  <div class="hero-actions">
+    <a class="btn btn-dark" href="#visit">Plan Your Visit</a>
+    <a class="btn btn-line" href="#services">The Menu</a>
+  </div>
+</header>
+<div class="ticker">FADES &middot; TAPERS &middot; HOT TOWEL &middot; LINE-UPS &middot; FADES &middot; TAPERS &middot; HOT TOWEL &middot; LINE-UPS</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Built on Precision</h2></div>
+    <div class="grid-3">
+      <div class="card"><h3>Crisp Fades</h3><p>Skin fades, mid fades, drop fades — blended tight and faded clean, with edges you could set a level against.</p></div>
+      <div class="card"><h3>Tapers &amp; Shape-Ups</h3><p>Fast, exact maintenance cuts that keep your look game-day ready between full appointments.</p></div>
+      <div class="card"><h3>Beard Detail</h3><p>Sculpted beard work with sharp borders and a natural gradient into the fade.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ritual">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num" style="color:var(--lime)">02</span><h2>The Hot-Towel Ritual</h2></div>
+    <div class="grid-3">
+      <div class="card"><h3>Steam</h3><p>Every service closes with a hot towel — opening the skin, settling the cut, resetting the day.</p></div>
+      <div class="card"><h3>Finish</h3><p>Final detailing under the light. Nothing leaves the chair until it passes the mirror test — ours, then yours.</p></div>
+      <div class="card"><h3>Walk Out Finest</h3><p>A perfect 5.0 rating isn't luck. It's the same standard, every head, every visit.</p></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n">5.0</div><div class="l">Rating</div></div>
+      <div class="stat"><div class="n">100%</div><div class="l">Hot-Towel Finish</div></div>
+      <div class="stat"><div class="n">W. PICO</div><div class="l">Home Corridor</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2>A Shop Built for You</h2></div>
+    <p style="max-width:44rem;color:var(--steel);">A clean, curated, modern room on West Pico — designed so waiting feels easy and the chair feels like the main event. Black-owned and proud of it, with a standard the whole corridor can see.</p>
+    <div class="amen">
+      <span class="chip">📶 Free Wi-Fi</span>
+      <span class="chip">♿ Wheelchair Accessible</span>
+      <span class="chip">🧼 Curated Modern Interior</span>
+      <span class="chip">⭐ Perfect 5.0</span>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="background:var(--off);">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Pull Up</h2></div>
+    <div class="visit-flex">
+      <div class="visit-box"><h3>Location</h3><p>5764 W Pico Blvd<br>Los Angeles, CA 90019</p></div>
+      <div class="visit-box"><h3>Hours</h3><p>Tuesday – Saturday<br>Closed Sunday &amp; Monday</p></div>
+      <div class="visit-box"><h3>The Feed</h3><p>Fresh work daily on Instagram<br>@picosfinestbarbershop</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Demo concept page — not the official website of Pico's Finest Barbershop. Built as a proposal by Here's My Company Website. This page is hidden from search engines and will be removed on request.</p>
+</footer>
+</body>
+</html>

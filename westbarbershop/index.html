@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>West Barbershop — Demo Concept</title>
+<style>
+  :root{
+    --paper:#fdfbf5;
+    --red:#b3202c;
+    --blue:#274b8f;
+    --navy:#20304d;
+    --tan:#e8dfc9;
+    --brown:#5a4632;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Trebuchet MS','Segoe UI',Verdana,Arial,sans-serif;
+    background:var(--paper);color:#2b2b2b;
+    padding-top:44px;line-height:1.65;
+  }
+  .demo-banner{
+    position:fixed;top:0;left:0;right:0;z-index:9999;
+    background:#1c2333;color:#f2f2f2;
+    font-size:12px;text-align:center;padding:6px 10px;line-height:1.4;
+  }
+  header.hero{
+    background:var(--paper);
+    text-align:center;
+    padding:clamp(3rem,7vw,5rem) 1.25rem;
+    border-bottom:3px double var(--brown);
+  }
+  .pole{
+    width:34px;height:110px;margin:0 auto 1.5rem;border-radius:17px;
+    background:repeating-linear-gradient(-45deg,
+      var(--red) 0 12px,#fff 12px 24px,var(--blue) 24px 36px,#fff 36px 48px);
+    border:3px solid var(--navy);
+    box-shadow:0 4px 0 rgba(0,0,0,.12);
+    position:relative;
+  }
+  .pole::before,.pole::after{
+    content:"";position:absolute;left:50%;transform:translateX(-50%);
+    width:44px;height:12px;background:var(--navy);border-radius:6px;
+  }
+  .pole::before{top:-12px;} .pole::after{bottom:-12px;}
+  h1{
+    font-size:clamp(2.4rem,7vw,4rem);
+    color:var(--navy);letter-spacing:.03em;
+    font-weight:700;
+  }
+  h1 span{color:var(--red);}
+  .since{
+    font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;color:var(--brown);
+    margin-top:.5rem;
+  }
+  .hero-sub{max-width:36rem;margin:1.25rem auto 0;font-size:clamp(1rem,2.3vw,1.15rem);color:#4c4c4c;}
+  .walkin{
+    display:inline-block;margin-top:1.75rem;background:var(--red);color:#fff;
+    font-weight:700;padding:.85rem 2rem;border-radius:6px;text-decoration:none;
+    letter-spacing:.05em;box-shadow:0 3px 0 #7d161f;
+  }
+  section{padding:clamp(2.5rem,6vw,4rem) 1.25rem;}
+  .wrap{max-width:900px;margin:0 auto;}
+  h2{
+    text-align:center;color:var(--navy);font-size:clamp(1.5rem,4vw,2.1rem);margin-bottom:.4rem;
+  }
+  .sub-es{text-align:center;color:var(--red);font-style:italic;font-size:1rem;margin-bottom:2rem;}
+  .price-board{
+    background:var(--navy);color:var(--tan);border-radius:10px;
+    max-width:620px;margin:0 auto;padding:2rem clamp(1.25rem,4vw,2.5rem);
+    border:4px solid var(--brown);
+  }
+  .price-board h3{
+    text-align:center;letter-spacing:.25em;text-transform:uppercase;font-size:.85rem;
+    color:#fff;margin-bottom:1.5rem;border-bottom:1px dashed rgba(232,223,201,.4);padding-bottom:1rem;
+  }
+  .p-row{display:flex;align-items:baseline;gap:.5rem;padding:.55rem 0;font-size:1rem;}
+  .p-row .name{white-space:nowrap;}
+  .p-row .dots{flex:1;border-bottom:2px dotted rgba(232,223,201,.45);transform:translateY(-4px);}
+  .p-row .tag{white-space:nowrap;font-weight:700;color:#fff;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;}
+  .family{background:var(--tan);}
+  .fam-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-top:1.5rem;}
+  .fam-card{
+    background:var(--paper);border-radius:8px;padding:1.5rem;text-align:center;
+    border:2px solid #d5c9ab;
+  }
+  .fam-card .em{font-size:2rem;display:block;margin-bottom:.5rem;}
+  .fam-card h3{color:var(--navy);font-size:1.05rem;margin-bottom:.4rem;}
+  .fam-card p{font-size:.92rem;color:#55503f;}
+  .visit-strip{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.25rem;margin-top:1.5rem;text-align:center;
+  }
+  .v-item h3{color:var(--red);font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;margin-bottom:.5rem;}
+  .v-item p{color:#4c4c4c;font-size:.98rem;}
+  footer{
+    background:#1c2333;color:#9aa1b0;text-align:center;font-size:.78rem;
+    padding:2.25rem 1.25rem;line-height:1.7;
+  }
+  footer .stripe{
+    height:8px;margin:-2.25rem -1.25rem 2rem;
+    background:repeating-linear-gradient(135deg,var(--red) 0 14px,#fff 14px 28px,var(--blue) 28px 42px,#fff 42px 56px);
+  }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by Here's My Company Website. Not affiliated with the business.</div>
+
+<header class="hero">
+  <div class="pole" aria-hidden="true"></div>
+  <h1>West <span>Barbershop</span></h1>
+  <p class="since">Family-Owned &middot; Mid-City Los Angeles</p>
+  <p class="hero-sub">A real neighborhood barbershop, in a space that's been cutting Mid-City's hair for generations. No fuss, no attitude — just good barbers, fair prices, and a clean cut every time. <em>Aquí todos son bienvenidos.</em></p>
+  <a class="walkin" href="#visit">Walk-Ins Welcome &middot; Pásale</a>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>The Board</h2>
+    <p class="sub-es">Lo de siempre — the classics, done right.</p>
+    <div class="price-board">
+      <h3>Services &middot; Servicios</h3>
+      <div class="p-row"><span class="name">Fades &amp; Tapers</span><span class="dots"></span><span class="tag">House Favorite</span></div>
+      <div class="p-row"><span class="name">Scissor Cuts</span><span class="dots"></span><span class="tag">Classic</span></div>
+      <div class="p-row"><span class="name">Beard Trims</span><span class="dots"></span><span class="tag">Clean-Up</span></div>
+      <div class="p-row"><span class="name">Hot Towel Shaves</span><span class="dots"></span><span class="tag">Old School</span></div>
+      <div class="p-row"><span class="name">Kids' Cuts &middot; Niños</span><span class="dots"></span><span class="tag">Family</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="family">
+  <div class="wrap">
+    <h2>Your Neighborhood Shop</h2>
+    <p class="sub-es">De la familia, para el barrio.</p>
+    <div class="fam-grid">
+      <div class="fam-card"><span class="em">💈</span><h3>Barbershop History</h3><p>This corner of Pico has been a barbershop for years — West Barbershop keeps that tradition alive, chair by chair.</p></div>
+      <div class="fam-card"><span class="em">👨‍👩‍👧‍👦</span><h3>Family-Owned</h3><p>Run by family, for families. Dads, kids, abuelos — everybody has a seat here.</p></div>
+      <div class="fam-card"><span class="em">🗣️</span><h3>English y Español</h3><p>Tell us what you want in whichever language feels like home. We'll get it right.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <h2>Stop By</h2>
+    <p class="sub-es">No appointment needed — sin cita.</p>
+    <div class="visit-strip">
+      <div class="v-item"><h3>Address</h3><p>4506 W Pico Blvd<br>Los Angeles, CA 90019</p></div>
+      <div class="v-item"><h3>How It Works</h3><p>Walk in, grab a seat,<br>you're next in line.</p></div>
+      <div class="v-item"><h3>Look For</h3><p>The barber pole out front —<br>you can't miss it.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="stripe" aria-hidden="true"></div>
+  <p>Demo concept page — not the official website of West Barbershop. Built as a proposal by Here's My Company Website. This page is hidden from search engines and will be removed on request.</p>
+</footer>
+</body>
+</html>

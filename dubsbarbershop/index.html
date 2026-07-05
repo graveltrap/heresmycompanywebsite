@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Dub's Barber Shop — Demo Concept</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #16130f;
+    color: #e8ddcb;
+    padding-top: 44px;
+    line-height: 1.6;
+  }
+  .demo-banner {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+    background: #0a0a0a; color: #f0e8d8;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 12px; text-align: center; padding: 7px 12px;
+    border-bottom: 1px solid #3a2f22;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+  /* Barber pole stripe accent */
+  .pole-stripe {
+    height: 10px;
+    background: repeating-linear-gradient(45deg, #b32830 0 14px, #f2ecdf 14px 28px, #24457a 28px 42px, #f2ecdf 42px 56px);
+  }
+
+  header.hero {
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(120, 85, 45, 0.28), transparent 60%),
+      linear-gradient(180deg, #201a12 0%, #16130f 100%);
+    text-align: center;
+    padding: clamp(3rem, 8vw, 6rem) 20px clamp(2.5rem, 6vw, 5rem);
+    border-bottom: 1px solid #3a2f22;
+  }
+  .badge {
+    display: inline-block;
+    border: 3px double #b08d4f;
+    border-radius: 50%;
+    width: clamp(120px, 22vw, 160px);
+    height: clamp(120px, 22vw, 160px);
+    display: inline-flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    color: #d6b877;
+    margin-bottom: 1.5rem;
+    background: radial-gradient(circle at 35% 30%, rgba(214,184,119,0.12), transparent 65%);
+  }
+  .badge .est { font-size: clamp(0.65rem, 1.5vw, 0.75rem); letter-spacing: 0.35em; text-transform: uppercase; }
+  .badge .year { font-size: clamp(1.8rem, 4.5vw, 2.4rem); font-weight: bold; letter-spacing: 0.05em; }
+  .badge .place { font-size: clamp(0.55rem, 1.3vw, 0.65rem); letter-spacing: 0.25em; text-transform: uppercase; margin-top: 2px; }
+  h1 {
+    font-size: clamp(2.4rem, 7vw, 4.5rem);
+    letter-spacing: 0.04em;
+    color: #f2ecdf;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+  h1 span.apos { color: #d6b877; }
+  .tagline {
+    font-style: italic;
+    color: #b8a583;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    margin-top: 0.8rem;
+  }
+  .hero-rule {
+    width: 90px; height: 2px; background: #b08d4f;
+    margin: 1.4rem auto 0;
+  }
+
+  section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
+  h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+    color: #d6b877;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .sub { text-align: center; color: #9a8a6e; font-style: italic; margin-bottom: 2.2rem; }
+
+  .story p { max-width: 680px; margin: 0 auto 1.1rem; font-size: clamp(1rem, 2vw, 1.1rem); color: #d8ccb4; }
+
+  .services { background: #1d1810; border-top: 1px solid #3a2f22; border-bottom: 1px solid #3a2f22; }
+  .menu { max-width: 620px; margin: 0 auto; }
+  .menu-item {
+    display: flex; align-items: baseline; gap: 0.75rem;
+    padding: 1rem 0; border-bottom: 1px dashed #4a3d2a;
+  }
+  .menu-item:last-child { border-bottom: none; }
+  .menu-item .name { font-size: clamp(1.05rem, 2.2vw, 1.2rem); color: #f2ecdf; white-space: nowrap; }
+  .menu-item .dots { flex: 1; border-bottom: 1px dotted #6a5a40; transform: translateY(-4px); }
+  .menu-item .price { color: #d6b877; font-weight: bold; white-space: nowrap; }
+  .menu-item .desc { display: block; font-size: 0.88rem; color: #9a8a6e; font-style: italic; margin-top: 2px; }
+
+  .pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.2rem; margin-top: 1rem; }
+  .pillar {
+    border: 1px solid #3a2f22; padding: 1.6rem 1.4rem;
+    background: linear-gradient(180deg, #1d1810, #16130f);
+  }
+  .pillar h3 { color: #d6b877; letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; margin-bottom: 0.6rem; }
+  .pillar p { color: #c4b598; font-size: 0.95rem; }
+
+  .visit { text-align: center; background: #1d1810; border-top: 1px solid #3a2f22; }
+  .visit address { font-style: normal; font-size: clamp(1.05rem, 2.3vw, 1.25rem); color: #f2ecdf; margin-bottom: 0.5rem; }
+  .visit .ig { color: #d6b877; letter-spacing: 0.05em; }
+  .visit .note { color: #9a8a6e; font-style: italic; margin-top: 1rem; font-size: 0.95rem; }
+
+  footer {
+    padding: 2rem 20px; text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 0.78rem; color: #8a7a5e; background: #0f0d0a;
+    border-top: 1px solid #3a2f22;
+  }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by Here's My Company Website. Not affiliated with the business.</div>
+
+<div class="pole-stripe"></div>
+<header class="hero">
+  <div class="badge">
+    <span class="est">Est.</span>
+    <span class="year">2001</span>
+    <span class="place">La Brea Ave</span>
+  </div>
+  <h1>Dub<span class="apos">'</span>s Barber Shop</h1>
+  <p class="tagline">Two decades of sharp cuts on South La Brea.</p>
+  <div class="hero-rule"></div>
+</header>
+
+<section class="story">
+  <div class="wrap">
+    <h2>A La Brea Landmark</h2>
+    <p class="sub">Since 2001 &mdash; and still the first chair in the neighborhood</p>
+    <p>Some shops chase trends. Dub's set the standard. For more than twenty years, this Black-owned neighborhood institution at 1277 S La Brea has been where fathers bring their sons for a first cut, where the lineups stay crisp, and where the conversation is as good as the fade.</p>
+    <p>The formula hasn't changed because it doesn't need to: experienced barbers, honest prices, and a chair that feels like it was saved just for you. Walk in a stranger, leave looking like a regular.</p>
+  </div>
+</section>
+
+<div class="pole-stripe"></div>
+<section class="services">
+  <div class="wrap">
+    <h2>The Menu</h2>
+    <p class="sub">Classic services, done right</p>
+    <div class="menu">
+      <div class="menu-item"><div><span class="name">Men's Haircut</span><span class="desc">Fades, tapers, and classic cuts &mdash; lined up clean</span></div><span class="dots"></span><span class="price">Ask in shop</span></div>
+      <div class="menu-item"><div><span class="name">Beard Trim &amp; Shape-Up</span><span class="desc">Sharp edges, sculpted to your face</span></div><span class="dots"></span><span class="price">Ask in shop</span></div>
+      <div class="menu-item"><div><span class="name">Hot Towel Shave</span><span class="desc">Old-school straight-razor treatment</span></div><span class="dots"></span><span class="price">Ask in shop</span></div>
+      <div class="menu-item"><div><span class="name">Cut + Beard Combo</span><span class="desc">The full refresh, chair to door</span></div><span class="dots"></span><span class="price">Ask in shop</span></div>
+      <div class="menu-item"><div><span class="name">Kids' Cuts</span><span class="desc">Patient hands for the next generation</span></div><span class="dots"></span><span class="price">Ask in shop</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Why Dub's</h2>
+    <p class="sub">What twenty-plus years earns you</p>
+    <div class="pillars">
+      <div class="pillar"><h3>&#9986; Master Barbers</h3><p>Decades of combined experience behind every chair. Your barber remembers your cut &mdash; and your name.</p></div>
+      <div class="pillar"><h3>&#9733; 4.5-Star Reputation</h3><p>The neighborhood keeps coming back for a reason. Consistency is the house specialty.</p></div>
+      <div class="pillar"><h3>&#127968; Community First</h3><p>Black-owned and rooted on La Brea since 2001. This is more than a shop &mdash; it's a cornerstone.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="pole-stripe"></div>
+<section class="visit">
+  <div class="wrap">
+    <h2>Pull Up</h2>
+    <address>1277 S La Brea Ave, Los Angeles, CA 90019</address>
+    <p class="ig">Instagram: @dubs_on_la_brea</p>
+    <p class="note">Walk-ins welcome. Come see why La Brea has trusted Dub's since 2001.</p>
+  </div>
+</section>
+
+<footer>
+  Demo concept page — not the official website of Dub's Barber Shop. Built as a proposal by Here's My Company Website. This page is hidden from search engines and will be removed on request.
+</footer>
+</body>
+</html>

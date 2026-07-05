@@ -2,6 +2,27 @@
 # Demos live at root paths (/<slug>/) — add a Disallow line for every
 # demo folder when it is created. Each demo also carries meta noindex.
 User-agent: *
-Disallow: /chopzla/
 Disallow: /templates/
 Disallow: /docs/
+Disallow: /chopzla/
+Disallow: /mrconeys/
+Disallow: /mbarbering/
+Disallow: /picosfinest/
+Disallow: /westbarbershop/
+Disallow: /oaxacabarber/
+Disallow: /dubsbarbershop/
+Disallow: /rolands/
+Disallow: /rodriguezbarber/
+Disallow: /picobeauty/
+Disallow: /upperroomboutique/
+Disallow: /legacylounge/
+Disallow: /blueflame/
+Disallow: /thehookahlounge/
+Disallow: /launicamidcity/
+Disallow: /rubiosbakery/
+Disallow: /lucysdrivein/
+Disallow: /latiresauto/
+Disallow: /gdautomotive/
+Disallow: /autobrakecenter/
+Disallow: /bodybuilders/
+Disallow: /boulevardvacuum/

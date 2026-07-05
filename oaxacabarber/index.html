@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Oaxaca Barber &amp; Beauty Salon — Demo Concept</title>
+<style>
+  :root{
+    --clay:#a6452b;
+    --terra:#c96f3b;
+    --sand:#f5e9d7;
+    --maize:#e0a92e;
+    --cacao:#3f2a20;
+    --teal:#2f6b62;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Verdana,Arial,sans-serif;
+    background:var(--sand);color:var(--cacao);
+    padding-top:44px;line-height:1.65;
+  }
+  .demo-banner{
+    position:fixed;top:0;left:0;right:0;z-index:9999;
+    background:#241811;color:#f5ecdd;
+    font-size:12px;text-align:center;padding:6px 10px;line-height:1.4;
+  }
+  /* Zapotec-style stepped fret band (greca) in CSS */
+  .greca{
+    height:26px;
+    background:
+      repeating-linear-gradient(90deg,
+        var(--maize) 0 8px, transparent 8px 16px),
+      repeating-linear-gradient(90deg,
+        var(--clay) 0 16px, var(--teal) 16px 32px);
+    border-top:3px solid var(--cacao);
+    border-bottom:3px solid var(--cacao);
+  }
+  header.hero{
+    background:linear-gradient(160deg,var(--clay) 0%,var(--terra) 60%,#b85a30 100%);
+    color:var(--sand);text-align:center;
+    padding:clamp(3rem,8vw,5.5rem) 1.25rem;
+  }
+  .sun{
+    width:76px;height:76px;margin:0 auto 1.5rem;border-radius:50%;
+    background:radial-gradient(circle,var(--maize) 0 55%,transparent 56%),
+      repeating-conic-gradient(var(--maize) 0deg 12deg,transparent 12deg 30deg);
+  }
+  h1{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:clamp(2.2rem,7vw,4rem);line-height:1.1;
+  }
+  h1 small{
+    display:block;font-size:clamp(1rem,3vw,1.4rem);font-weight:400;
+    letter-spacing:.25em;text-transform:uppercase;color:var(--maize);margin-top:.4rem;
+  }
+  .hero-sub{max-width:38rem;margin:1.25rem auto 0;font-size:clamp(1rem,2.4vw,1.2rem);}
+  .hero-sub em{color:#ffe8b8;}
+  .cta{
+    display:inline-block;margin-top:2rem;background:var(--maize);color:var(--cacao);
+    font-weight:700;text-decoration:none;padding:.9rem 2.2rem;border-radius:6px;
+    letter-spacing:.05em;border:2px solid var(--cacao);box-shadow:4px 4px 0 var(--cacao);
+  }
+  section{padding:clamp(2.5rem,6vw,4.5rem) 1.25rem;}
+  .wrap{max-width:960px;margin:0 auto;}
+  .bilingual{text-align:center;margin-bottom:2rem;}
+  h2{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:clamp(1.6rem,4.5vw,2.4rem);color:var(--clay);
+  }
+  .es-line{color:var(--teal);font-style:italic;font-size:1.05rem;}
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.25rem;}
+  .svc{
+    background:#fff;border:2px solid var(--cacao);border-radius:8px;
+    padding:1.5rem;box-shadow:5px 5px 0 rgba(63,42,32,.15);
+  }
+  .svc .band{height:8px;border-radius:4px;margin-bottom:1rem;
+    background:repeating-linear-gradient(90deg,var(--clay) 0 10px,var(--maize) 10px 20px,var(--teal) 20px 30px);}
+  .svc h3{font-size:1.1rem;color:var(--cacao);margin-bottom:.35rem;}
+  .svc .es{font-size:.85rem;color:var(--teal);font-style:italic;display:block;margin-bottom:.5rem;}
+  .svc p{font-size:.93rem;color:#5d4a3d;}
+  .heritage{background:var(--cacao);color:var(--sand);}
+  .heritage h2{color:var(--maize);}
+  .heritage .es-line{color:#d9b98a;}
+  .heritage .lead{max-width:44rem;margin:0 auto;text-align:center;font-size:clamp(1rem,2.3vw,1.15rem);}
+  .gen-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;margin-top:2.25rem;text-align:center;}
+  .gen{background:#4d372a;border-radius:8px;padding:1.5rem 1rem;border-top:6px solid var(--maize);}
+  .gen .em{font-size:2rem;display:block;margin-bottom:.5rem;}
+  .gen h3{font-size:1rem;color:var(--maize);margin-bottom:.3rem;}
+  .gen p{font-size:.88rem;color:#e4d5c2;}
+  .visit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;text-align:center;}
+  .v-card{background:#fff;border:2px solid var(--cacao);border-radius:8px;padding:1.6rem 1.25rem;}
+  .v-card h3{color:var(--clay);font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.6rem;}
+  .v-card p{font-size:.95rem;color:#5d4a3d;}
+  footer{
+    background:#241811;color:#b9a58f;text-align:center;font-size:.78rem;
+    padding:2.25rem 1.25rem;line-height:1.7;
+  }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by Here's My Company Website. Not affiliated with the business.</div>
+
+<header class="hero">
+  <div class="sun" aria-hidden="true"></div>
+  <h1>Oaxaca Barber<small>&amp; Beauty Salon</small></h1>
+  <p class="hero-sub">Cortes con orgullo oaxaqueño, en el corazón de Pico. <em>Barbering with Oaxacan pride — for the whole family, every generation.</em></p>
+  <a class="cta" href="#visita">Visítanos &middot; Visit Us</a>
+</header>
+<div class="greca" aria-hidden="true"></div>
+
+<section>
+  <div class="wrap">
+    <div class="bilingual">
+      <h2>Servicios para Toda la Familia</h2>
+      <p class="es-line">Services for the whole family — men, women, and kids.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc"><div class="band"></div><h3>Cortes de Caballero</h3><span class="es">Men's cuts, fades &amp; tapers</span><p>Classic traditional barbering — clean fades, sharp tapers, and the styles the neighborhood grew up with.</p></div>
+      <div class="svc"><div class="band"></div><h3>Salón Unisex</h3><span class="es">Women's cuts &amp; styling</span><p>A full unisex salon under the same roof, so the whole family gets taken care of in one visit.</p></div>
+      <div class="svc"><div class="band"></div><h3>Cortes para Niños</h3><span class="es">Kids' cuts</span><p>Patient, friendly barbers who make first haircuts and back-to-school trims easy — and affordable.</p></div>
+      <div class="svc"><div class="band"></div><h3>Barba y Detalles</h3><span class="es">Beard trims &amp; finishing</span><p>Beard shaping, cejas, and finish work done with old-school care.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="heritage">
+  <div class="wrap">
+    <div class="bilingual">
+      <h2>Raíces Oaxaqueñas</h2>
+      <p class="es-line">Oaxacan roots, Mid-City home.</p>
+    </div>
+    <p class="lead">From the grecas of Mitla to the chairs on Pico Boulevard — Oaxaca Barber &amp; Beauty Salon carries its heritage in its name and its welcome. Three generations of the same family can walk in on a Saturday morning and every one of them leaves looking their best, without breaking the family budget.</p>
+    <div class="gen-row">
+      <div class="gen"><span class="em">👴</span><h3>Los Abuelos</h3><p>Classic cuts and hot-towel tradition, the way it's always been done.</p></div>
+      <div class="gen"><span class="em">👨‍👩‍👧</span><h3>La Familia</h3><p>Affordable prices for everyone under one roof — barbería y salón juntos.</p></div>
+      <div class="gen"><span class="em">👦</span><h3>Los Niños</h3><p>Gentle hands and quick cuts for the little ones. Family-friendly, always.</p></div>
+    </div>
+  </div>
+</section>
+<div class="greca" aria-hidden="true"></div>
+
+<section id="visita">
+  <div class="wrap">
+    <div class="bilingual">
+      <h2>Visítanos</h2>
+      <p class="es-line">Come see us — walk-ins and familias always welcome.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="v-card"><h3>Dirección</h3><p>3812 W Pico Blvd<br>Los Angeles, CA 90019</p></div>
+      <div class="v-card"><h3>Horario</h3><p>Lunes a Sábado<br>Monday – Saturday<br>9:00 AM – 7:00 PM</p></div>
+      <div class="v-card"><h3>Para Todos</h3><p>Family-friendly &middot; Unisex<br>Precios accesibles &middot; Affordable</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Demo concept page — not the official website of Oaxaca Barber &amp; Beauty Salon. Built as a proposal by Here's My Company Website. This page is hidden from search engines and will be removed on request.</p>
+</footer>
+</body>
+</html>

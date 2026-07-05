@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>LA Tires Auto &amp; Body Shop — Demo Concept</title>
+<style>
+  :root{
+    --ink:#0e1116; --panel:#181d24; --steel:#232a33; --edge:#39434f;
+    --hi:#ff3b30; --hi2:#ffb020; --txt:#e8ecf1; --dim:#9aa6b2;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--ink); color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; padding-top:44px;
+  }
+  .demo-banner{
+    position:fixed; top:0; left:0; right:0; z-index:9999;
+    background:#000; color:#ffd23f; font-size:12px; text-align:center;
+    padding:8px 12px; letter-spacing:.02em; border-bottom:1px solid #333;
+  }
+  .wrap{max-width:1060px; margin:0 auto; padding:0 20px;}
+  /* HERO — industrial dark */
+  header{
+    background:
+      linear-gradient(160deg, rgba(14,17,22,.92) 40%, rgba(255,59,48,.14)),
+      repeating-linear-gradient(45deg, #12161c 0 22px, #151a21 22px 44px);
+    border-bottom:4px solid var(--hi);
+    padding:clamp(3rem,8vw,6rem) 0 clamp(2.5rem,6vw,4.5rem);
+  }
+  .kicker{
+    display:inline-block; background:var(--hi); color:#fff; font-weight:800;
+    font-size:.75rem; letter-spacing:.18em; text-transform:uppercase;
+    padding:.35em .9em; margin-bottom:1.2rem; clip-path:polygon(0 0,100% 0,96% 100%,0 100%);
+  }
+  h1{
+    font-size:clamp(2.1rem,6vw,3.8rem); line-height:1.05; font-weight:900;
+    text-transform:uppercase; letter-spacing:-.01em;
+  }
+  h1 .red{color:var(--hi);}
+  .sub{color:var(--dim); max-width:34em; margin-top:1rem; font-size:clamp(1rem,2.2vw,1.15rem);}
+  .badges{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.6rem;}
+  .badge{
+    border:1px solid var(--edge); background:var(--panel); color:var(--txt);
+    font-size:.8rem; font-weight:700; padding:.45em 1em; border-radius:3px;
+  }
+  .badge.gold{border-color:var(--hi2); color:var(--hi2);}
+  /* 7 DAYS strip */
+  .strip{
+    background:var(--hi2); color:#1a1200; font-weight:900; text-transform:uppercase;
+    letter-spacing:.12em; text-align:center; padding:.7rem 1rem; font-size:clamp(.85rem,2vw,1rem);
+  }
+  /* SECTIONS */
+  section{padding:clamp(2.5rem,6vw,4.5rem) 0;}
+  h2{
+    font-size:clamp(1.4rem,3.5vw,2rem); text-transform:uppercase; font-weight:900;
+    margin-bottom:1.6rem; border-left:6px solid var(--hi); padding-left:.6em;
+  }
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:1rem;}
+  .card{
+    background:var(--panel); border:1px solid var(--edge); border-top:3px solid var(--hi);
+    padding:1.4rem; border-radius:4px;
+  }
+  .card .icon{font-size:1.6rem; margin-bottom:.5rem; display:block;}
+  .card h3{font-size:1rem; text-transform:uppercase; letter-spacing:.05em; margin-bottom:.35rem;}
+  .card p{color:var(--dim); font-size:.9rem;}
+  /* WHY */
+  .why{background:var(--steel); border-top:1px solid var(--edge); border-bottom:1px solid var(--edge);}
+  .why-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1.6rem;}
+  .why-grid strong{color:var(--hi2); display:block; margin-bottom:.3rem; font-size:1.05rem;}
+  .why-grid p{color:var(--dim); font-size:.95rem;}
+  /* VISIT */
+  .visit{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.6rem;}
+  .visit .card{border-top-color:var(--hi2);}
+  .hours{list-style:none;}
+  .hours li{display:flex; justify-content:space-between; border-bottom:1px dashed var(--edge); padding:.35em 0; font-size:.92rem;}
+  .hours li span:last-child{color:var(--hi2); font-weight:700;}
+  footer{
+    background:#000; color:#8a939e; font-size:.78rem; text-align:center;
+    padding:1.6rem 20px; border-top:1px solid #222; line-height:1.7;
+  }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by Here's My Company Website. Not affiliated with the business.</div>
+
+<header>
+  <div class="wrap">
+    <span class="kicker">Pico Blvd &middot; Los Angeles &middot; Est. 2006</span>
+    <h1>LA Tires<br><span class="red">Auto &amp; Body Shop</span></h1>
+    <p class="sub">Tires, mechanical, and collision repair under one roof — the straight-shooting neighborhood garage Mid-City has trusted for nearly two decades. In, fixed, and back on the road.</p>
+    <div class="badges">
+      <span class="badge gold">&#9733; 4.4 rated &middot; ~198 reviews</span>
+      <span class="badge">Est. 2006</span>
+      <span class="badge">Fair, up-front pricing</span>
+    </div>
+  </div>
+</header>
+
+<div class="strip">&#128736; Open 7 days a week — because flat tires don't take Sundays off</div>
+
+<section>
+  <div class="wrap">
+    <h2>What we do</h2>
+    <div class="grid">
+      <div class="card"><span class="icon">&#9899;</span><h3>Tires</h3><p>New and quality used tires, mounting, balancing, flat repair — usually while you wait.</p></div>
+      <div class="card"><span class="icon">&#127919;</span><h3>Alignment</h3><p>Precision wheel alignment that stops the pull, saves your tread, and steadies the ride.</p></div>
+      <div class="card"><span class="icon">&#128721;</span><h3>Brakes</h3><p>Pads, rotors, and full brake service done right the first time — no upsell, no runaround.</p></div>
+      <div class="card"><span class="icon">&#128296;</span><h3>Body &amp; Paint</h3><p>Collision repair, dent work, and paint matching that makes the damage disappear.</p></div>
+      <div class="card"><span class="icon">&#128268;</span><h3>Diagnostics</h3><p>Check-engine light on? We find the real problem and tell you the real cost before we touch it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <h2>Why the neighborhood keeps coming back</h2>
+    <div class="why-grid">
+      <div><strong>Quick turnaround</strong><p>Most tire and brake jobs done same-day. We know you need your car — we don't sit on it.</p></div>
+      <div><strong>Honest quotes</strong><p>You get the price and the reason before any work starts. If it doesn't need fixing, we'll say so.</p></div>
+      <div><strong>One-stop shop</strong><p>Tire shop, mechanic, and body shop in one place. One visit, one bill, no bouncing around town.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Find the shop</h2>
+    <div class="visit">
+      <div class="card">
+        <h3>Location</h3>
+        <p style="color:var(--txt); font-size:1rem;">5100 W Pico Blvd<br>Los Angeles, CA 90019</p>
+        <p style="margin-top:.6rem;">Right on Pico — easy pull-in, get looked at fast.</p>
+      </div>
+      <div class="card">
+        <h3>Hours</h3>
+        <ul class="hours">
+          <li><span>Monday – Saturday</span><span>Open</span></li>
+          <li><span>Sunday</span><span>Open</span></li>
+          <li><span>Every day of the week</span><span>&#10003;</span></li>
+        </ul>
+        <p style="margin-top:.6rem;">Seven days a week — a rarity for a full-service garage in LA.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Demo concept page — not the official website of LA Tires Auto &amp; Body Shop. Built as a proposal by Here's My Company Website. This page is hidden from search engines and will be removed on request.
+</footer>
+</body>
+</html>

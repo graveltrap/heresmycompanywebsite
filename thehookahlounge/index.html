@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>The Hookah Lounge — Demo Concept</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Palatino Linotype', Palatino, Georgia, serif;
+    background: #17211f;
+    color: #efe4d0;
+    padding-top: 44px;
+    line-height: 1.7;
+  }
+  .demo-banner {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+    background: #0d1413; color: #cbbfa8;
+    font-family: 'Segoe UI', -apple-system, Arial, sans-serif;
+    font-size: 12px; text-align: center; padding: 7px 12px;
+    border-bottom: 1px solid #2c3b38;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  /* HERO — centered, ornamental, lantern warmth */
+  .hero {
+    text-align: center; padding: 90px 24px 70px;
+    background:
+      radial-gradient(circle at 50% 15%, rgba(224, 154, 61, 0.22), transparent 55%),
+      linear-gradient(180deg, #1b2a27 0%, #17211f 100%);
+  }
+  .ornament { color: #d1913c; font-size: 1.3rem; letter-spacing: 0.6em; }
+  h1 {
+    font-size: clamp(2.6rem, 8vw, 4.6rem); font-weight: 400;
+    color: #f0d9a8; margin: 20px 0 6px; letter-spacing: 0.03em;
+  }
+  .hero .under {
+    font-size: clamp(0.95rem, 2.4vw, 1.15rem); color: #a8c5be;
+    font-style: italic;
+  }
+  .hero .flavors {
+    display: inline-block; margin-top: 32px;
+    border: 1px double #b97f31; border-width: 3px; padding: 14px 30px;
+    color: #eecb8a; letter-spacing: 0.1em; font-size: clamp(0.9rem, 2.2vw, 1.05rem);
+  }
+  .hero .age { margin-top: 22px; font-family: 'Segoe UI', Arial, sans-serif; font-size: 0.75rem; letter-spacing: 0.3em; color: #8ba39c; }
+
+  .divider { text-align: center; color: #b97f31; font-size: 1.1rem; letter-spacing: 0.8em; padding: 8px 0; }
+
+  section { padding: 64px 0; }
+  h2 {
+    text-align: center; font-size: clamp(1.6rem, 4.5vw, 2.3rem);
+    font-weight: 400; color: #f0d9a8; margin-bottom: 12px;
+  }
+  .center-sub { text-align: center; color: #a8c5be; font-style: italic; margin-bottom: 40px; }
+
+  /* ABOUT — warm prose panel */
+  .about-panel {
+    background: linear-gradient(150deg, #20302c, #1a2624);
+    border: 1px solid #31443f; border-radius: 18px;
+    padding: clamp(28px, 5vw, 48px);
+  }
+  .about-panel p { margin-bottom: 18px; color: #ddd0b8; font-size: 1.02rem; }
+  .about-panel p:last-child { margin-bottom: 0; }
+  .about-panel em { color: #eecb8a; }
+
+  /* WHY — alternating list with amber markers */
+  .why-list { list-style: none; display: grid; gap: 20px; }
+  .why-list li {
+    display: grid; grid-template-columns: 54px 1fr; gap: 20px; align-items: start;
+    background: rgba(224, 154, 61, 0.05);
+    border-left: 3px solid #d1913c;
+    padding: 20px 22px;
+  }
+  .why-list .mark {
+    width: 46px; height: 46px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #2e453f, #1e2d2a);
+    border: 1px solid #3b544d;
+    display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+  }
+  .why-list h3 { font-weight: 400; color: #eecb8a; font-size: 1.15rem; margin-bottom: 4px; }
+  .why-list p { color: #c8bda6; font-size: 0.96rem; }
+  @media (max-width: 480px) { .why-list li { grid-template-columns: 1fr; } .why-list .mark { display: none; } }
+
+  /* OCCASIONS */
+  .occ { background: radial-gradient(ellipse at 50% 100%, rgba(224, 154, 61, 0.13), transparent 60%); }
+  .occ-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .occ-card {
+    text-align: center; padding: 34px 24px;
+    border: 1px solid #31443f; border-radius: 12px 12px 60px 60px;
+    background: #1c2a27;
+  }
+  .occ-card .g { font-size: 1.9rem; }
+  .occ-card h3 { font-weight: 400; color: #f0d9a8; margin: 12px 0 8px; font-size: 1.1rem; }
+  .occ-card p { color: #b9ac93; font-size: 0.92rem; }
+
+  /* VISIT */
+  .visit { text-align: center; padding-bottom: 80px; }
+  .visit .addr { color: #eecb8a; font-size: 1.08rem; margin-top: 4px; }
+  .visit p { color: #b9c9c3; }
+
+  footer {
+    background: #0d1413; padding: 34px 24px; text-align: center;
+    font-family: 'Segoe UI', -apple-system, Arial, sans-serif;
+    font-size: 0.8rem; color: #8ba39c; border-top: 1px solid #263531;
+  }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by Here's My Company Website. Not affiliated with the business.</div>
+
+<header class="hero">
+  <div class="ornament">&#10022; &#10022; &#10022;</div>
+  <h1>The Hookah Lounge</h1>
+  <p class="under">A cozy corner of Pico Boulevard where the coals are always ready</p>
+  <div class="flavors">200+ FLAVORS &middot; INDOOR COUCHES &middot; OUTDOOR SEATING</div>
+  <div class="age">21+ ONLY</div>
+</header>
+
+<div class="divider">&#8226; &#8226; &#8226;</div>
+
+<section>
+  <div class="wrap">
+    <h2>Settle In</h2>
+    <p class="center-sub">This is a lounge in the old sense of the word.</p>
+    <div class="about-panel">
+      <p>Step off Pico and the pace changes. Deep, comfortable couches. Ornate hookah vessels catching the light. Music tuned loud enough to feel and low enough to talk over. The Hookah Lounge carries the <em>Middle Eastern lounge tradition</em> the way it's meant to be — unhurried, generous, and centered on good company.</p>
+      <p>With <em>more than 200 flavors</em> behind the counter, there's a bowl for the purist, the sweet tooth, and the friend who says "surprise me." Take a couch inside under the warm glow, or claim a table on the outdoor patio when the LA evening cooperates — which is most of them.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Why Regulars Keep Coming Back</h2>
+    <p class="center-sub">Small room, big hospitality.</p>
+    <ul class="why-list">
+      <li><span class="mark">&#127807;</span><div><h3>A Flavor Wall Worth Exploring</h3><p>Over 200 options — classic double apple and mint to layered house mixes. Tell us your mood; we'll build the bowl.</p></div></li>
+      <li><span class="mark">&#128715;&#65039;</span><div><h3>Couches, Not Barstools</h3><p>Sink-in seating arranged for conversation. This is a place to stay a while, not perch and leave.</p></div></li>
+      <li><span class="mark">&#127900;&#65039;</span><div><h3>Music That Sets the Room</h3><p>A music-forward chill — the soundtrack does half the ambiance work, every night of the week.</p></div></li>
+      <li><span class="mark">&#127769;</span><div><h3>Patio Nights</h3><p>Outdoor seating under the Mid-City sky, made for warm evenings and long sessions.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="occ">
+  <div class="wrap">
+    <h2>Bring Your Occasion</h2>
+    <p class="center-sub">Some nights call for a lounge.</p>
+    <div class="occ-grid">
+      <div class="occ-card"><div class="g">&#10084;&#65039;</div><h3>Date Night</h3><p>Low light, shared smoke, no rush. The kind of second date that earns a third.</p></div>
+      <div class="occ-card"><div class="g">&#127881;</div><h3>Celebrations</h3><p>Birthdays and good-news nights — gather your people around the big couches.</p></div>
+      <div class="occ-card"><div class="g">&#9749;</div><h3>Just Because</h3><p>A weeknight wind-down with tea, a favorite flavor, and nowhere to be.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider">&#8226; &#8226; &#8226;</div>
+
+<section class="visit">
+  <div class="wrap">
+    <h2>Find the Glow</h2>
+    <p>Mid-City, on Pico.</p>
+    <p class="addr">5066 1/2 W Pico Blvd, Los Angeles, CA 90019</p>
+    <p style="margin-top:14px; font-size:0.85rem; color:#8ba39c;">Guests must be 21 or older.</p>
+  </div>
+</section>
+
+<footer>
+  Demo concept page — not the official website of The Hookah Lounge. Built as a proposal by Here's My Company Website. This page is hidden from search engines and will be removed on request.
+</footer>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Mr. Coney's Barbershop — Demo Concept</title>
+<style>
+  :root{
+    --pole-red:#c8102e;
+    --pole-blue:#1b3f8f;
+    --cream:#faf6ef;
+    --ink:#1e2430;
+    --gold:#d9a441;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:Georgia,'Times New Roman',serif;
+    background:var(--cream);
+    color:var(--ink);
+    padding-top:44px;
+    line-height:1.6;
+  }
+  .demo-banner{
+    position:fixed;top:0;left:0;right:0;z-index:9999;
+    background:#14181f;color:#f2f2f2;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+    font-size:12px;text-align:center;padding:6px 10px;line-height:1.4;
+  }
+  /* Barber pole stripe ribbon */
+  .pole-stripe{
+    height:14px;
+    background:repeating-linear-gradient(135deg,
+      var(--pole-red) 0 18px, #fff 18px 36px, var(--pole-blue) 36px 54px, #fff 54px 72px);
+  }
+  header.hero{
+    background:radial-gradient(ellipse at 50% 0%, #2a3245 0%, var(--ink) 70%);
+    color:var(--cream);
+    text-align:center;
+    padding:clamp(3rem,8vw,6rem) 1.25rem clamp(3.5rem,9vw,6.5rem);
+  }
+  .est{
+    display:inline-block;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+    letter-spacing:.35em;text-transform:uppercase;font-size:.75rem;
+    color:var(--gold);border:1px solid var(--gold);
+    padding:.4rem 1rem;border-radius:2px;margin-bottom:1.5rem;
+  }
+  h1{
+    font-size:clamp(2.4rem,7vw,4.5rem);
+    line-height:1.05;font-weight:700;
+  }
+  h1 .apos{color:var(--pole-red);}
+  .hero-sub{
+    font-size:clamp(1.05rem,2.5vw,1.35rem);
+    max-width:38rem;margin:1.25rem auto 0;color:#cdd3de;font-style:italic;
+  }
+  .hero-cta{
+    display:inline-block;margin-top:2rem;
+    background:var(--pole-red);color:#fff;text-decoration:none;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+    font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.9rem;
+    padding:.9rem 2.2rem;border-radius:3px;
+  }
+  section{padding:clamp(2.5rem,6vw,4.5rem) 1.25rem;}
+  .wrap{max-width:960px;margin:0 auto;}
+  h2{
+    font-size:clamp(1.6rem,4vw,2.3rem);
+    text-align:center;margin-bottom:.5rem;
+  }
+  .rule{
+    width:70px;height:4px;margin:0 auto 2rem;
+    background:linear-gradient(90deg,var(--pole-red) 33%,#fff 33% 66%,var(--pole-blue) 66%);
+    border:1px solid #d8d2c6;
+  }
+  .lead{max-width:44rem;margin:0 auto;text-align:center;font-size:clamp(1rem,2.2vw,1.15rem);}
+  .services-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:1.25rem;margin-top:2.25rem;
+  }
+  .svc{
+    background:#fff;border:1px solid #e4ddd0;border-radius:6px;
+    padding:1.5rem;border-top:5px solid var(--pole-blue);
+  }
+  .svc:nth-child(2n){border-top-color:var(--pole-red);}
+  .svc h3{font-size:1.15rem;margin-bottom:.4rem;}
+  .svc p{font-size:.95rem;color:#4a5261;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;}
+  .community{background:var(--ink);color:var(--cream);}
+  .community h2{color:var(--cream);}
+  .community .lead{color:#cdd3de;}
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-top:2.25rem;}
+  .quote{
+    background:#262e3f;border-left:4px solid var(--gold);
+    padding:1.25rem 1.5rem;border-radius:0 6px 6px 0;font-style:italic;font-size:1rem;
+  }
+  .quote span{display:block;margin-top:.75rem;font-style:normal;font-size:.8rem;color:var(--gold);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;}
+  .visit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:2rem;text-align:center;}
+  .visit-card{background:#fff;border:1px solid #e4ddd0;border-radius:6px;padding:1.75rem 1.25rem;}
+  .visit-card .icn{font-size:1.8rem;display:block;margin-bottom:.6rem;}
+  .visit-card h3{font-size:1.05rem;margin-bottom:.4rem;}
+  .visit-card p{font-size:.95rem;color:#4a5261;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;}
+  footer{
+    background:#14181f;color:#9aa2b1;text-align:center;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+    font-size:.8rem;padding:2rem 1.25rem;line-height:1.7;
+  }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by Here's My Company Website. Not affiliated with the business.</div>
+
+<div class="pole-stripe" aria-hidden="true"></div>
+<header class="hero">
+  <span class="est">Mid-City Los Angeles &middot; Est. in the Neighborhood</span>
+  <h1>Mr. Coney<span class="apos">'</span>s Barbershop</h1>
+  <p class="hero-sub">The chair everybody in Mid-City knows. Fresh fades, honest conversation, and a shop that feels like family — right on Pico.</p>
+  <a class="hero-cta" href="#visit">Walk-Ins Welcome</a>
+</header>
+<div class="pole-stripe" aria-hidden="true"></div>
+
+<section>
+  <div class="wrap">
+    <h2>A Pico Boulevard Tradition</h2>
+    <div class="rule"></div>
+    <p class="lead">For years, Mr. Coney's has been the neighborhood's living room — a classic Black barbershop where regulars, first-timers, and kids in the booster seat all get the same thing: a sharp cut and a warm welcome. Every background, every hair texture, every generation. Pull up a chair.</p>
+    <div class="services-grid">
+      <div class="svc"><h3>Cuts &amp; Fades</h3><p>Tapers, skin fades, shape-ups, and line-work crisp enough to catch the light on Pico.</p></div>
+      <div class="svc"><h3>Locs &amp; Braiding</h3><p>Loc maintenance, retwists, and braiding done with patience and real technique.</p></div>
+      <div class="svc"><h3>Kids' First Haircuts</h3><p>Gentle hands, a little humor, and a milestone moment your family will remember.</p></div>
+      <div class="svc"><h3>Beard &amp; Grooming</h3><p>Beard shaping, edge-ups, and finish work that keeps you clean between visits.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="community">
+  <div class="wrap">
+    <h2>More Than a Haircut</h2>
+    <div class="rule"></div>
+    <p class="lead">Mid-City shows up here — and Mr. Coney's shows up for Mid-City. This is the kind of shop where the barber remembers your name, your fade, and how your team did last weekend.</p>
+    <div class="quotes">
+      <div class="quote">The vibe on any given Saturday: music low, clippers humming, laughter loud.<span>The Shop Floor</span></div>
+      <div class="quote">Multicultural clientele, one standard — everybody leaves looking right.<span>The House Rule</span></div>
+      <div class="quote">Chill, professional, consistent. That's been the formula since day one.<span>The Coney Way</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <h2>Come Through</h2>
+    <div class="rule"></div>
+    <div class="visit-grid">
+      <div class="visit-card"><span class="icn">📍</span><h3>Find Us</h3><p>5076 1/2 W Pico Blvd<br>Los Angeles, CA 90019<br>Mid-City, right on the boulevard.</p></div>
+      <div class="visit-card"><span class="icn">💈</span><h3>Walk-Ins Welcome</h3><p>No appointment needed. Come as you are, leave sharper than you came.</p></div>
+      <div class="visit-card"><span class="icn">📸</span><h3>See the Work</h3><p>Fresh cuts posted on Instagram — @mrconeysbarbershop</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="pole-stripe" aria-hidden="true"></div>
+<footer>
+  <p>Demo concept page — not the official website of Mr. Coney's Barbershop. Built as a proposal by Here's My Company Website. This page is hidden from search engines and will be removed on request.</p>
+</footer>
+</body>
+</html>

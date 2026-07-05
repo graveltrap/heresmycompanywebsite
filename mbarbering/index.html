@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>M Barbering — Demo Concept</title>
+<style>
+  :root{
+    --black:#0c0c0e;
+    --charcoal:#17181c;
+    --panel:#1f2127;
+    --gold:#c9a35c;
+    --gold-light:#e3c98f;
+    --text:#d8d5cf;
+    --muted:#8d8b85;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+    background:var(--black);color:var(--text);
+    padding-top:44px;line-height:1.7;
+    font-weight:300;
+  }
+  .demo-banner{
+    position:fixed;top:0;left:0;right:0;z-index:9999;
+    background:#000;color:#e8e6e1;border-bottom:1px solid #2c2e34;
+    font-size:12px;text-align:center;padding:6px 10px;line-height:1.4;
+  }
+  .serif{font-family:Garamond,'Palatino Linotype',Palatino,Georgia,serif;}
+  header.hero{
+    min-height:82vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;padding:4rem 1.5rem;
+    background:linear-gradient(180deg,#0c0c0e 0%,#15161a 55%,#0c0c0e 100%);
+    position:relative;
+  }
+  .monogram{
+    width:clamp(84px,14vw,120px);height:clamp(84px,14vw,120px);
+    border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;
+    font-family:Garamond,'Palatino Linotype',Georgia,serif;
+    font-size:clamp(2.6rem,6vw,3.8rem);color:var(--gold-light);
+    margin-bottom:2rem;position:relative;
+  }
+  .monogram::after{
+    content:"";position:absolute;inset:6px;border:1px solid rgba(201,163,92,.35);
+  }
+  h1{
+    font-family:Garamond,'Palatino Linotype',Georgia,serif;
+    font-size:clamp(2.2rem,6vw,3.6rem);font-weight:400;
+    letter-spacing:.22em;text-transform:uppercase;color:#f0ede6;
+  }
+  .tagline{
+    margin-top:1.25rem;color:var(--gold);letter-spacing:.4em;text-transform:uppercase;
+    font-size:clamp(.7rem,1.8vw,.85rem);
+  }
+  .hero p.intro{max-width:34rem;margin:1.75rem auto 0;color:var(--muted);font-size:clamp(.95rem,2.2vw,1.1rem);}
+  .hero-cta{
+    display:inline-block;margin-top:2.5rem;color:var(--gold-light);text-decoration:none;
+    border:1px solid var(--gold);padding:1rem 3rem;letter-spacing:.3em;text-transform:uppercase;
+    font-size:.8rem;transition:background .2s;
+  }
+  .hero-cta:hover{background:rgba(201,163,92,.12);}
+  .hairline{width:64px;height:1px;background:var(--gold);margin:0 auto;}
+  section{padding:clamp(3.5rem,8vw,6rem) 1.5rem;}
+  .wrap{max-width:920px;margin:0 auto;}
+  .kicker{
+    text-align:center;color:var(--gold);letter-spacing:.4em;text-transform:uppercase;
+    font-size:.72rem;margin-bottom:1rem;
+  }
+  h2{
+    font-family:Garamond,'Palatino Linotype',Georgia,serif;
+    font-weight:400;text-align:center;font-size:clamp(1.7rem,4.5vw,2.6rem);
+    color:#f0ede6;margin-bottom:1.25rem;letter-spacing:.04em;
+  }
+  .center-copy{max-width:40rem;margin:1.5rem auto 0;text-align:center;color:var(--muted);}
+  .creds{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:2.5rem;margin-top:3rem;text-align:center;
+  }
+  .cred .num{font-family:Garamond,Georgia,serif;font-size:clamp(2rem,5vw,2.8rem);color:var(--gold-light);}
+  .cred .lbl{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-top:.3rem;}
+  .services{background:var(--charcoal);}
+  .svc-list{max-width:640px;margin:3rem auto 0;}
+  .svc-row{
+    display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+    padding:1.4rem 0;border-bottom:1px solid #2a2c33;
+  }
+  .svc-row:first-child{border-top:1px solid #2a2c33;}
+  .svc-row h3{font-family:Garamond,Georgia,serif;font-weight:400;font-size:1.2rem;color:#eae7e0;}
+  .svc-row p{font-size:.85rem;color:var(--muted);margin-top:.25rem;max-width:26rem;}
+  .svc-row .mark{color:var(--gold);white-space:nowrap;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;}
+  .philosophy blockquote{
+    font-family:Garamond,'Palatino Linotype',Georgia,serif;
+    font-size:clamp(1.3rem,3.5vw,1.9rem);font-style:italic;color:#eae7e0;
+    text-align:center;max-width:42rem;margin:0 auto;line-height:1.5;
+  }
+  .philosophy cite{
+    display:block;text-align:center;margin-top:1.5rem;font-style:normal;
+    color:var(--gold);letter-spacing:.3em;text-transform:uppercase;font-size:.72rem;
+  }
+  .visit{background:var(--charcoal);}
+  .visit-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;margin-top:3rem;text-align:center;}
+  .vc h3{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;}
+  .vc p{color:var(--text);font-size:.95rem;}
+  .vc p small{color:var(--muted);}
+  footer{
+    background:#000;color:#6f6d68;text-align:center;font-size:.78rem;
+    padding:2.25rem 1.5rem;line-height:1.7;border-top:1px solid #1e2025;
+  }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by Here's My Company Website. Not affiliated with the business.</div>
+
+<header class="hero">
+  <div class="monogram">M</div>
+  <h1>M Barbering</h1>
+  <p class="tagline">Executive Grooming &middot; Est. 2011</p>
+  <p class="intro">By appointment only. A private, unhurried grooming experience for men who understand that presence is built in the details.</p>
+  <a class="hero-cta" href="#visit">Request an Appointment</a>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">The Executive Barber</p>
+    <h2>Your Image Is an Asset. Manage It.</h2>
+    <div class="hairline"></div>
+    <p class="center-copy">With more than two decades behind the chair, M Barbering was founded on a simple conviction: the boardroom, the pitch, the interview — they all start in the mirror. Every appointment is one client, one chair, undivided attention.</p>
+    <div class="creds">
+      <div class="cred"><div class="num serif">20+</div><div class="lbl">Years of Craft</div></div>
+      <div class="cred"><div class="num serif">2011</div><div class="lbl">Established</div></div>
+      <div class="cred"><div class="num serif">1:1</div><div class="lbl">Private Appointments</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <p class="kicker">Services</p>
+    <h2>The Executive Standard</h2>
+    <div class="hairline"></div>
+    <div class="svc-list">
+      <div class="svc-row"><div><h3>The Executive Cut</h3><p>A precision cut engineered for your face, your profession, and your calendar — designed to hold its shape between appointments.</p></div><span class="mark">Signature</span></div>
+      <div class="svc-row"><div><h3>Straight-Razor Shave</h3><p>Hot lather, warm towels, and a traditional straight-razor finish. The classic ritual, executed without shortcuts.</p></div><span class="mark">Classic</span></div>
+      <div class="svc-row"><div><h3>Beard Architecture</h3><p>Structured shaping and maintenance that turns a beard into a deliberate statement.</p></div><span class="mark">Tailored</span></div>
+      <div class="svc-row"><div><h3>Image Consulting</h3><p>Candid, professional guidance on grooming strategy for the image you intend to project.</p></div><span class="mark">Advisory</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="philosophy">
+  <div class="wrap">
+    <blockquote>&ldquo;Confidence isn't given in the chair. It's revealed there.&rdquo;</blockquote>
+    <cite>The M Barbering Philosophy</cite>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <p class="kicker">Visit</p>
+    <h2>By Appointment Only</h2>
+    <div class="hairline"></div>
+    <div class="visit-cols">
+      <div class="vc"><h3>Studio</h3><p>5591 W Pico Blvd<br>La Pico Plaza<br>Los Angeles, CA 90019</p></div>
+      <div class="vc"><h3>Booking</h3><p>Appointments reserved in advance.<br><small>Discretion and punctuality, both ways.</small></p></div>
+      <div class="vc"><h3>Portfolio</h3><p>Instagram — @mbarberingla</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Demo concept page — not the official website of M Barbering. Built as a proposal by Here's My Company Website. This page is hidden from search engines and will be removed on request.</p>
+</footer>
+</body>
+</html>

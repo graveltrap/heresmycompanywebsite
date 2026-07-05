@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Legacy Lounge — Demo Concept</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #120a1c;
+    color: #e9dff2;
+    padding-top: 44px;
+    line-height: 1.6;
+  }
+  .demo-banner {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+    background: #0a0510; color: #d8c9ea;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px; text-align: center; padding: 7px 12px;
+    border-bottom: 1px solid #3a2454;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+  /* HERO */
+  .hero {
+    min-height: 82vh;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center;
+    background:
+      radial-gradient(ellipse at 20% 10%, rgba(120, 40, 190, 0.35), transparent 55%),
+      radial-gradient(ellipse at 80% 90%, rgba(212, 160, 23, 0.18), transparent 50%),
+      linear-gradient(180deg, #1a0f29 0%, #120a1c 100%);
+    padding: 70px 24px;
+  }
+  .hero .eyebrow {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: 0.45em; text-transform: uppercase;
+    font-size: clamp(0.65rem, 1.5vw, 0.8rem);
+    color: #c99df0;
+  }
+  h1 {
+    font-size: clamp(3rem, 10vw, 6.5rem);
+    font-weight: 400;
+    line-height: 1.05;
+    margin: 18px 0 10px;
+    background: linear-gradient(100deg, #e7c766 10%, #f6e7ae 40%, #c9932e 70%, #e7c766 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    text-shadow: none;
+  }
+  .hero .neon {
+    display: inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #ff7ae0;
+    text-shadow: 0 0 8px rgba(255, 122, 224, 0.9), 0 0 24px rgba(255, 122, 224, 0.5);
+    font-size: clamp(0.95rem, 2.5vw, 1.25rem);
+    letter-spacing: 0.18em; text-transform: uppercase;
+    margin-top: 8px;
+  }
+  .hero p.tag {
+    max-width: 34em; margin: 26px auto 0;
+    color: #cbbadd; font-style: italic;
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+  }
+  .hero .hours-pill {
+    margin-top: 34px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.85rem; letter-spacing: 0.08em;
+    border: 1px solid #5b3b85; border-radius: 999px;
+    padding: 10px 22px; color: #d9c8ef;
+    background: rgba(60, 32, 95, 0.35);
+  }
+
+  section { padding: 72px 0; }
+  h2 {
+    font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+    font-weight: 400; color: #f0dc9b;
+    margin-bottom: 8px;
+  }
+  .rule {
+    width: 64px; height: 2px; margin: 14px 0 30px;
+    background: linear-gradient(90deg, #e7c766, transparent);
+  }
+
+  /* VIBE */
+  .vibe { background: #160d22; }
+  .vibe-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; margin-top: 10px; }
+  .vibe-card {
+    background: linear-gradient(160deg, #221336 0%, #180e26 100%);
+    border: 1px solid #35204f; border-radius: 14px; padding: 28px;
+  }
+  .vibe-card .glyph { font-size: 1.8rem; }
+  .vibe-card h3 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.85rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: #d3a94a; margin: 14px 0 10px;
+  }
+  .vibe-card p { color: #c4b3d8; font-size: 0.97rem; }
+
+  /* EVENTS */
+  .events { background: radial-gradient(ellipse at 50% 0%, rgba(110, 45, 175, 0.22), transparent 60%), #120a1c; }
+  .week { display: grid; gap: 14px; margin-top: 8px; }
+  .day-row {
+    display: grid; grid-template-columns: 110px 1fr; gap: 18px; align-items: baseline;
+    border-bottom: 1px dotted #3c2758; padding: 18px 6px;
+  }
+  .day-row .day {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: 0.18em; text-transform: uppercase; font-size: 0.78rem;
+    color: #ff9be7;
+  }
+  .day-row .what strong { color: #f3e3a8; font-weight: 400; font-size: 1.15rem; display: block; }
+  .day-row .what span { color: #b7a4cd; font-size: 0.95rem; }
+  .day-row.closed .what strong { color: #7f6c99; }
+  @media (max-width: 540px) { .day-row { grid-template-columns: 1fr; gap: 4px; } }
+
+  /* PRIVATE EVENTS */
+  .private {
+    background: linear-gradient(160deg, #1d1030 0%, #241236 55%, #1a0f29 100%);
+    border-top: 1px solid #3a2454; border-bottom: 1px solid #3a2454;
+  }
+  .private .lede { max-width: 40em; color: #d5c5e8; font-size: clamp(1rem, 2.2vw, 1.15rem); }
+  .occasions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0; }
+  .occasions span {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.85rem; letter-spacing: 0.05em;
+    border: 1px solid #c9932e; color: #f0dc9b;
+    border-radius: 999px; padding: 8px 18px;
+  }
+  .private .cta-note {
+    display: inline-block; margin-top: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(100deg, #e7c766, #c9932e);
+    color: #1c1028; font-weight: 600; letter-spacing: 0.04em;
+    padding: 14px 28px; border-radius: 6px; font-size: 0.95rem;
+  }
+  .private .fineprint { margin-top: 16px; font-size: 0.85rem; color: #9d89b8; }
+
+  /* VISIT */
+  .visit { text-align: center; }
+  .visit p { color: #c4b3d8; }
+  .visit .addr { font-size: 1.1rem; color: #ecdfb0; margin-top: 6px; }
+  .visit .ig { margin-top: 10px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.9rem; color: #ff9be7; }
+  .age { margin-top: 18px; font-size: 0.8rem; letter-spacing: 0.2em; color: #8f7bab;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+
+  footer {
+    background: #0a0510; padding: 34px 24px; text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.8rem; color: #9d89b8; border-top: 1px solid #2a1a3e;
+  }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by Here's My Company Website. Not affiliated with the business.</div>
+
+<header class="hero">
+  <div class="eyebrow">Mid-City &middot; Los Angeles</div>
+  <h1>Legacy Lounge</h1>
+  <div class="neon">Hookah &middot; Cocktails &middot; Culture</div>
+  <p class="tag">A Black woman&#8209;owned lounge on Pico where the lights stay low, the smoke stays smooth, and the night doesn't rush you out the door.</p>
+  <div class="hours-pill">Open late — till 1–2am &middot; Closed Mondays &middot; 21+</div>
+</header>
+
+<section class="vibe">
+  <div class="wrap">
+    <h2>The Vibe</h2>
+    <div class="rule"></div>
+    <div class="vibe-grid">
+      <div class="vibe-card">
+        <div class="glyph">&#128156;</div>
+        <h3>Owned With Intention</h3>
+        <p>Legacy Lounge is Black woman&#8209;owned and it shows — in the hospitality, the playlist, and the way regulars get greeted by name. This is a room built for community, not just a bar with hookahs in it.</p>
+      </div>
+      <div class="vibe-card">
+        <div class="glyph">&#127787;&#65039;</div>
+        <h3>Low Light, High Standards</h3>
+        <p>Deep purples, warm gold accents, and hookahs prepped right every time. Pull up a seat, pick a flavor, and let the evening stretch — we're open until 1 and 2am for a reason.</p>
+      </div>
+      <div class="vibe-card">
+        <div class="glyph">&#127925;</div>
+        <h3>Pico's Late-Night Living Room</h3>
+        <p>Some nights it's R&amp;B and conversation; some nights the whole room is singing. Either way, it's the West Pico spot where your group chat ends up after everything else closes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="events">
+  <div class="wrap">
+    <h2>The Weekly Lineup</h2>
+    <div class="rule"></div>
+    <div class="week">
+      <div class="day-row closed"><div class="day">Monday</div><div class="what"><strong>Closed</strong><span>Even the lounge needs a reset night.</span></div></div>
+      <div class="day-row"><div class="day">Tuesday</div><div class="what"><strong>Taco Tuesdays</strong><span>Tacos, hookah, and a mid-week excuse to come outside.</span></div></div>
+      <div class="day-row"><div class="day">Wednesday</div><div class="what"><strong>Karaoke Wednesdays</strong><span>Grab the mic — the crowd is kinder than you think.</span></div></div>
+      <div class="day-row"><div class="day">Thu – Sun</div><div class="what"><strong>Lounge Nights</strong><span>DJs, celebrations, and sessions that run late into the night.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="private">
+  <div class="wrap">
+    <h2>Host Your Night Here</h2>
+    <div class="rule"></div>
+    <p class="lede">Birthdays that need a room worthy of the outfit. Baby showers with a little glow to them. Networking mixers where people actually stay past the first hour. Legacy Lounge rents privately for the moments you want to feel curated — not thrown together.</p>
+    <div class="occasions">
+      <span>Birthdays</span><span>Baby Showers</span><span>Networking Mixers</span><span>Day Parties</span><span>Celebrations of All Kinds</span>
+    </div>
+    <span class="cta-note">Ask about private-party dates &rarr;</span>
+    <p class="fineprint">Booking inquiries welcome in person or via Instagram.</p>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <h2>Find Us</h2>
+    <p>On Pico, in the heart of Mid-City.</p>
+    <p class="addr">5084 W Pico Blvd, Los Angeles, CA 90019</p>
+    <p class="ig">Instagram: @legacylounge_la</p>
+    <p class="age">21+ VENUE</p>
+  </div>
+</section>
+
+<footer>
+  Demo concept page — not the official website of Legacy Lounge. Built as a proposal by Here's My Company Website. This page is hidden from search engines and will be removed on request.
+</footer>
+</body>
+</html>

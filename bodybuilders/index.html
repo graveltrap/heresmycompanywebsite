@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Body Builders Automotive — Demo Concept</title>
+<style>
+  :root{
+    --charcoal:#2b2f33; --slate:#3a4046; --light:#f5f6f7; --white:#ffffff;
+    --orange:#f4711f; --ink:#22262a; --dim:#6b7178;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--light); color:var(--ink);
+    font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65; padding-top:44px;
+  }
+  .demo-banner{
+    position:fixed; top:0; left:0; right:0; z-index:9999;
+    background:#17191b; color:#f5f6f7; font-size:12px; text-align:center; padding:8px 12px;
+  }
+  .wrap{max-width:1040px; margin:0 auto; padding:0 22px;}
+  /* NAV-LIKE TOP */
+  .brandbar{
+    background:var(--white); border-bottom:1px solid #e2e5e8; padding:1rem 0;
+  }
+  .brandbar .wrap{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.6rem;}
+  .logo{font-weight:800; font-size:1.15rem; letter-spacing:.02em; color:var(--charcoal);}
+  .logo b{color:var(--orange);}
+  .since{font-size:.8rem; color:var(--dim); font-weight:600; letter-spacing:.08em; text-transform:uppercase;}
+  /* HERO — split clean corporate/industrial */
+  header.hero{
+    background:linear-gradient(120deg, var(--charcoal) 0%, var(--slate) 100%);
+    color:var(--white); padding:clamp(3rem,8vw,5.5rem) 0; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; right:-80px; top:-40px; width:340px; height:340px;
+    border:22px solid var(--orange); border-radius:50%; opacity:.18;
+  }
+  .hero-tag{
+    color:var(--orange); font-weight:700; text-transform:uppercase; letter-spacing:.2em;
+    font-size:.78rem; margin-bottom:1rem; display:block;
+  }
+  h1{font-size:clamp(2rem,5.5vw,3.4rem); font-weight:800; line-height:1.1; max-width:14em;}
+  .hero p{margin-top:1.1rem; max-width:34em; color:#cfd4d9; font-size:clamp(1rem,2.2vw,1.15rem);}
+  .stat-row{display:flex; flex-wrap:wrap; gap:2.2rem; margin-top:2rem;}
+  .stat b{display:block; color:var(--orange); font-size:1.7rem; font-weight:800;}
+  .stat span{font-size:.82rem; color:#aeb5bc; text-transform:uppercase; letter-spacing:.08em;}
+  /* SECTIONS */
+  section{padding:clamp(2.6rem,6vw,4.4rem) 0;}
+  .eyebrow{color:var(--orange); font-weight:700; text-transform:uppercase; letter-spacing:.18em; font-size:.75rem;}
+  h2{font-size:clamp(1.5rem,3.6vw,2.1rem); font-weight:800; color:var(--charcoal); margin:.3rem 0 1.4rem;}
+  .two-col{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.4rem;}
+  .panel{
+    background:var(--white); border:1px solid #e2e5e8; border-radius:8px; padding:1.7rem;
+    border-top:4px solid var(--orange);
+  }
+  .panel h3{font-size:1.1rem; font-weight:700; color:var(--charcoal); margin-bottom:.5rem;}
+  .panel p, .panel li{color:#4a5057; font-size:.95rem;}
+  .panel ul{list-style:none; margin-top:.6rem;}
+  .panel li{padding:.3em 0; border-bottom:1px solid #eef0f2;}
+  .panel li::before{content:"\2192"; color:var(--orange); margin-right:.55em; font-weight:700;}
+  /* INSURANCE STEPS */
+  .steps-sec{background:var(--charcoal); color:var(--white);}
+  .steps-sec h2{color:var(--white);}
+  .steps{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.2rem; counter-reset:step;}
+  .step{
+    background:var(--slate); border-radius:8px; padding:1.5rem 1.3rem; counter-increment:step; position:relative;
+  }
+  .step::before{
+    content:counter(step); display:inline-flex; align-items:center; justify-content:center;
+    width:2.1em; height:2.1em; border-radius:50%; background:var(--orange); color:var(--white);
+    font-weight:800; margin-bottom:.7rem;
+  }
+  .step h3{font-size:1rem; margin-bottom:.35rem;}
+  .step p{font-size:.88rem; color:#c6ccd2;}
+  /* LEGACY */
+  .legacy{display:flex; flex-wrap:wrap; gap:2rem; align-items:center;}
+  .legacy .yearmark{
+    flex:0 0 auto; background:var(--white); border:2px solid var(--orange); border-radius:8px;
+    padding:1.4rem 1.8rem; text-align:center;
+  }
+  .yearmark b{display:block; font-size:2.4rem; color:var(--charcoal); font-weight:800; line-height:1;}
+  .yearmark span{font-size:.75rem; text-transform:uppercase; letter-spacing:.15em; color:var(--dim);}
+  .legacy .copy{flex:1 1 300px; max-width:38em;}
+  .addr{
+    margin-top:1.2rem; display:inline-block; background:var(--white); border:1px solid #e2e5e8;
+    border-left:4px solid var(--orange); padding:.9rem 1.3rem; border-radius:6px; font-weight:600;
+  }
+  footer{
+    background:#17191b; color:#9aa1a8; font-size:.78rem; text-align:center;
+    padding:1.6rem 22px; line-height:1.7;
+  }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by Here's My Company Website. Not affiliated with the business.</div>
+
+<div class="brandbar">
+  <div class="wrap">
+    <span class="logo">BODY <b>BUILDERS</b> AUTOMOTIVE</span>
+    <span class="since">La Brea Ave &middot; Since 1991</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="hero-tag">Collision &middot; Body &middot; Mechanical</span>
+    <h1>Thirty-plus years of putting cars — and days — back together.</h1>
+    <p>From fender-benders to full collision restoration, Body Builders Automotive has been the shop La Brea trusts since 1991. Straight repairs, handled insurance claims, and a finish you can't tell from factory.</p>
+    <div class="stat-row">
+      <div class="stat"><b>4.8&#9733;</b><span>Customer rating</span></div>
+      <div class="stat"><b>1991</b><span>Established</span></div>
+      <div class="stat"><b>30+</b><span>Years on La Brea</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">What we do</span>
+    <h2>Two shops' worth of skill, one address</h2>
+    <div class="two-col">
+      <div class="panel">
+        <h3>Collision &amp; Body Repair</h3>
+        <p>Accidents are stressful. The repair shouldn't be.</p>
+        <ul>
+          <li>Collision repair, frame to finish</li>
+          <li>Dent, scratch &amp; bumper repair</li>
+          <li>Expert paint &amp; color matching</li>
+          <li>Panel replacement &amp; refinishing</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Routine Maintenance &amp; Repair</h3>
+        <p>The same care we put into bodywork goes under the hood.</p>
+        <ul>
+          <li>Oil changes &amp; scheduled service</li>
+          <li>Brakes, suspension &amp; steering</li>
+          <li>Engine diagnostics</li>
+          <li>Pre-trip &amp; safety inspections</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps-sec">
+  <div class="wrap">
+    <span class="eyebrow">Insurance claims, made easy</span>
+    <h2>We handle the paperwork. You handle nothing.</h2>
+    <div class="steps">
+      <div class="step"><h3>Bring it in</h3><p>Stop by for a walk-around and a clear, written estimate — no appointment drama.</p></div>
+      <div class="step"><h3>We work the claim</h3><p>We deal directly with your insurance company and document everything they need.</p></div>
+      <div class="step"><h3>Repair &amp; refinish</h3><p>Quality parts, straight panels, and paint matched to factory finish.</p></div>
+      <div class="step"><h3>Drive away right</h3><p>Final inspection with you at the car. It leaves right, or it doesn't leave.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Our story</span>
+    <h2>A fixture on La Brea since 1991</h2>
+    <div class="legacy">
+      <div class="yearmark"><b>30+</b><span>Years of trust</span></div>
+      <div class="copy">
+        <p>In this business, shops come and go. Body Builders Automotive has spent more than three decades at the corner of the neighborhood — long enough to repair the same family's cars across two generations. A 4.8-star reputation isn't built by advertising. It's built one straight, honest repair at a time.</p>
+        <span class="addr">1200 S La Brea Ave, Los Angeles, CA 90019</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Demo concept page — not the official website of Body Builders Automotive. Built as a proposal by Here's My Company Website. This page is hidden from search engines and will be removed on request.
+</footer>
+</body>
+</html>

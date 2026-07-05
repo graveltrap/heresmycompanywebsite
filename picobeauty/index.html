@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Pico Beauty Supplies &amp; Salon — Demo Concept</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Trebuchet MS', 'Segoe UI', Tahoma, sans-serif;
+    background: #2a1a3a;
+    color: #f3e9f7;
+    padding-top: 44px;
+    line-height: 1.6;
+  }
+  .demo-banner {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+    background: #14091f; color: #f0e4c8;
+    font-size: 12px; text-align: center; padding: 7px 12px;
+    border-bottom: 1px solid #4a2f66;
+  }
+  .wrap { max-width: 1020px; margin: 0 auto; padding: 0 20px; }
+
+  header.hero {
+    text-align: center;
+    padding: clamp(3rem, 8vw, 5.5rem) 20px;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(212,164,60,0.18), transparent 45%),
+      radial-gradient(circle at 80% 70%, rgba(150,60,180,0.25), transparent 50%),
+      linear-gradient(160deg, #3b2153 0%, #2a1a3a 70%);
+    border-bottom: 3px solid #d4a43c;
+  }
+  .crown { font-size: clamp(2rem, 5vw, 2.8rem); }
+  h1 {
+    font-size: clamp(2rem, 6.5vw, 3.8rem);
+    line-height: 1.12;
+    background: linear-gradient(90deg, #f3d98a, #d4a43c, #f3d98a);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: #d4a43c;
+    margin: 0.4rem 0 0.6rem;
+    letter-spacing: 0.02em;
+  }
+  .hero p.tag {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: #e2cef0;
+    max-width: 620px; margin: 0 auto;
+  }
+  .hero .chips { margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
+  .chip {
+    background: rgba(212,164,60,0.14);
+    border: 1px solid #d4a43c;
+    color: #f3d98a;
+    border-radius: 999px;
+    padding: 0.4rem 1.1rem;
+    font-size: clamp(0.78rem, 1.8vw, 0.9rem);
+  }
+
+  section { padding: clamp(2.4rem, 6vw, 4rem) 0; }
+  h2 {
+    font-size: clamp(1.5rem, 3.6vw, 2.1rem);
+    color: #f3d98a;
+    text-align: center;
+  }
+  .sub { text-align: center; color: #b99cd1; margin: 0.4rem auto 2rem; max-width: 560px; font-size: 0.98rem; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.4rem; }
+  .card {
+    background: linear-gradient(170deg, #3b2153, #321c47);
+    border: 1px solid #55357a;
+    border-radius: 16px;
+    padding: 1.7rem 1.5rem;
+  }
+  .card .em { font-size: 1.8rem; }
+  .card h3 { color: #f3d98a; font-size: 1.12rem; margin: 0.6rem 0 0.5rem; }
+  .card p { color: #d9c6ea; font-size: 0.93rem; }
+  .card ul { margin-top: 0.6rem; padding-left: 1.1rem; color: #d9c6ea; font-size: 0.93rem; }
+  .card li { margin-bottom: 0.25rem; }
+
+  .salon { background: #221230; border-top: 1px solid #4a2f66; border-bottom: 1px solid #4a2f66; }
+  .svc-list { max-width: 640px; margin: 0 auto; }
+  .svc {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+    padding: 0.85rem 0; border-bottom: 1px solid #3d2456;
+  }
+  .svc:last-child { border-bottom: none; }
+  .svc .n { color: #f3e9f7; font-size: 1rem; }
+  .svc .d { color: #a487bf; font-size: 0.85rem; }
+
+  .lines { text-align: center; }
+  .brand-row { display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: center; max-width: 760px; margin: 0 auto; }
+  .brand {
+    background: rgba(255,255,255,0.06);
+    border: 1px dashed #7a5a9e;
+    border-radius: 10px;
+    padding: 0.55rem 1.2rem;
+    color: #e2cef0; font-size: 0.9rem;
+  }
+  .lines .note { color: #a487bf; font-size: 0.85rem; font-style: italic; margin-top: 1.2rem; }
+
+  .visit {
+    text-align: center;
+    background:
+      radial-gradient(circle at 70% 30%, rgba(212,164,60,0.15), transparent 55%),
+      #221230;
+    border-top: 3px solid #d4a43c;
+  }
+  .visit address { font-style: normal; font-size: clamp(1.05rem, 2.4vw, 1.25rem); color: #f3e9f7; margin-top: 1rem; }
+  .visit p { color: #b99cd1; margin-top: 0.6rem; font-size: 0.95rem; }
+
+  footer {
+    padding: 1.8rem 20px; text-align: center;
+    font-size: 0.78rem; color: #8f7aa5; background: #14091f;
+  }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by Here's My Company Website. Not affiliated with the business.</div>
+
+<header class="hero">
+  <div class="crown">&#128081;</div>
+  <h1>Pico Beauty Supplies &amp; Salon</h1>
+  <p class="tag">The neighborhood's home for textured hair &mdash; shop the shelves, then sit in the chair. Everything your crown deserves, all under one roof on Pico.</p>
+  <div class="chips">
+    <span class="chip">Curl &amp; Texture Care</span>
+    <span class="chip">Wigs &amp; Extensions</span>
+    <span class="chip">Full-Service Salon</span>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Shop the Store</h2>
+    <p class="sub">Aisles stocked for every texture, pattern, and style &mdash; staffed by people who actually use what they sell.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="em">&#129526;</div>
+        <h3>Curl &amp; Texture Products</h3>
+        <p>Shelves curated for coils, curls, waves, and locs:</p>
+        <ul>
+          <li>Moisturizers, creams &amp; leave-ins</li>
+          <li>Co-washes &amp; clarifying shampoos</li>
+          <li>Edge control, gels &amp; custards</li>
+          <li>Oils, butters &amp; scalp care</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="em">&#128171;</div>
+        <h3>Wigs &amp; Extensions</h3>
+        <p>Switch it up whenever the mood hits:</p>
+        <ul>
+          <li>Wigs in a range of styles &amp; lengths</li>
+          <li>Bundles, weaves &amp; closures</li>
+          <li>Braiding hair &amp; crochet styles</li>
+          <li>Caps, glues &amp; install essentials</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="em">&#128299;</div>
+        <h3>Tools &amp; Accessories</h3>
+        <p>The finishing touches, floor to ceiling:</p>
+        <ul>
+          <li>Bonnets, wraps &amp; satin pillowcases</li>
+          <li>Combs, brushes &amp; detanglers</li>
+          <li>Clips, beads &amp; styling accessories</li>
+          <li>Hooded dryers &amp; heat tools</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="salon">
+  <div class="wrap">
+    <h2>Sit in the Chair</h2>
+    <p class="sub">A working salon right inside the store &mdash; buy your products and get them installed by hands that know textured hair.</p>
+    <div class="svc-list">
+      <div class="svc"><span class="n">Silk Press &amp; Styling</span><span class="d">Sleek, healthy, heat-smart</span></div>
+      <div class="svc"><span class="n">Braids &amp; Twists</span><span class="d">Protective styles built to last</span></div>
+      <div class="svc"><span class="n">Wig &amp; Weave Installs</span><span class="d">Pick it off the shelf, wear it out the door</span></div>
+      <div class="svc"><span class="n">Natural Hair Care</span><span class="d">Treatments, trims &amp; wash-day resets</span></div>
+      <div class="svc"><span class="n">Locs &amp; Retwists</span><span class="d">Maintenance with a gentle touch</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="lines">
+  <div class="wrap">
+    <h2>Lines We Carry</h2>
+    <p class="sub">A rotating shelf of trusted multicultural hair-care lines &mdash; from wash-day staples to styling favorites.</p>
+    <div class="brand-row">
+      <span class="brand">Curl-defining creams</span>
+      <span class="brand">Texture-loving shampoos</span>
+      <span class="brand">Deep conditioners</span>
+      <span class="brand">Natural oils &amp; butters</span>
+      <span class="brand">Kids' gentle lines</span>
+      <span class="brand">Professional salon brands</span>
+    </div>
+    <p class="note">Come browse in person &mdash; new arrivals hit the shelves all the time.</p>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <h2>Visit the Hub</h2>
+    <address>4972 W Pico Blvd, Ste 103, Los Angeles, CA 90019</address>
+    <p>In the plaza at Pico &amp; La Brea &mdash; a trusted stop for the neighborhood's hair care.</p>
+  </div>
+</section>
+
+<footer>
+  Demo concept page — not the official website of Pico Beauty Supplies &amp; Salon. Built as a proposal by Here's My Company Website. This page is hidden from search engines and will be removed on request.
+</footer>
+</body>
+</html>

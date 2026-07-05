@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Rubio's Bakery — Demo Concept</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    background: #fff9f3;
+    color: #4a3630;
+    padding-top: 44px;
+    line-height: 1.7;
+  }
+  .demo-banner {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+    background: #362420; color: #f2ddd2;
+    font-size: 12px; text-align: center; padding: 7px 12px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+  /* HERO — light, airy, confetti pastels */
+  .hero {
+    text-align: center; padding: 84px 24px 70px;
+    background:
+      radial-gradient(circle at 12% 20%, rgba(255, 182, 193, 0.35) 0 60px, transparent 61px),
+      radial-gradient(circle at 88% 26%, rgba(173, 216, 230, 0.4) 0 46px, transparent 47px),
+      radial-gradient(circle at 22% 82%, rgba(255, 223, 128, 0.4) 0 38px, transparent 39px),
+      radial-gradient(circle at 80% 78%, rgba(195, 177, 225, 0.38) 0 52px, transparent 53px),
+      linear-gradient(180deg, #fff3ea 0%, #fff9f3 100%);
+  }
+  .hero .script {
+    font-family: Georgia, 'Times New Roman', serif; font-style: italic;
+    color: #d4728c; font-size: clamp(1rem, 2.5vw, 1.25rem);
+  }
+  h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.8rem, 9vw, 5rem); font-weight: 400;
+    color: #6b4436; line-height: 1.05; margin: 10px 0 14px;
+  }
+  h1 .dot { color: #d4728c; }
+  .hero .sub { color: #8a6a5c; max-width: 34em; margin: 0 auto; font-size: clamp(0.98rem, 2.2vw, 1.15rem); }
+  .hero .chips { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .hero .chips span {
+    background: #fff; border: 1px solid #ecd5c6; border-radius: 999px;
+    padding: 9px 20px; font-size: 0.85rem; color: #a26246;
+    box-shadow: 0 2px 6px rgba(160, 100, 70, 0.08);
+  }
+
+  /* ribbon */
+  .ribbon {
+    background: linear-gradient(90deg, #f7c8d4, #fbe3c9, #cfe6ef, #ddd0ef);
+    text-align: center; padding: 13px 20px;
+    color: #6b4436; font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600;
+  }
+
+  section { padding: 70px 0; }
+  .kicker { font-size: 0.75rem; letter-spacing: 0.3em; text-transform: uppercase; color: #d4728c; font-weight: 700; }
+  h2 {
+    font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: clamp(1.7rem, 4.5vw, 2.5rem); color: #6b4436; margin: 8px 0 18px;
+  }
+
+  /* CAKES — the money section */
+  .cakes { background: #fdf1f4; }
+  .cake-flex { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 26px; }
+  .cake-card {
+    background: #fff; border-radius: 18px; padding: 32px 28px;
+    box-shadow: 0 8px 24px rgba(180, 110, 130, 0.12);
+    border-top: 6px solid #f2a9bd;
+  }
+  .cake-card:nth-child(2) { border-top-color: #f5c98a; }
+  .cake-card:nth-child(3) { border-top-color: #a9cfe0; }
+  .cake-card .g { font-size: 2rem; }
+  .cake-card h3 { font-family: Georgia, serif; font-weight: 400; color: #6b4436; font-size: 1.25rem; margin: 12px 0 8px; }
+  .cake-card p { color: #86685b; font-size: 0.95rem; }
+  .cake-cta {
+    margin-top: 34px; text-align: center;
+  }
+  .cake-cta .btn {
+    display: inline-block; background: #d4728c; color: #fff;
+    border-radius: 999px; padding: 15px 36px; font-weight: 600; letter-spacing: 0.04em;
+    box-shadow: 0 6px 18px rgba(212, 114, 140, 0.35);
+  }
+  .cake-cta p { margin-top: 12px; font-size: 0.85rem; color: #a5877a; }
+
+  /* PAN DULCE case */
+  .case-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-top: 26px; }
+  .case-item {
+    background: #fff6ec; border: 1px dashed #e4c3a5; border-radius: 14px;
+    text-align: center; padding: 24px 14px;
+  }
+  .case-item .g { font-size: 1.7rem; }
+  .case-item h4 { font-family: Georgia, serif; font-weight: 400; color: #6b4436; margin-top: 8px; font-size: 1rem; }
+  .case-item span { font-size: 0.8rem; color: #a5877a; font-style: italic; }
+  .case-note { margin-top: 22px; color: #86685b; font-size: 0.95rem; max-width: 42em; }
+
+  /* STORY */
+  .story { background: linear-gradient(180deg, #fff9f3, #fdf4ec); }
+  .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+  .story p { color: #7a5d50; margin-bottom: 16px; }
+  .story .fact-stack { display: grid; gap: 14px; }
+  .fact {
+    background: #fff; border-radius: 14px; padding: 20px 22px;
+    box-shadow: 0 4px 14px rgba(160, 100, 70, 0.08);
+    display: flex; gap: 14px; align-items: center;
+  }
+  .fact .n { font-family: Georgia, serif; font-size: 1.7rem; color: #d4728c; min-width: 64px; text-align: center; }
+  .fact div p { margin: 0; font-size: 0.9rem; color: #86685b; }
+  .fact div h4 { color: #6b4436; font-size: 0.98rem; }
+  @media (max-width: 720px) { .story-grid { grid-template-columns: 1fr; } }
+
+  /* VISIT */
+  .visit { text-align: center; }
+  .visit .addr { font-size: 1.08rem; color: #6b4436; font-weight: 600; margin-top: 4px; }
+  .visit .hours { display: inline-block; margin-top: 14px; background: #fdeee2; border-radius: 999px; padding: 10px 24px; color: #a26246; font-size: 0.9rem; }
+
+  footer {
+    background: #362420; color: #cbb0a3;
+    padding: 32px 24px; text-align: center; font-size: 0.8rem;
+  }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by Here's My Company Website. Not affiliated with the business.</div>
+
+<header class="hero">
+  <div class="script">Mid-City's sweetest tradition</div>
+  <h1>Rubio's Bakery<span class="dot">.</span></h1>
+  <p class="sub">Twenty years of tres leches, pan dulce, and celebration cakes on Pico — with a kitchen led by a Le Cordon Bleu&#8209;trained pastry chef.</p>
+  <div class="chips">
+    <span>&#127856; Custom Occasion Cakes</span>
+    <span>&#129360; Daily Pan Dulce</span>
+    <span>&#129380; Aguas Frescas</span>
+    <span>Open Daily 6am–7pm</span>
+  </div>
+</header>
+
+<div class="ribbon">Famous Tres Leches &middot; 20 Years in Mid-City &middot; Baked Fresh Every Morning</div>
+
+<section class="cakes">
+  <div class="wrap">
+    <div class="kicker">The Signature</div>
+    <h2>Cakes made for the big moments</h2>
+    <p style="max-width:44em; color:#86685b;">Quincea&ntilde;eras, weddings, first birthdays, retirements — when the occasion matters, the cake can't be an afterthought. Every custom cake is designed with you and finished by a Le Cordon Bleu&#8209;trained pastry chef.</p>
+    <div class="cake-flex">
+      <div class="cake-card"><div class="g">&#127874;</div><h3>The Famous Tres Leches</h3><p>The cake people cross town for — cloud-light sponge soaked in three milks, never soggy, always gone by the last slice. Available by the slice or as a full occasion cake.</p></div>
+      <div class="cake-card"><div class="g">&#127882;</div><h3>Custom Occasion Cakes</h3><p>Bring a photo, a theme, or just a feeling. Tiered quincea&ntilde;era showpieces, elegant wedding cakes, character birthday cakes — designed to match the party.</p></div>
+      <div class="cake-card"><div class="g">&#128144;</div><h3>Chef-Finished Details</h3><p>Classic French pastry technique meets Latin American tradition: clean piping, real fruit fillings, and flavors your familia will actually argue over.</p></div>
+    </div>
+    <div class="cake-cta">
+      <span class="btn">Start a Custom Cake Order</span>
+      <p>Cake consultations available in-store, open daily 6am–7pm.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Every Morning</div>
+    <h2>The pan dulce case</h2>
+    <div class="case-strip">
+      <div class="case-item"><div class="g">&#128012;</div><h4>Conchas</h4><span>vanilla, chocolate, pink</span></div>
+      <div class="case-item"><div class="g">&#129370;</div><h4>Cuernos</h4><span>buttery &amp; flaky</span></div>
+      <div class="case-item"><div class="g">&#127849;</div><h4>Empanadas</h4><span>pineapple, pumpkin</span></div>
+      <div class="case-item"><div class="g">&#127820;</div><h4>Pl&aacute;tano &amp; more</h4><span>ask what's fresh</span></div>
+      <div class="case-item"><div class="g">&#129380;</div><h4>Aguas Frescas</h4><span>made daily</span></div>
+    </div>
+    <p class="case-note">The case fills up at 6am and changes through the day. Come early for first pick, or swing by after work — there's always something warm-adjacent and wonderful left.</p>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <div class="story-grid">
+      <div>
+        <div class="kicker">Our Story</div>
+        <h2>Two decades on Pico</h2>
+        <p>For twenty years, Rubio's has been where Mid-City marks its milestones — the Saturday-morning concha run, the quincea&ntilde;era cake pickup, the tres leches that shows up at every family table.</p>
+        <p>It's a family legacy with serious training behind it: our kitchen is led by a Le Cordon Bleu&#8209;trained pastry chef who brings classical technique to the recipes this neighborhood grew up on.</p>
+      </div>
+      <div class="fact-stack">
+        <div class="fact"><div class="n">20</div><div><h4>Years in Mid-City</h4><p>Same corner of Pico, same standards.</p></div></div>
+        <div class="fact"><div class="n">6–7</div><div><h4>Open Daily, 6am–7pm</h4><p>Fresh from the first tray to the last.</p></div></div>
+        <div class="fact"><div class="n">&#10022;</div><div><h4>Le Cordon Bleu-Trained</h4><p>Classical pastry craft, neighborhood heart.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <div class="kicker">Visit</div>
+    <h2>Come hungry</h2>
+    <p class="addr">4972 W Pico Blvd, Los Angeles, CA 90019</p>
+    <span class="hours">Open every day &middot; 6:00am – 7:00pm</span>
+  </div>
+</section>
+
+<footer>
+  Demo concept page — not the official website of Rubio's Bakery. Built as a proposal by Here's My Company Website. This page is hidden from search engines and will be removed on request.
+</footer>
+</body>
+</html>

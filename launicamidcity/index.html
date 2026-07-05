@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Tacos y Birria La Unica — Demo Concept</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Arial Black', 'Segoe UI', Arial, Helvetica, sans-serif;
+    background: #fff6ea;
+    color: #3a1408;
+    padding-top: 44px;
+    line-height: 1.55;
+  }
+  .demo-banner {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+    background: #1c0a04; color: #f3d9b8;
+    font-family: 'Segoe UI', Arial, sans-serif; font-weight: 400;
+    font-size: 12px; text-align: center; padding: 7px 12px;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 22px; }
+
+  /* HERO — loud street-sign energy */
+  .hero {
+    background:
+      repeating-linear-gradient(-45deg, rgba(0,0,0,0.06) 0 12px, transparent 12px 24px),
+      linear-gradient(160deg, #c81d0e 0%, #a81208 55%, #8f0e06 100%);
+    color: #fff3dd; text-align: center;
+    padding: 64px 22px 56px;
+    border-bottom: 10px solid #f5a623;
+  }
+  .hero .since {
+    display: inline-block; background: #f5a623; color: #5c1200;
+    font-size: 0.75rem; letter-spacing: 0.2em; padding: 6px 16px;
+    transform: rotate(-2deg); font-weight: 900;
+  }
+  h1 {
+    font-size: clamp(2.5rem, 9vw, 5.2rem);
+    line-height: 0.98; margin: 22px 0 4px;
+    text-transform: uppercase;
+    color: #ffe9c2;
+    text-shadow: 3px 3px 0 #5c1200, 6px 6px 0 rgba(0,0,0,0.25);
+    letter-spacing: 0.01em;
+    transform: rotate(-1deg);
+  }
+  h1 .unica { color: #ffd23f; }
+  .hero .sub {
+    font-family: Georgia, serif; font-style: italic; font-weight: 400;
+    font-size: clamp(1rem, 2.6vw, 1.3rem); color: #ffdcb0; margin-top: 12px;
+  }
+  .hero .badges { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .hero .badges span {
+    background: #5c1200; border: 2px dashed #f5a623; color: #ffe9c2;
+    font-size: 0.72rem; letter-spacing: 0.12em; padding: 8px 14px; font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  /* TV STRIP */
+  .tv-strip {
+    background: #f5a623; color: #4a0f00; text-align: center;
+    padding: 16px 22px; font-size: clamp(0.8rem, 2.2vw, 0.95rem);
+    letter-spacing: 0.12em; text-transform: uppercase; font-weight: 900;
+  }
+  .tv-strip .star { color: #a81208; }
+
+  section { padding: 60px 0; }
+  h2 {
+    text-transform: uppercase; font-size: clamp(1.5rem, 5vw, 2.3rem);
+    color: #a81208; letter-spacing: 0.02em;
+    border-bottom: 4px solid #f5a623; display: inline-block; padding-bottom: 4px;
+    transform: rotate(-0.5deg); margin-bottom: 8px;
+  }
+  .sub-es { font-family: Georgia, serif; font-style: italic; font-weight: 400; color: #8a4a22; margin-bottom: 32px; }
+
+  /* MENU */
+  .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }
+  .menu-item {
+    background: #fffdf7; border: 3px solid #3a1408; border-radius: 6px;
+    box-shadow: 6px 6px 0 #f5a623;
+    padding: 24px 22px;
+  }
+  .menu-item .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .menu-item h3 { text-transform: uppercase; font-size: 1.05rem; color: #a81208; }
+  .menu-item .es { font-family: Georgia, serif; font-style: italic; font-weight: 400; font-size: 0.85rem; color: #8a4a22; }
+  .menu-item p { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 400; font-size: 0.93rem; color: #55301c; margin-top: 10px; }
+  .menu-item .fire { font-size: 1.1rem; }
+
+  /* CONSOME callout */
+  .consome {
+    margin-top: 34px;
+    background: linear-gradient(120deg, #a81208, #c8340e);
+    color: #ffe9c2; border-radius: 10px;
+    padding: clamp(24px, 5vw, 40px);
+    display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center;
+  }
+  .consome .bowl { font-size: clamp(2.4rem, 7vw, 3.6rem); }
+  .consome h3 { text-transform: uppercase; font-size: clamp(1.1rem, 3vw, 1.5rem); color: #ffd23f; }
+  .consome p { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 400; font-size: 0.98rem; margin-top: 6px; }
+  @media (max-width: 480px) { .consome { grid-template-columns: 1fr; text-align: center; } }
+
+  /* STORY */
+  .story { background: #3a1408; color: #f6e3c8; }
+  .story h2 { color: #ffd23f; border-color: #c8340e; }
+  .story .sub-es { color: #d9a878; }
+  .story p { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 400; max-width: 44em; margin-bottom: 16px; font-size: 1rem; }
+  .story .rating {
+    display: inline-block; margin-top: 12px; background: #c8340e; color: #ffe9c2;
+    padding: 10px 20px; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+    transform: rotate(1deg);
+  }
+
+  /* VISIT */
+  .visit { text-align: center; }
+  .visit .addr { font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.1rem; font-weight: 700; color: #3a1408; margin-top: 6px; }
+  .visit p.note { font-family: Georgia, serif; font-style: italic; font-weight: 400; color: #8a4a22; margin-top: 10px; }
+
+  footer {
+    background: #1c0a04; color: #cfa87e;
+    font-family: 'Segoe UI', Arial, sans-serif; font-weight: 400;
+    padding: 32px 22px; text-align: center; font-size: 0.8rem;
+  }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO CONCEPT: This is a private web proposal built by Here's My Company Website. Not affiliated with the business.</div>
+
+<header class="hero">
+  <span class="since">DESDE 2017 &middot; BOYLE HEIGHTS ORIGINAL</span>
+  <h1>Tacos y Birria<br><span class="unica">La Unica</span></h1>
+  <p class="sub">Mid-City, Los Angeles &mdash; el sabor que cruz&oacute; la ciudad</p>
+  <div class="badges">
+    <span>&#128293; Red-Oil Consom&eacute;</span>
+    <span>&#129472; Quesatacos</span>
+    <span>&#127805; Handmade Tortillas</span>
+  </div>
+</header>
+
+<div class="tv-strip">
+  <span class="star">&#9733;</span> AS SEEN ON DINERS, DRIVE-INS &amp; DIVES <span class="star">&#9733;</span> FEATURED BY DISCOVER LA <span class="star">&#9733;</span>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>The Menu</h2>
+    <p class="sub-es">Hecho a mano, todos los d&iacute;as.</p>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="row"><h3>Quesataco <span class="fire">&#128293;</span></h3></div>
+        <div class="es">el favorito de la casa</div>
+        <p>Slow-braised birria and melted cheese griddled crisp on a handmade corn tortilla, dressed red in the pan. Dip it. Always dip it.</p>
+      </div>
+      <div class="menu-item">
+        <div class="row"><h3>Tacos de Birria</h3></div>
+        <div class="es">con cebolla y cilantro</div>
+        <p>The classic — tender beef birria stacked on tortillas pressed fresh in-house, finished with onion, cilantro, and lime.</p>
+      </div>
+      <div class="menu-item">
+        <div class="row"><h3>Plato de Birria</h3></div>
+        <div class="es">para los serios</div>
+        <p>A full plate of birria with tortillas hechas a mano on the side — build your own, your way, until the plate is clean.</p>
+      </div>
+    </div>
+    <div class="consome">
+      <div class="bowl">&#127858;</div>
+      <div>
+        <h3>El Consom&eacute; Rojo</h3>
+        <p>The signature red-oil consom&eacute; — deep, slow-simmered, and glossy with chile. It's the reason the line forms, the dip that made a Boyle Heights corner famous, now ladled fresh on Venice Blvd.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <h2>De Boyle Heights a Mid-City</h2>
+    <p class="sub-es">Same family, same pots, new neighborhood.</p>
+    <p>La Unica started in 2017 as a Boyle Heights original, earning its name one quesataco at a time. When the TV crews came — Diners, Drive-Ins &amp; Dives, Discover LA — they found what the neighborhood already knew: birria done with patience, tortillas done by hand, and consom&eacute; that doesn't cut corners.</p>
+    <p>The Mid-City outpost on Venice Blvd brings that same kitchen discipline west — so this side of town doesn't have to cross the river for the real thing.</p>
+    <span class="rating">&#9733; 4.4 stars &middot; loved by the neighborhood</span>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <h2>Ll&eacute;gale</h2>
+    <p class="addr">5871 Venice Blvd, Los Angeles, CA 90019</p>
+    <p class="note">Mid-City outpost &mdash; original en Boyle Heights.</p>
+  </div>
+</section>
+
+<footer>
+  Demo concept page — not the official website of Tacos y Birria La Unica. Built as a proposal by Here's My Company Website. This page is hidden from search engines and will be removed on request.
+</footer>
+</body>
+</html>
