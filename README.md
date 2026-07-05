@@ -8,27 +8,28 @@ AI-automated web development for local brick-and-mortar businesses with no web p
 
 | Domain | Role |
 |---|---|
-| `heresmycompanywebsite.com` | Flagship — homepage + hosted demos |
-| `heresmycompanyweb.site` | 301 → .com |
-| `heresmycompanywebsite.net` | 301 → .com |
+| `heresmycompanyweb.site` | **Live domain** — homepage + hosted demos |
+| `heresmycompanywebsite.com` | 301 → .site |
+| `heresmycompanywebsite.net` | 301 → .site |
 
-DNS at Squarespace. Currently structured for **GitHub Pages** hosting (account `graveltrap`), with a planned migration path.
+DNS at Squarespace. Currently structured for **GitHub Pages** hosting (account `graveltrap`); `CNAME` file pins the custom domain.
 
-## Demo URL scheme (and the wildcard constraint)
+## Demo URL scheme
 
-GitHub Pages **does not support wildcard subdomains** — `chopzla.heresmycompanywebsite.com` cannot be served from one Pages site, and per-demo subdomains would each need their own repo + CNAME record. So:
+Demos live at root paths on the .site domain: **`heresmycompanyweb.site/<slug>`** (e.g. `heresmycompanyweb.site/chopzla`). One repo, one Pages site — adding a demo = adding a folder. Notes:
 
-- **Now (GitHub Pages):** path-based demos — `heresmycompanywebsite.com/demos/chopzla/`. One repo, one Pages site, zero DNS churn per demo. Adding a demo = adding a folder.
-- **Later (subdomain look):** migrate hosting to **Cloudflare Pages or Netlify**, which support wildcard/branch subdomains, and flip DNS to get `chopzla.heresmycompanywebsite.com`. The repo layout (one folder per demo, static HTML) migrates as-is.
+- GitHub Pages does not support wildcard subdomains, so root-path demos are also the friction-free choice here. If subdomain-style URLs are ever wanted, migrate to Cloudflare Pages/Netlify; the folder-per-demo layout carries over.
+- Every new demo folder gets a matching `Disallow: /<slug>/` line in robots.txt.
 - Squarespace DNS changes are manual and deliberate — never automated.
 
 ## Repo layout
 
 ```
 index.html                      # public homepage — what the service is
-robots.txt                      # Disallow: /demos/  (demos never indexed)
+CNAME                           # heresmycompanyweb.site (GitHub Pages custom domain)
+robots.txt                      # Disallow per demo slug (demos never indexed)
 templates/demo-template/        # canonical demo template + config schema
-demos/<slug>/index.html         # one folder per generated demo
+<slug>/index.html               # one root-level folder per generated demo
 docs/                           # pipeline + policy docs
 ```
 
@@ -36,7 +37,7 @@ docs/                           # pipeline + policy docs
 
 1. **Prospect** — identify zero-web-presence businesses (initial corridor: W Pico Blvd, LA 90019). Source facts from public listings only (name, address, category, rating).
 2. **Generate** — fill `templates/demo-template/` from a `demo.config.json` per business; hyper-local copy, brand colors chosen to suit, no scraped assets.
-3. **Publish** — add `demos/<slug>/`, deploy. Demo is live but noindexed and disclosed.
+3. **Publish** — add `/<slug>/` folder + robots.txt Disallow line, deploy. Demo is live but noindexed and disclosed.
 4. **Pitch** — outreach (see deliverability rule below) linking to the live demo.
 5. **Convert or delete** — client signs: site is finished and moved to their own domain. No response / declined: demo folder is deleted.
 

@@ -1,3 +1,7 @@
 # Homepage may be indexed; demo concepts must never be.
+# Demos live at root paths (/<slug>/) — add a Disallow line for every
+# demo folder when it is created. Each demo also carries meta noindex.
 User-agent: *
-Disallow: /demos/
+Disallow: /chopzla/
+Disallow: /templates/
+Disallow: /docs/
