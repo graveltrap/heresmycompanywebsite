@@ -4,7 +4,7 @@ Initial zero-web-presence targets near the 5066–5068 W Pico Blvd block. Facts 
 
 | Business | Category | Slug | Demo status |
 |---|---|---|---|
-| CHOPZ LA (5076 W Pico Blvd, 5.0 rating) | Barbershop | `chopzla` | ✅ Built — `mybusinessweb.site/chopzla` |
+| CHOPZ LA (5076 W Pico Blvd, 5.0 rating) | Barbershop | `chopzla` | ✅ Built — showcase only. ⚠️ Has own site (chopzla.com), verified 2026-07-05 — DO NOT PITCH |
 | Mr. Coney's Barber Shop | Barbershop | `mrconeys` | Planned |
 | The Upper Room Boutique | Boutique | `upperroomboutique` | Planned |
 | Legacy Lounge | Lounge/bar | `legacylounge` | Planned |
