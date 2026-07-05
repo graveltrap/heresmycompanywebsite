@@ -5,7 +5,7 @@
 
 $repo = Split-Path $PSScriptRoot -Parent
 $reserved = @('templates', 'docs', '.git')
-$bannerText = 'DEMO CONCEPT: This is a private web proposal built by'
+$bannerText = 'DEMO CONCEPT: This is a private web proposal built by MyBusinessWeb.site'
 $noindexPattern = 'name="robots"\s+content="[^"]*noindex'
 $robots = Get-Content (Join-Path $repo 'robots.txt') -Raw
 $fail = @()
