@@ -1,0 +1,3 @@
+# Homepage may be indexed; demo concepts must never be.
+User-agent: *
+Disallow: /demos/

@@ -1,0 +1,16 @@
+{
+  "slug": "example-business",
+  "business_name": "Example Business",
+  "tagline": "One-line hyper-local value statement",
+  "brand_color": "#0f6f5c",
+  "brand_color_dark": "#0a4a3e",
+  "public_address": "123 Example St, Los Angeles, CA 90019",
+  "section_1_heading": "About / hook heading",
+  "section_1_body": "Tailored copy referencing neighborhood, reputation, specialty.",
+  "section_2_heading": "Services",
+  "service_cards": [
+    { "title": "Service A", "body": "Short description." },
+    { "title": "Service B", "body": "Short description." }
+  ],
+  "sources": "Public listings only (Google Maps / Yelp text). Never copy photos, logos, or reviews verbatim."
+}
